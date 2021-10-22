@@ -1,0 +1,59 @@
+<section class="container mt-5">
+  <h1>{{ 'MODEL.TITLE' | translate }}</h1>
+
+  <form [formGroup]="formulario" (ngSubmit)="pesquisar()">
+    <!-- sample
+    <div class="row justify-content-center">
+      <button type="button" class="btn btn-primary" routerLink="/app/model/new">{{ 'CRUD.NEW' | translate }}</button>
+      <button type="button" class="btn btn-secondary" (click)="exportar()">{{ 'CRUD.EXPORT' | translate }}</button>
+      <button type="button" class="btn btn-info" (click)="acionarComponenteUpload()">{{ 'CRUD.IMPORT' | translate }}</button>
+      <input type="file" id="componenteUpload" (change)="inputFileChange($event)" style="display: none"/>
+      <div *ngIf="exibirGifAguarde">
+        <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+      </div>
+    </div>
+-->
+
+    <div class="justify-content-center">
+      <button type="button" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}"
+        routerLink="/app/model/new">{{ 'CRUD.NEW' | translate }}</button>
+    </div>
+
+    <div class="input-group mb-3" style="margin-top: 8px;">
+      <input type="text" class="form-control" placeholder="{{ 'MODEL.MODEL_LABEL_FILTER' | translate }}"
+        aria-label="Name of model" aria-describedby="basic-addon2" formControlName="name">
+      <div class="input-group-append">
+        <button class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}" type="submit"><i
+            class="fas fa-search"></i></button>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" class="coluna-acoes-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+            <th scope="col">{{ 'MODEL.SEARCH_COLUMN_NAME' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entidade of entidades ">
+            <td>
+              <div class="coluna-acoes-crud-body" *ngIf="entidade.id > 0">
+                <a tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}" [routerLink]="['/app/model', entidade.id]"><i class="fa fa-edit"></i></a>
+                <button tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}"  type="button" (click)="confirmarExclusao(entidade)" class="botao-sem-fundo"><i
+                    class="far fa-trash-alt"></i></button>
+              </div>
+            </td>
+            <td tooltip="{{ 'MODEL.LABEL_NAME' | translate }}">{{ entidade.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <app-paginacao-tabela [page]="page" (paginationEvent)=changePage($event) style="width: 100%">
+      </app-paginacao-tabela>
+    </div>
+
+  </form>
+
+  <app-form-debug [form]="formulario"></app-form-debug>
+</section>

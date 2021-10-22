@@ -1,0 +1,39 @@
+<section class="container mt-5">
+
+  <form [formGroup]="formulario" (ngSubmit)="salvar()">
+
+    <div class="justify-content-end botoes-crud-content">
+      <button type="submit" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}"
+        [disabled]="formulario.invalid">{{ 'CRUD.SAVE' | translate }}</button>
+      <button type="button" class="btn btn-secondary" tooltip="{{ 'CRUD.TOOLTIP_BACK' | translate }}"
+        routerLink="/app/model">{{ 'CRUD.BACK' | translate }}</button>
+    </div>
+
+    <div>
+      <tabset>
+
+        
+        <tab heading="{{ titulo }}" id="tab1">  
+          <div class="form-row">
+
+            <div class="form-group col">
+              <label class="requiredLabel">{{ 'MODEL.LABEL_NAME' | translate }}</label>
+              <input type="text" class="form-control" formControlName="name" tooltip="{{ 'MODEL.LABEL_NAME' | translate }}"> 
+              <app-form-messages-erro [control]="$any(formulario).controls['name']"
+                label="{{ 'MODEL.LABEL_NAME' | translate }}"></app-form-messages-erro>
+            </div>
+
+          </div>
+
+        </tab>
+
+        
+
+      </tabset>
+    </div>
+
+
+  </form>
+
+  <app-form-debug [form]="formulario"></app-form-debug>
+</section>

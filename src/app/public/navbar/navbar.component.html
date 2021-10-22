@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+  <span style="margin-left: 10px; " class="navbar-brand mb-0 h1 " >Maicon Fang</span>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">{{ 'NAVBAR.NAVBAR_ITEM_1' | translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">{{ 'NAVBAR.NAVBAR_ITEM_2' | translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/project">{{ 'NAVBAR.NAVBAR_ITEM_3' | translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact">{{ 'NAVBAR.NAVBAR_ITEM_4' | translate }}</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">LOGIN</a>
+      </li>
+      
+      <li>
+
+      </li>
+
+    </ul>
+  </div>
+
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <div class="btn-nav" style="margin-right: 25px; ">
+        <select id="selLanguage" class="form-control form-control-sm"  #langSelect (change)="translate.use(langSelect.value)">
+          <option id="optLanguage" *ngFor="let lang of translate.getLangs()" [value]="lang"
+            [selected]="lang === translate.currentLang">{{ lang }}</option>
+        </select>
+
+      </div>
+    </li>
+  </ul>
+
+
+</nav>

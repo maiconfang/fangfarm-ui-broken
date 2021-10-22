@@ -1,0 +1,71 @@
+<section class="container mt-5">
+  <h1>{{ titulo }}</h1>
+  
+  <form [formGroup]="formulario" (ngSubmit)="salvar()">
+
+    <div class="row justify-content-center botoes-crud-content">
+      <button type="submit" class="btn btn-primary" [disabled]="formulario.invalid">Salvar</button>
+      <button type="button" class="btn btn-secondary" routerLink="/app/usuario">Voltar para pesquisa</button>
+    </div>
+
+
+    <div class="form-row">
+
+      <div class="form-group col">
+        <label>Nome*</label>
+        <input type="text" class="form-control" formControlName="nome">
+        <app-form-messages-erro [control]="formulario.get('nome')" label="O nome"></app-form-messages-erro>
+      </div>
+
+      <div class="form-group col">
+        <label>Login/E-mail*</label>
+        <input type="text" class="form-control" formControlName="email">
+        <app-form-messages-erro [control]="formulario.get('email')" label="O login"></app-form-messages-erro>
+      </div>
+
+    </div>
+
+    <div class="form-row">
+
+      <div class="form-group col" *ngIf="titulo !== 'Edição de Usuário'">
+        <label>Senha</label>
+        <input type="password" class="form-control" formControlName="senha">
+        <app-form-messages-erro [control]="formulario.get(senha)" label="A senha"></app-form-messages-erro>
+      </div>
+
+      
+    </div>
+
+
+
+    <!--
+    <div class="form-row">
+
+      <div class="form-group col">
+        <label>Senha</label>
+        <input type="password" class="form-control" formControlName="senha">
+        <app-form-messages-erro [control]="formulario.get(senha)" label="A senha"></app-form-messages-erro>
+      </div>
+
+      <div class="form-group col">
+        <label>Confirma a senha</label>
+        <input type="password" class="form-control" formControlName="confirmaSenha">
+        <app-form-messages-erro [control]="formulario.get('confirmaSenha')" label="A confirmação"></app-form-messages-erro>
+      </div>
+      
+    </div>
+
+    <div class="form-row container-check-senhas" *ngIf="formulario.get('pass').value != formulario.get('confirmaSenha').value">
+      <i class="fas fa-info-circle icone-check-senhas"></i> Campo 'Senha' e 'Confirma a senha' devem ser iguais
+    </div>
+
+    -->
+
+
+
+
+
+  </form>
+
+  <app-form-debug [form]="formulario"></app-form-debug>
+</section>

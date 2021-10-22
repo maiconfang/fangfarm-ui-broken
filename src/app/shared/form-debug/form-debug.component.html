@@ -1,0 +1,20 @@
+<div class="row mt-5" *ngIf="form">
+  <h3 class="col-12 text-center">Debug form</h3>
+
+  <div class="col-12">
+    <pre>Form válido: {{ form.valid }}</pre>
+  </div>
+  
+  <div class="col-12">
+    <pre class="col-12">Form submetido: {{ form.submitted }}</pre>
+  </div>
+  
+  <div class="col-12">
+    <pre class="col-12">Valores: <br>{{ form.value | json }}</pre>
+  </div>
+  
+  <div class="col-12">
+    <pre class="col-12">Response Backend: {{response | json}}</pre>
+  </div>
+  
+</div>

@@ -1,0 +1,99 @@
+.sidebar {
+  width: 250px;
+  overflow-x: hidden;
+  transition: all 300ms;
+}
+
+.sidebar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background-image: -webkit-linear-gradient(left, color-stop(#333333 10px), color-stop(#222222 10px));
+  background-image: linear-gradient(to right, #333333 10px, #5a0f0f 10px);
+  background-repeat: repeat-x;
+}
+
+.sidebar-search {
+  padding: 15px;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar ul a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #ecebea;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar ul ul a {
+  padding: 10px 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-item-icon {
+  padding-right: 5px;
+}
+
+.sidebar ul ul a:hover,
+.sidebar ul ul a:focus,
+.sidebar ul ul a:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar ul a:hover,
+.sidebar ul a:focus,
+.sidebar ul a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar a,
+.sidebar a:hover,
+.sidebar a:focus,
+.sidebar a:active {
+  outline: none;
+}
+
+.sidebar ul li ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+
+/* .sidebar ul li a:hover + ul {
+  height: auto;
+} */
+
+.hideSidebar {
+  width: 0;
+  overflow-x: hidden;
+}
+
+.toogleSubMenu {
+  max-height: 600px !important;
+  overflow-x: hidden !important;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+
+  .sidebar {
+    background-color: aqua;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .sidebar-search {
+    display:none
+  }
+
+}

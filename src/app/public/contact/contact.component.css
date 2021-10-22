@@ -1,0 +1,21 @@
+.icon-wrapper {
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    background-clip: padding-box;
+    text-align: center;
+    margin: -14px auto 0;
+    vertical-align: middle;
+  }
+  .center-icon ul li {
+    list-style: none;
+    display: inline-block;
+    border-width: 1px 0 0;
+    width: 75px;
+    height: 0px;
+    line-height: 0px;
+    text-align: center;
+  }

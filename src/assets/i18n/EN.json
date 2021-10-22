@@ -1,0 +1,157 @@
+{
+	"NAVBAR":{
+		"NAVBAR_ITEM_1": "HOME",
+		"NAVBAR_ITEM_2": "ABOUT",
+		"NAVBAR_ITEM_3": "PROJECT",
+		"NAVBAR_ITEM_4": "CONTACT",
+		"NAVBAR_LANGUAGE" :"Language"
+	},
+
+	"HOME": {
+	  "APRESENTATION": "Hi, my name is Maicon Fang and I am a Software Developer (Java, Angular CLI) and a Test Analyst.",
+	  "ABSTRACT": "I concluded the Bachelor of Information Systems course at the end of 2010 and since then I have been working with software development and testing. From 2011 to 2012 I worked with Java development, and from 2012 to the end of 2019 I worked focused on automated tests. Besides that,  I have taken courses in the Java REST API and Angular CLI development areas. In addition, I have a postgraduate degree in Software Engineering from the Federal University of Paraná (Brazil)."
+	},
+
+	"ABOUT": {
+		"ABOUTMETAB": "About Me",
+		"SKILLSTAB": "Skills",
+		"EXPIRIENCETAB": "Experience",
+		"FORMATIONTAB": "Formation",
+		"LANGUAGESTAB": "Languages",
+		"COURSESTAB": "Courses",
+		"ABOUTMETEXT": "At the beginning of my career, I worked with Java development, however, after 2 years I started working with test software. I have worked with testing for more than 5 years. In 2018 I decided to start focusing my studies on software development, therefore, nowadays I have skills in the following areas: Java, Angular CLI, Spring Boot, REST API, JUnit, MySql, SQL Server, and Postgresql. In order to improve my knowledge I have worked in partnership with co-workers to create projects using Java, Angular CLI, and REST API.",
+		"SKILLSTEXT": "Object-oriented Programming",
+		"EXPERIENCETEXT_LINE_TITLE_2": "Junior Java Development - Sabro Tecnologia Int. Ltda. 2011 - 2012",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_2.1": "Creation of functionality / java routines",
+		"EXPERIENCETEXT_LINE_TITLE_1": "Test Analyst - Velti Tecnologia 2014 - 2019",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_1.1": "Test Analyst",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_1.2": "Automation tests using Selenium WebDriver",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_1.3": "Creation and execution of test scenarios",
+		"EXPERIENCETEXT_LINE_TITLE_3": "Junior Java, Angular Development - FH. 2020 - Now",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.1": "Creation of functionality / java, angular routines",
+
+		"FORMATIONTEXT_LINE_TITLE_1": "Federal University of Paraná 2013 - 2014" ,
+		"FORMATIONTEXT_DESCRIPTION_1.1": "Post-Graduation in Software Engineering",
+		"FORMATIONTEXT_LINE_TITLE_2": "Dynamic Union of Colleges Cataratas 2006 - 2010" ,
+		"FORMATIONTEXT_DESCRIPTION_2.1": "Bachelor's Degree in Information Systems",
+
+		"LANGUAGESTEXT_LINE_TITLE_1": "English",
+		"LANGUAGESTEXT_DESCRIPTION_1.1": "Advanced",
+		"LANGUAGESTEXT_LINE_TITLE_2": "Spanish",
+		"LANGUAGESTEXT_DESCRIPTION_2.1": "Fluent",
+		"LANGUAGESTEXT_LINE_TITLE_3": "Portuguese",
+		"LANGUAGESTEXT_DESCRIPTION_3.1": "Native",
+
+		"COURSESTEXT_LINE_1": "Spring REST Specialist, 240 hours, at Algaworks",
+		"COURSESTEXT_LINE_2": "Angular and Spring Fullstack, 230 hours, at Algaworks",
+		"COURSESTEXT_LINE_3": "Java and Object-oriented, 22 hours, at Algaworks"
+	},
+
+	  
+	"PROJECT": {
+		"PROJECT_NAME_TITLE_1": "Help Desk",
+		"PROJECT_DESCRIPTION_1.1": "In partnership with co-workers, I created a system using Java and REST API on the  Back-End and, on the Front-End, Angular CLI with Bootstrap. How we created the project is described below:" ,
+		"PROJECT_DESCRIPTION_1.2": "Once a week we met in person or remotely to discuss what was done and what could be done;",
+		"PROJECT_DESCRIPTION_1.3": "The activities were created and specified in Jira;",
+		"PROJECT_DESCRIPTION_1.4": "After the completion of the activity, the commit on branch was done;",
+		"PROJECT_DESCRIPTION_1.5": "After a certain amount of activities completed, a member would merge with the Master;",
+		"PROJECT_DESCRIPTION_1.6": "When a new activity was developed, a new branch was created from the Master;",
+		"PROJECT_DESCRIPTION_1.7": "For code versioning we used GIT.",
+		"PROJECT_NAME_SUB_TITLE_1": "Front-End",
+		"PROJECT_DESCRIPTION_SUB_TITLE_1.1": "The system was created with componentization, consultation and registration screen",
+		"PROJECT_DESCRIPTION_SUB_TITLE_1.2": "Some validations such as CNPJ and CPF have been implemented on  Front-End;",
+		"PROJECT_DESCRIPTION_SUB_TITLE_1.3": "Front-End and Back-End integration was done with JSON, for example,  when the Font-End made a request with GET and the API returned the result in JSON;",
+		"PROJECT_DESCRIPTION_SUB_TITLE_1.4": "We also used the object-oriented concept to create classes and components.",
+		"PROJECT_NAME_SUB_TITLE_2": "Back-End",
+		"PROJECT_DESCRIPTION_SUB_TITLE_2.1": "It was created in MVC and each layer was responsible for a certain action;",
+		"PROJECT_DESCRIPTION_SUB_TITLE_2.2": "Here we also used object orientation for creating classes;",
+		"PROJECT_DESCRIPTION_SUB_TITLE_2.3": "JPA was used for database integration;",
+		"PROJECT_DESCRIPTION_SUB_TITLE_2.4": "We used Flyway to manage database tables."
+	},
+
+	"CONTACT": {
+		"CONTACT_TITLE": "E-Mail to contact:",
+		"CONTACT_DESCRIPTION": "gomaiconfang@gmail.com"
+	},
+
+	"LOGIN": {
+		"ACCESS_SYSTEM": "Access the System",
+		"LBL_LOGIN": "Login",
+		"LBL_PASSWORD": "Password",
+		"REQUERID_LOGIN": "Login",
+		"REQUERID_PASSWORD": "The password",
+		"REMEMBER_ME": "Remember me",
+		"ENTER": "Enter",
+		"FORGOT_PASSWORD": "I forgot my password"
+	},
+
+	"FORM_VALIDATIONS": {
+		"REQUERID": " is required",
+		"MIN_LENGTH": " need to have at least ",
+		"MAX_LENGTH":  " need to have at most ",
+		"CHARACTERS": " characters"
+	},
+
+	"NAV_BAR": {
+		"SYSTEM_NAME": "Fang Farm",
+		"OPTION": "Opation",
+		"PROFILE": " Profile",
+		"SETTINGS": " Settings",
+		"LOGOUT": " Logout"
+	},
+
+	"SIDE_BAR": {
+		"MODEL" : "Model",
+		"SEE_POSTS": "See Records",
+		"ADD_MODEL": "Add Model"
+	},
+
+	"CRUD": {
+		"SAVE" : "Save",
+		"BACK": "Back to search",
+		"NEW": "Create new",
+		"EXPORT": "Export",
+		"IMPORT": "Import",
+		"ACTION": "Actions",
+		"ACTION_UPDATE": "Update",
+		"ACTION_REMOVE": "Remove",
+		"TOOLTIP_FILTER": "Consult records",
+		"TOOLTIP_CREATE_NEW": "Create new record",
+		"TOOLTIP_SAVE": "Save record",
+		"TOOLTIP_BACK": "Back to search",
+		"MSG_CONFIRM_REMOVE": "Do you really want to delete ",
+		"MSG_CONFIRM_REMOVE_YES": "Yes",
+		"MSG_CONFIRM_REMOVE_NO": "No",
+		"MSG_SUCCESS_REMOVE": "Successfully removed",
+		"MSG_SUCCESS_CREATED": "Successfully created",
+		"MSG_SUCCESS_UPDATED": "Successfully updated"
+	},
+
+	"MODEL": {
+		"SEARCH_COLUMN_NAME": "Model",
+		"MODEL_LABEL_FILTER": "Name of model",
+		"LABEL_NAME": "Name of model",
+		"TITLE": "Model",
+		"TITLE_EDIT": "Edit of Model",
+		"TITLE_NEW": "New Model"
+	},
+
+	"PAGINATOR": {
+		"BACK": "Back",
+		"NEXT": "Next"
+	},
+
+	"INTERCEPTOR":{
+		"STATUS_400": "Invalid username or password",
+		"STATUS_401": "Application without access permission",
+		"TOKEN_EXPIRED": "Session expired",
+		"FULL_AUTHENTICATION": "Application without access permission",
+		"STATUS_404": "Resource not found",
+		"STATUS_405": "Method not allowed",
+		"STATUS_500": "Error processing your request",
+		"STATUS_DEFAULT": "Server not found"
+	}
+
+
+}
+  

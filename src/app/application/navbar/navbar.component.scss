@@ -1,0 +1,46 @@
+.bg-menu {
+  background-image: -webkit-linear-gradient(left, color-stop(#333333 10px), color-stop(#222222 10px));
+  background-image: linear-gradient(to right, #333333 10px, #a31414 10px);
+}
+
+.navbar {
+
+  .img-round {
+    height: 2.5em;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+}
+
+.notification {
+  position: absolute;
+  top: 2px;
+  border: 1px solid #fff;
+  right: 0;
+  font-size: 9px;
+  background: #f44336;
+  color: #fff;
+  min-width: 18px;
+  padding: 0 5px;
+  height: 18px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 15px;
+  /* vertical-align: middle; */
+  display: block;
+}
+
+.nav-item {
+  margin-left: 1em;
+  position: relative;
+}
+
+.nav-color-user {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
