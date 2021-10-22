@@ -11,28 +11,28 @@ import { Observable } from 'rxjs';
 })
 export class ModelService extends CrudServiceImpl {
 
-  modeloUrl: string;
+  modelUrl: string;
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.modeloUrl = `${environment.apiURL}/v1/models`;
+    this.modelUrl = `${environment.apiURL}/v1/models`;
   }
 
   getUrlResource(): string {
-    return this.modeloUrl;
+    return this.modelUrl;
   }
 
-  listarPaginado(filtro: ModelFilter, pagina: number, parametros = new HttpParams()): Observable<any> {
+  listPaginated(filter: ModelFilter, page: number, parameters = new HttpParams()): Observable<any> {
 
-    if (filtro.name) {
-      parametros = parametros.set('name', filtro.name);
+    if (filter.name) {
+      parameters = parameters.set('name', filter.name);
     }
 
-    return super.listarPaginado(filtro, pagina, parametros);
+    return super.listPaginated(filter, page, parameters);
   }
 
-  listarTodas(): Promise<any> {
-    return this.http.get<any>(this.modeloUrl)
+  listAll(): Promise<any> {
+    return this.http.get<any>(this.modelUrl)
       .toPromise()
       .then(response => response);
   }

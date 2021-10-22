@@ -14,7 +14,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class ModelRegisterComponent extends CrudCadastroImpl implements OnInit {
 
-  titulo: string;
+  titleModel: string;
 
   constructor(
     protected translate: TranslateService,
@@ -33,29 +33,29 @@ export class ModelRegisterComponent extends CrudCadastroImpl implements OnInit {
 
     if (id) {
       this.translate.get('MODEL.TITLE_EDIT').subscribe((text: string) => {
-        this.titulo = text;
+        this.titleModel = text;
       });
-      this.buscarEntidade(id);
+      this.findEntity(id);
     } else {
       this.translate.get('MODEL.TITLE_NEW').subscribe((text: string) => {
-        this.titulo = text
+        this.titleModel = text
       });
     }
 
   }
 
   createForm() {
-    this.formulario = this.formBuilder.group({
+    this.form = this.formBuilder.group({
       id: [''],
       name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]]
     });
   }
 
-  redirecionarAposAdicionar(entidade: any) {
-    this.router.navigate(['/app/model', entidade.id]);
+  redirectAfterAdd(entity: any) {
+    this.router.navigate(['/app/model', entity.id]);
   }
 
-  voltarParaPesquisa() {
+  backToSearch() {
     this.router.navigate(['/model']);
   }
 

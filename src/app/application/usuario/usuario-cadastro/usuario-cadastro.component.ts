@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { UsuarioService } from '../usuario.service';
 import { MensagemToastService } from './../../../core/mensagem-toast/mensagem.toast.service';
 import { CrudCadastroImpl } from 'src/app/core/crud-generico/crud-cadastro-impl';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-usuario-cadastro',
@@ -13,16 +14,17 @@ import { CrudCadastroImpl } from 'src/app/core/crud-generico/crud-cadastro-impl'
 })
 export class UsuarioCadastroComponent extends CrudCadastroImpl implements OnInit {
 
-  formulario: FormGroup;
-  titulo: string;
+  form: FormGroup;
+  titleUser: string;
 
   constructor(
+    protected translate: TranslateService,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
     protected usuarioService: UsuarioService,
     protected toastService: MensagemToastService) {
-      super(usuarioService, toastService)
+      super(translate, usuarioService, toastService)
       this.createForm();
     }
 
@@ -31,15 +33,15 @@ export class UsuarioCadastroComponent extends CrudCadastroImpl implements OnInit
       const id: number = this.route.snapshot.params['id'];
 
       if (id) {
-        this.titulo = 'Edição de Usuário';
-        super.buscarEntidade(id);
+        this.titleUser = 'Edição de Usuário';
+        super.findEntity(id);
       } else {
-        this.titulo = 'Novo Usuário';
+        this.titleUser = 'Novo Usuário';
       }
     }
 
     createForm() {
-      this.formulario = this.formBuilder.group({
+      this.form = this.formBuilder.group({
         id: [''],
         nome: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
         email: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(100)]],
@@ -47,19 +49,19 @@ export class UsuarioCadastroComponent extends CrudCadastroImpl implements OnInit
       });
     }
 
-    redirecionarAposAdicionar(entidade: any) {
-      this.router.navigate(['/app/usuario', entidade.id]);
+    redirectAfterAdd(entity: any) {
+      this.router.navigate(['/app/usuario', entity.id]);
     }
 
-    voltarParaPesquisa() {
+    backToSearch() {
       this.router.navigate(['/usuario']);
     }
 
-    atualizar() {
-      this.formulario.removeControl('senha');
-      this.service.atualizar(this.formulario.value).subscribe( entidade => {
-          this.toastService.exibirMensagemSucesso('Atualizado com sucesso');
-          this.atualizarFormularioComEntidade(entidade);
+    update() {
+      this.form.removeControl('senha');
+      this.service.update(this.form.value).subscribe( entity => {
+          this.toastService.showMessageSuccess('Atualizado com sucesso');
+          this.updateFormWithEntity(entity);
       });
     }
 

@@ -8,16 +8,16 @@ export class MensagemToastService {
 
   constructor(private toasterService: ToastrService) { }
 
-  exibirMensagemSucesso(mensagem: string) {
-    this.toasterService.success(mensagem, '', {
+  showMessageSuccess(message: string) {
+    this.toasterService.success(message, '', {
       closeButton: true,
       positionClass: 'toast-bottom-right',
       timeOut: 8000,
     });
   }
 
-  exibirMensagemAviso(mensagem: string, html = false) {
-    this.toasterService.warning(mensagem, '', {
+  showMessageAdvise(message: string, html = false) {
+    this.toasterService.warning(message, '', {
       closeButton: true,
       positionClass: 'toast-bottom-right',
       timeOut: 8000,

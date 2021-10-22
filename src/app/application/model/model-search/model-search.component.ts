@@ -27,29 +27,29 @@ export class ModelSearchComponent extends CrudPesquisaImpl implements OnInit {
   }
 
   ngOnInit() {
-    this.formulario = this.formBuilder.group({
+    this.form = this.formBuilder.group({
       name: ['', [Validators.maxLength(100)]]
     });
 
-    this.pesquisar();
+    this.search();
   }
 
-  novo() {
+  new() {
     this.router.navigate(['/model/new']);
   }
 
-  confirmarExclusao(entidade: any, identificacao = '') {
-    super.confirmarExclusao(entidade, entidade.name);
+  confirmRemoval(entity: any, identification = '') {
+    super.confirmRemoval(entity, entity.name);
   }
 
-  pesquisar(paginacao = 0) {
-    this.service.listarPaginado(this.formulario.value, paginacao)
+  search(paginator = 0) {
+    this.service.listPaginated(this.form.value, paginator)
       .subscribe(data => {
         this.page = data.page;
         if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
-          this.entidades = data._embedded.models
+          this.entities = data._embedded.models
         } else
-          this.entidades = [{}]
+          this.entities = [{}]
       });
   }
 

@@ -5,50 +5,51 @@ import { TranslateService } from '@ngx-translate/core';
 
 export abstract class CrudCadastroImpl {
 
-    public formulario: FormGroup;
+    public form: FormGroup;
 
     constructor(
         protected translate: TranslateService,
         protected service: CrudServiceImpl,
         protected toastService: MensagemToastService) {}
 
-    buscarEntidade(id: number) {
-        this.service.buscarPorID(id).subscribe( entidade => {
-            this.atualizarFormularioComEntidade(entidade);
+    findEntity(id: number) {
+        this.service.findById(id).subscribe( entity => {
+            this.updateFormWithEntity(entity);
         });
     }
 
-    salvar() {
-        if (this.editando) {
-            this.atualizar();
+    save() {
+        if (this.editing) {
+            this.update();
         } else {
-            this.adicionar();
+            this.add();
         }
     }
 
-    adicionar() {
-        this.service.adicionar(this.formulario.value).subscribe(entidade => {
-            this.toastService.exibirMensagemSucesso(this.translate.instant('CRUD.MSG_SUCCESS_CREATED'));
-            this.redirecionarAposAdicionar(entidade);
+    add() {
+        this.service.add(this.form.value).subscribe(entity => {
+            this.toastService.showMessageSuccess(this.translate.instant('CRUD.MSG_SUCCESS_CREATED'));
+            this.redirectAfterAdd(entity);
         });
     }
 
-    atualizar() {
-        this.service.atualizar(this.formulario.value).subscribe( entidade => {
-            this.toastService.exibirMensagemSucesso(this.translate.instant('CRUD.MSG_SUCCESS_UPDATED'));
-            this.atualizarFormularioComEntidade(entidade);
+    update() {
+        this.service.update(this.form.value).subscribe( entity => {
+            this.toastService.showMessageSuccess(this.translate.instant('CRUD.MSG_SUCCESS_UPDATED'));
+            this.updateFormWithEntity(entity);
         });
     }
-
-    atualizarFormularioComEntidade(entidade: any) {
-        this.formulario.patchValue(entidade);
+    
+    updateFormWithEntity(entity: any) {
+        this.form.patchValue(entity);
     }
 
-    get editando() {
-        return Boolean(this.formulario.get('id').value);
+    get editing() {
+        return Boolean(this.form.get('id').value);
     }
 
     abstract createForm();
-    abstract redirecionarAposAdicionar(entidade: any);
-    abstract voltarParaPesquisa();
+    abstract redirectAfterAdd(entity: any);
+    abstract backToSearch();
+    
 }

@@ -22,20 +22,20 @@ export class UsuarioService extends CrudServiceImpl {
     return this.usuarioUrl;
   }
 
-  listarPaginado(filtro: UsuarioFiltro, pagina: number, parametros = new HttpParams()): Observable<any> {
+  listPaginated(filter: UsuarioFiltro, page: number, parameters = new HttpParams()): Observable<any> {
 
-    if (filtro.nome) {
-      parametros = parametros.set('nome', filtro.nome);
+    if (filter.nome) {
+      parameters = parameters.set('nome', filter.nome);
     }
 
-    if (filtro.email) {
-      parametros = parametros.set('email', filtro.email);
+    if (filter.email) {
+      parameters = parameters.set('email', filter.email);
     }
 
-    return super.listarPaginado(filtro, pagina, parametros);
+    return super.listPaginated(filter, page, parameters);
   }
 
-  listarTodas(): Promise<any> {
+  listAll(): Promise<any> {
     return this.http.get<any>(this.usuarioUrl)
       .toPromise()
       .then(response => response);

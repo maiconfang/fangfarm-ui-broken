@@ -47,7 +47,7 @@ export class UserSession {
 
   }
 
-  async setUsuarioLogado(usuario: Usuario) {
+  async setUserLogged(usuario: Usuario) {
     this.storage.setLocalStorage('usuario', usuario)
     return true;
   }

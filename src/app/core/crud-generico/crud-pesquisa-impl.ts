@@ -8,9 +8,9 @@ import { TranslateService } from '@ngx-translate/core';
 
 export abstract class CrudPesquisaImpl {
 
-    public entidades = [];
+    public entities = [];
     public page: Page;
-    public formulario: FormGroup;
+    public form: FormGroup;
     protected modalRef: BsModalRef;
     public exibirGifAguarde = false;
 
@@ -18,76 +18,37 @@ export abstract class CrudPesquisaImpl {
         protected translate: TranslateService,
         protected service: CrudServiceImpl,
         protected toastService: MensagemToastService,
-        protected modalService: BsModalService) {}
+        protected modalService: BsModalService) { }
 
-        pesquisar(paginacao = 0) {
-            this.service.listarPaginado(this.formulario.value, paginacao)
-              .subscribe(resultado => {
-                this.page = resultado;
-                this.entidades = resultado.content;
-              });
-        }
+    search(paginator = 0) {
+        this.service.listPaginated(this.form.value, paginator)
+            .subscribe(result => {
+                this.page = result;
+                this.entities = result.content;
+            });
+    }
 
-    excluir(entidade: any) {
-        this.service.excluir(entidade.id).subscribe(resultado => {
-          this.toastService.exibirMensagemSucesso(this.translate.instant('CRUD.MSG_SUCCESS_REMOVE'));
-          this.pesquisar();
+    remove(entity: any) {
+        this.service.remove(entity.id).subscribe(result => {
+            this.toastService.showMessageSuccess(this.translate.instant('CRUD.MSG_SUCCESS_REMOVE'));
+            this.search();
         });
     }
 
-    confirmarExclusao(entidade: any, identificacao = '') {
+    confirmRemoval(entity: any, identification = '') {
 
         const initialState = {
-            message: this.translate.instant('CRUD.MSG_CONFIRM_REMOVE') + `"` +  identificacao + `" ?`
+            message: this.translate.instant('CRUD.MSG_CONFIRM_REMOVE') + `"` + identification + `" ?`
         };
-        this.modalRef = this.modalService.show(DialogConfirmacaoComponent, {initialState});
+        this.modalRef = this.modalService.show(DialogConfirmacaoComponent, { initialState });
         this.modalRef.content.eventConfirm.subscribe((value) => {
-            this.excluir(entidade);
+            this.remove(entity);
         });
-    }
-
-    exportar() {
-        this.exibirGifAguarde = true;
-        this.service.exportar()
-        .subscribe(bytes => {
-          const downloadURL = window.URL.createObjectURL(bytes);
-          const link = document.createElement('a');
-          link.href = downloadURL;
-          link.download = "dados.csv";
-          link.click();
-          this.exibirGifAguarde = false;
-        });
-    }
-
-    acionarComponenteUpload() {
-        document.getElementById('componenteUpload').click();
-    }
-
-    inputFileChange(event) {
-        if (event.target.files && event.target.files[0]) {
-            const arquivo = event.target.files[0];
-
-            if (arquivo.name.indexOf('.csv') > 0) {
-
-                this.exibirGifAguarde = true;
-                this.service.importar(arquivo)
-                    .subscribe( resultado => {
-                    const mensagem = `Importado com sucesso: ${resultado.nrLinhaSucesso} <br/>Falha ao importar: ${resultado.nrLinhaFalha}`;
-                    this.toastService.exibirMensagemAviso(mensagem, true);
-                    this.pesquisar();
-                    this.exibirGifAguarde = false;
-                    const target = event.target || event.srcElement;
-                    target.value = '';
-                    });
-            } else {
-            this.toastService.exibirMensagemAviso('Formato inválido. Aceito somente arquivo CSV');
-            }
-        }
     }
 
     changePage(event) {
-        this.pesquisar(event.page);
+        this.search(event.page);
     }
 
-    abstract novo();
+    abstract new();
 }

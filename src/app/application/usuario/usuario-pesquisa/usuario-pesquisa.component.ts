@@ -7,6 +7,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { UsuarioService } from '../usuario.service';
 import { MensagemToastService } from './../../../core/mensagem-toast/mensagem.toast.service';
 import { CrudPesquisaImpl } from 'src/app/core/crud-generico/crud-pesquisa-impl';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-usuario-pesquisa',
@@ -16,40 +17,41 @@ import { CrudPesquisaImpl } from 'src/app/core/crud-generico/crud-pesquisa-impl'
 export class UsuarioPesquisaComponent extends CrudPesquisaImpl implements OnInit {
 
   constructor(
+    protected translate: TranslateService,
     private formBuilder: FormBuilder,
     private router: Router,
     protected usuarioService: UsuarioService,
     protected toastService: MensagemToastService,
     protected modalService: BsModalService) {
-      super(usuarioService, toastService, modalService);
+      super(translate, usuarioService, toastService, modalService);
     }
 
   ngOnInit() {
-    this.formulario = this.formBuilder.group({
+    this.form = this.formBuilder.group({
       nome: ['', [Validators.maxLength(100)]],
       email: ['', [Validators.maxLength(100)]]
     });
 
-    super.pesquisar();
+    super.search();
   }
 
-  novo() {
+  new() {
     this.router.navigate(['/usuario/novo']);
   }
 
-  confirmarExclusao(entidade: any, identificacao = '') {
-    super.confirmarExclusao(entidade, entidade.username);
+  confirmRemoval(entity: any, identification = '') {
+    super.confirmRemoval(entity, entity.username);
   }
 
 
-pesquisar(paginacao = 0) {
-  this.service.listarPaginado(this.formulario.value, paginacao)
+  search(paginacao = 0) {
+  this.service.listPaginated(this.form.value, paginacao)
     .subscribe(data => {
       this.page = data.page;
       if(data.page.totalElements > 0  ){
-        this.entidades = data._embedded.usuarios;
+        this.entities = data._embedded.usuarios;
       } else 
-      this.entidades = [{}]
+      this.entities = [{}]
     });
 }
 

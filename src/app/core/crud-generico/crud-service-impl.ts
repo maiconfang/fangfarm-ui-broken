@@ -3,94 +3,75 @@ import { Observable } from 'rxjs';
 
 export abstract class CrudServiceImpl {
 
-    NR_REGISTRO_POR_PAGINA = '10';
+    NUMBER_REGISTER_BY_PAGE = '10';
 
     constructor(protected http: HttpClient) {
     }
 
-    listar(): Observable<any> {
+    list(): Observable<any> {
       return this.http.get(`${this.getUrlResource()}`);
     }
 
-    listarComUrl(stringUrl: string): Observable<any> {
+    listWithUrl(stringUrl: string): Observable<any> {
       return this.http.get(stringUrl);
     }
 
-    adicionar(entidade: any): Observable<any> {
-      return this.http.post(this.getUrlResource(), entidade);
+    add(entity: any): Observable<any> {
+      return this.http.post(this.getUrlResource(), entity);
     }
 
-    adicionarComUrl(stringUrl: string): Observable<any> {
+    addWithUrl(stringUrl: string): Observable<any> {
       return this.http.put(stringUrl, null);
     }
 
-    atualizar(entidade: any): Observable<any> {
-        return this.http.put(`${this.getUrlResource()}/${entidade.id}`, entidade);
+    update(entity: any): Observable<any> {
+        return this.http.put(`${this.getUrlResource()}/${entity.id}`, entity);
     }
 
-    excluir(id: number): Observable<any> {
+    remove(id: number): Observable<any> {
       return this.http.delete(`${this.getUrlResource()}/${id}`);
     }
 
-    excluirComUrl(stringUrl: string): Observable<any> {
+    removeWithUrl(stringUrl: string): Observable<any> {
       return this.http.delete(stringUrl);
     }
 
-    requisicaoComUrlPut(stringUrl: string, entidade: any): Observable<any> {
-      return this.http.put(stringUrl, entidade);
+    requestWithUrlPut(stringUrl: string, entity: any): Observable<any> {
+      return this.http.put(stringUrl, entity);
     }
 
-    buscarPorID(id: number): Observable<any> {
+    findById(id: number): Observable<any> {
       return this.http.get(`${this.getUrlResource()}/${id}`);
     }
 
-    buscarPorUrl(stringUrl: string): Observable<any> {
+    findByUrl(stringUrl: string): Observable<any> {
       return this.http.get(stringUrl);
     }
 
-    exportar(): Observable<any> {
-      const httpOptions = {
-        responseType: 'blob' as 'json'
-      };
-      return this.http.get(`${this.getUrlResource()}/exportar`, httpOptions);
-    }
+    listPaginated(filter: any, page: number, parameters = new HttpParams()): Observable<any> {
 
-    importar(arquivo: any): Observable<any> {
-
-      const formData = new FormData();
-      formData.append('arquivo', arquivo);
-
-      const httpOptions = {
-        headers: new HttpHeaders()
-      };
-
-      return this.http.post(`${this.getUrlResource()}/importar`, formData, httpOptions);
-    }
-
-    listarPaginado(filtro: any, pagina: number, parametros = new HttpParams()): Observable<any> {
-
-      if (parametros == null){
-        parametros = new HttpParams();
+      if (parameters == null){
+        parameters = new HttpParams();
       }
 
-      parametros = parametros.set('page', pagina.toString());
-      parametros = parametros.set('size', this.NR_REGISTRO_POR_PAGINA);
+      parameters = parameters.set('page', page.toString());
+      parameters = parameters.set('size', this.NUMBER_REGISTER_BY_PAGE);
 
       const httpOptions = {
-        params: parametros
+        params: parameters
       };
 
       return this.http.get(`${this.getUrlResource()}`, httpOptions);
     }
 
-    listarSemPaginacao(strMapping: String, parametros = new HttpParams()): Observable<any> {
+    listWithOutPagination(strMapping: String, parameters = new HttpParams()): Observable<any> {
 
-      if (parametros == null){
-        parametros = new HttpParams();
+      if (parameters == null){
+        parameters = new HttpParams();
       }
 
       const httpOptions = {
-        params: parametros
+        params: parameters
       };
 
       return this.http.get(`${this.getUrlResource()}`+ strMapping, httpOptions);

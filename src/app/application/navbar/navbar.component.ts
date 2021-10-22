@@ -13,10 +13,9 @@ import { ErrorHandlerService } from 'src/app/core/error-handler.service';
 })
 export class NavbarComponent implements OnInit {
 
-  usuarioLogado = this.storage.getLocalStorage('login');
+  userLogged = this.storage.getLocalStorage('login');
 
   countEnvelopes: number;
-  nomeUsuarioL: string;
 
   constructor(
     private navbarService: NavbarService,
@@ -24,14 +23,13 @@ export class NavbarComponent implements OnInit {
     private authenticationService: AuthenticationService,
     private router: Router,
     private errorHandlerService: ErrorHandlerService
-    ) {
-    
+  ) {
+
   }
 
   ngOnInit() {
-    
-  }
 
+  }
 
   logout() {
     this.authenticationService.logout()
@@ -43,13 +41,13 @@ export class NavbarComponent implements OnInit {
 
   toggleSideBar() {
     var element = document.querySelector(".sidebar");
-  
+
     if (element.classList) {
       element.classList.toggle("hideSidebar");
     } else {
       var classes = element.className.split(" ");
       var i = classes.indexOf("hideSidebar");
-  
+
       if (i >= 0)
         classes.splice(i, 1);
       else
