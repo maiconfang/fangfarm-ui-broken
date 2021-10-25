@@ -7,8 +7,8 @@ import { CoreModule } from './core/core.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { DialogConfirmacaoComponent } from './core/dialog-confirmacao/dialog-confirmacao.component';
-import { MensagemToastService } from './core/mensagem-toast/mensagem.toast.service';
+import { DialogConfirmationComponent } from './core/dialog-confirmation/dialog-confirmation.component';
+import { MessageToastService } from './core/message-toast/message.toast.service';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { LassComponent } from './lass/lass.component';
 
@@ -23,7 +23,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    DialogConfirmacaoComponent,
+    DialogConfirmationComponent,
     LassComponent
   ],
   imports: [
@@ -41,8 +41,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     })
 
   ],
-  providers: [ MensagemToastService ],
+  providers: [ MessageToastService ],
   bootstrap: [AppComponent],
-  entryComponents: [ DialogConfirmacaoComponent ]
+  entryComponents: [ DialogConfirmationComponent ]
 })
 export class AppModule { }

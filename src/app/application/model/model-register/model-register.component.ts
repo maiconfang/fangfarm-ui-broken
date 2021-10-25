@@ -1,10 +1,10 @@
-import { CrudCadastroImpl } from 'src/app/core/crud-generico/crud-cadastro-impl';
+import { CrudRegisterImpl } from 'src/app/core/crud-generic/crud-register-impl';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { ModelService } from '../model.service';
-import { MensagemToastService } from '../../../core/mensagem-toast/mensagem.toast.service';
+import { MessageToastService } from '../../../core/message-toast/message.toast.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -12,7 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './model-register.component.html',
   styleUrls: ['./model-register.component.css']
 })
-export class ModelRegisterComponent extends CrudCadastroImpl implements OnInit {
+export class ModelRegisterComponent extends CrudRegisterImpl implements OnInit {
 
   titleModel: string;
 
@@ -22,7 +22,7 @@ export class ModelRegisterComponent extends CrudCadastroImpl implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     protected modelService: ModelService,
-    protected toastService: MensagemToastService) {
+    protected toastService: MessageToastService) {
     super(translate, modelService, toastService);
     this.createForm();
   }

@@ -2,17 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { UsuarioService } from '../usuario.service';
-import { MensagemToastService } from './../../../core/mensagem-toast/mensagem.toast.service';
-import { CrudCadastroImpl } from 'src/app/core/crud-generico/crud-cadastro-impl';
+import { UserService } from '../user.service';
+import { MessageToastService } from '../../../core/message-toast/message.toast.service';
+import { CrudRegisterImpl } from 'src/app/core/crud-generic/crud-register-impl';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-usuario-cadastro',
-  templateUrl: './usuario-cadastro.component.html',
-  styleUrls: ['./usuario-cadastro.component.css']
+  selector: 'app-user-register',
+  templateUrl: './user-register.component.html',
+  styleUrls: ['./user-register.component.css']
 })
-export class UsuarioCadastroComponent extends CrudCadastroImpl implements OnInit {
+export class UserRegisterComponent extends CrudRegisterImpl implements OnInit {
 
   form: FormGroup;
   titleUser: string;
@@ -22,9 +22,9 @@ export class UsuarioCadastroComponent extends CrudCadastroImpl implements OnInit
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    protected usuarioService: UsuarioService,
-    protected toastService: MensagemToastService) {
-      super(translate, usuarioService, toastService)
+    protected userService: UserService,
+    protected toastService: MessageToastService) {
+      super(translate, userService, toastService)
       this.createForm();
     }
 

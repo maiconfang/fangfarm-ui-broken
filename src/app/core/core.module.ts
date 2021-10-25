@@ -12,13 +12,13 @@ import { WrapperModule } from '../wrapper/wrapper.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component';
-import { NaoAutorizadoComponent } from './nao-autorizado.component';
+import { PageNotFoundComponent } from './page-not-found.component';
+import { NotAuthorizedComponent } from './not-authorized.component';
 
 @NgModule({
   declarations: [
-    PaginaNaoEncontradaComponent,
-    NaoAutorizadoComponent
+    PageNotFoundComponent,
+    NotAuthorizedComponent
   ],
   imports: [
     CommonModule,

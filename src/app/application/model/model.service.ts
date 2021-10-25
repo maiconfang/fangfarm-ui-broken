@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-import { CrudServiceImpl } from 'src/app/core/crud-generico/crud-service-impl';
+import { CrudServiceImpl } from 'src/app/core/crud-generic/crud-service-impl';
 import { ModelFilter } from './models';
 import { Observable } from 'rxjs';
 

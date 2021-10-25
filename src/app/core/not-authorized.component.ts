@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   </div>
   `,
 })
-export class NaoAutorizadoComponent implements OnInit {
+export class NotAuthorizedComponent implements OnInit {
 
   constructor() { }
 

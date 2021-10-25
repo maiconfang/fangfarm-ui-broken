@@ -1,4 +1,4 @@
-import { CrudPesquisaImpl } from 'src/app/core/crud-generico/crud-pesquisa-impl';
+import { CrudSearchImpl } from 'src/app/core/crud-generic/crud-search-impl';
 import { Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { BsModalService } from 'ngx-bootstrap/modal';
 
 import { ModelService } from '../model.service';
-import { MensagemToastService } from 'src/app/core/mensagem-toast/mensagem.toast.service';
+import { MessageToastService } from 'src/app/core/message-toast/message.toast.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -14,14 +14,14 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './model-search.component.html',
   styleUrls: ['./model-search.component.css'],
 })
-export class ModelSearchComponent extends CrudPesquisaImpl implements OnInit {
+export class ModelSearchComponent extends CrudSearchImpl implements OnInit {
 
   constructor(
     protected translate: TranslateService,
     private formBuilder: FormBuilder,
     private router: Router,
     protected modelService: ModelService,
-    protected toastService: MensagemToastService,
+    protected toastService: MessageToastService,
     protected modalService: BsModalService) {
     super(translate, modelService, toastService, modalService);
   }

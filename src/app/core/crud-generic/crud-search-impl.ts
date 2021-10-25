@@ -1,12 +1,12 @@
-import { DialogConfirmacaoComponent } from 'src/app/core/dialog-confirmacao/dialog-confirmacao.component';
+import { DialogConfirmationComponent } from 'src/app/core/dialog-confirmation/dialog-confirmation.component';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { FormGroup } from '@angular/forms';
-import { CrudServiceImpl } from 'src/app/core/crud-generico/crud-service-impl';
-import { Page } from '../paginacao-tabela/paginacao-tabela';
-import { MensagemToastService } from '../mensagem-toast/mensagem.toast.service';
+import { CrudServiceImpl } from 'src/app/core/crud-generic/crud-service-impl';
+import { Page } from '../pagination-table/pagination-table';
+import { MessageToastService } from '../message-toast/message.toast.service';
 import { TranslateService } from '@ngx-translate/core';
 
-export abstract class CrudPesquisaImpl {
+export abstract class CrudSearchImpl {
 
     public entities = [];
     public page: Page;
@@ -17,7 +17,7 @@ export abstract class CrudPesquisaImpl {
     constructor(
         protected translate: TranslateService,
         protected service: CrudServiceImpl,
-        protected toastService: MensagemToastService,
+        protected toastService: MessageToastService,
         protected modalService: BsModalService) { }
 
     search(paginator = 0) {
@@ -40,7 +40,7 @@ export abstract class CrudPesquisaImpl {
         const initialState = {
             message: this.translate.instant('CRUD.MSG_CONFIRM_REMOVE') + `"` + identification + `" ?`
         };
-        this.modalRef = this.modalService.show(DialogConfirmacaoComponent, { initialState });
+        this.modalRef = this.modalService.show(DialogConfirmationComponent, { initialState });
         this.modalRef.content.eventConfirm.subscribe((value) => {
             this.remove(entity);
         });

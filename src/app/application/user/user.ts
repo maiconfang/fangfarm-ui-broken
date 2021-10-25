@@ -1,11 +1,11 @@
-export class Usuario {
+export class User {
     id: number;
     nome: string;
     email: string;
   
   }
 
-export class UsuarioFiltro {
+export class UserFilter {
     nome: string;
     email: string;
 }

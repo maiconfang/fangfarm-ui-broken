@@ -2,27 +2,27 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-import { CrudServiceImpl } from 'src/app/core/crud-generico/crud-service-impl';
-import { UsuarioFiltro } from './usuario';
+import { CrudServiceImpl } from 'src/app/core/crud-generic/crud-service-impl';
+import { UserFilter } from './user';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioService extends CrudServiceImpl {
+export class UserService extends CrudServiceImpl {
 
-  usuarioUrl: string;
+  userUrl: string;
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.usuarioUrl = `${environment.apiURL}/v1/usuarios`;
+    this.userUrl = `${environment.apiURL}/v1/usuarios`;
   }
 
   getUrlResource(): string {
-    return this.usuarioUrl;
+    return this.userUrl;
   }
 
-  listPaginated(filter: UsuarioFiltro, page: number, parameters = new HttpParams()): Observable<any> {
+  listPaginated(filter: UserFilter, page: number, parameters = new HttpParams()): Observable<any> {
 
     if (filter.nome) {
       parameters = parameters.set('nome', filter.nome);
@@ -36,7 +36,7 @@ export class UsuarioService extends CrudServiceImpl {
   }
 
   listAll(): Promise<any> {
-    return this.http.get<any>(this.usuarioUrl)
+    return this.http.get<any>(this.userUrl)
       .toPromise()
       .then(response => response);
   }

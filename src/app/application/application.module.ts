@@ -12,8 +12,8 @@ import { ModelModule } from './model/model.module';
 import { ModelService } from './model/model.service';
 import { ModelRegisterComponent } from './model/model-register/model-register.component';
 import { ModelSearchComponent } from './model/model-search/model-search.component';
-import { NaoAutorizadoComponent } from '../core/nao-autorizado.component';
-import { PaginaNaoEncontradaComponent } from '../core/pagina-nao-encontrada.component';
+import { NotAuthorizedComponent } from '../core/not-authorized.component';
+import { PageNotFoundComponent } from '../core/page-not-found.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 
@@ -25,8 +25,8 @@ const routesApp: Routes = [
       { path: 'model', component: ModelSearchComponent },
       { path: 'model/new', component: ModelRegisterComponent },
       { path: 'model/:id', component: ModelRegisterComponent },
-      { path: 'nao-autorizado', component: NaoAutorizadoComponent },
-      { path: 'pagina-nao-encontrada', component: PaginaNaoEncontradaComponent }
+      { path: 'not-authorized', component: NotAuthorizedComponent },
+      { path: 'page-not-found', component: PageNotFoundComponent }
     ]
   },
 ];

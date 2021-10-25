@@ -2,11 +2,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-paginacao-tabela',
-  templateUrl: './paginacao-tabela.component.html',
-  styleUrls: ['./paginacao-tabela.component.css']
+  selector: 'app-pagination-table',
+  templateUrl: './pagination-table.component.html',
+  styleUrls: ['./pagination-table.component.css']
 })
-export class PaginacaoTabelaComponent implements OnInit {
+export class PaginationTableComponent implements OnInit {
 
   back: string;
   next: string;

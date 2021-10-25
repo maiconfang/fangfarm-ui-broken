@@ -89,7 +89,7 @@
 	"FORM_VALIDATIONS": {
 		"REQUERID": " é obrigatório",
 		"MIN_LENGTH": " precisa ter no mínimo ",
-		"MAX_LENGTH":  " precisa ter no máximo ",
+		"MAX_LENGTH":  " pode ter no máximo ",
 		"CHARACTERS": " caracteres"
 	},
 

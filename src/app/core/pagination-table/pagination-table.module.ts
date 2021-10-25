@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { PaginacaoTabelaComponent } from './paginacao-tabela.component';
+import { PaginationTableComponent } from './pagination-table.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @NgModule({
     imports: [ CommonModule, TooltipModule.forRoot() ],
-    declarations: [ PaginacaoTabelaComponent ],
-    exports: [ PaginacaoTabelaComponent ]
+    declarations: [ PaginationTableComponent ],
+    exports: [ PaginationTableComponent ]
   })
-export class PaginacaoTabelaModule { }
+export class PaginationTableModule { }

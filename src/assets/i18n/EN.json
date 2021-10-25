@@ -88,7 +88,7 @@
 	"FORM_VALIDATIONS": {
 		"REQUERID": " is required",
 		"MIN_LENGTH": " need to have at least ",
-		"MAX_LENGTH":  " need to have at most ",
+		"MAX_LENGTH":  " may have have at most ",
 		"CHARACTERS": " characters"
 	},
 

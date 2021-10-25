@@ -2,11 +2,11 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-dialog-confirmacao',
-  templateUrl: './dialog-confirmacao.component.html',
-  styleUrls: ['./dialog-confirmacao.component.css']
+  selector: 'app-dialog-confirmation',
+  templateUrl: './dialog-confirmation.component.html',
+  styleUrls: ['./dialog-confirmation.component.css']
 })
-export class DialogConfirmacaoComponent implements OnInit {
+export class DialogConfirmationComponent implements OnInit {
 
   @Output() eventConfirm = new EventEmitter();
 

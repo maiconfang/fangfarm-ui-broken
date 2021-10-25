@@ -1,16 +1,16 @@
 import { FormGroup } from '@angular/forms';
-import { CrudServiceImpl } from 'src/app/core/crud-generico/crud-service-impl';
-import { MensagemToastService } from '../mensagem-toast/mensagem.toast.service';
+import { CrudServiceImpl } from 'src/app/core/crud-generic/crud-service-impl';
+import { MessageToastService } from '../message-toast/message.toast.service';
 import { TranslateService } from '@ngx-translate/core';
 
-export abstract class CrudCadastroImpl {
+export abstract class CrudRegisterImpl {
 
     public form: FormGroup;
 
     constructor(
         protected translate: TranslateService,
         protected service: CrudServiceImpl,
-        protected toastService: MensagemToastService) {}
+        protected toastService: MessageToastService) {}
 
     findEntity(id: number) {
         this.service.findById(id).subscribe( entity => {

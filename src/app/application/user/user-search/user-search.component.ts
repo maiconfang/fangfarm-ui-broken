@@ -4,26 +4,26 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BsModalService } from 'ngx-bootstrap/modal';
 
-import { UsuarioService } from '../usuario.service';
-import { MensagemToastService } from './../../../core/mensagem-toast/mensagem.toast.service';
-import { CrudPesquisaImpl } from 'src/app/core/crud-generico/crud-pesquisa-impl';
+import { UserService } from '../user.service';
+import { MessageToastService } from '../../../core/message-toast/message.toast.service';
+import { CrudSearchImpl } from 'src/app/core/crud-generic/crud-search-impl';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-usuario-pesquisa',
-  templateUrl: './usuario-pesquisa.component.html',
-  styleUrls: ['./usuario-pesquisa.component.css']
+  selector: 'app-user-search',
+  templateUrl: './user-search.component.html',
+  styleUrls: ['./user-search.component.css']
 })
-export class UsuarioPesquisaComponent extends CrudPesquisaImpl implements OnInit {
+export class UserSearchComponent extends CrudSearchImpl implements OnInit {
 
   constructor(
     protected translate: TranslateService,
     private formBuilder: FormBuilder,
     private router: Router,
-    protected usuarioService: UsuarioService,
-    protected toastService: MensagemToastService,
+    protected userService: UserService,
+    protected toastService: MessageToastService,
     protected modalService: BsModalService) {
-      super(translate, usuarioService, toastService, modalService);
+      super(translate, userService, toastService, modalService);
     }
 
   ngOnInit() {
@@ -44,8 +44,8 @@ export class UsuarioPesquisaComponent extends CrudPesquisaImpl implements OnInit
   }
 
 
-  search(paginacao = 0) {
-  this.service.listPaginated(this.form.value, paginacao)
+  search(pagination = 0) {
+  this.service.listPaginated(this.form.value, pagination)
     .subscribe(data => {
       this.page = data.page;
       if(data.page.totalElements > 0  ){
