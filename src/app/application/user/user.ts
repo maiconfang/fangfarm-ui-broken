@@ -1,11 +1,12 @@
 export class User {
     id: number;
-    nome: string;
+    name: string;
     email: string;
   
   }
 
 export class UserFilter {
-    nome: string;
+    name: string;
     email: string;
+    login: string;
 }

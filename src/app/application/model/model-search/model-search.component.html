@@ -10,7 +10,7 @@
     </div>
 
     <div class="input-group mb-3" style="margin-top: 8px;">
-      <input id="filter-model-name" type="text" class="form-control"
+      <input id="filter-model-name" type="text" class="form-control" tooltip="{{ 'MODEL.MODEL_LABEL_FILTER' | translate }}"
         placeholder="{{ 'MODEL.MODEL_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2"
         formControlName="name">
       <div class="input-group-append">
@@ -23,18 +23,18 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col" class="coluna-acoes-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+            <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
             <th scope="col">{{ 'MODEL.SEARCH_COLUMN_NAME' | translate }}</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let entity of entities ">
             <td>
-              <div class="coluna-acoes-crud-body" *ngIf="entity.id > 0">
+              <div class="column-action-crud-body" *ngIf="entity.id > 0">
                 <a id="action-update-model" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
                   [routerLink]="['/app/model', entity.id]"><i class="fa fa-edit"></i></a>
                 <button id="action-remove-model" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" type="button"
-                  (click)="confirmRemoval(entity)" class="botao-sem-fundo"><i
+                  (click)="confirmRemoval(entity)" class="bottomless-button"><i
                     class="far fa-trash-alt"></i></button>
               </div>
             </td>

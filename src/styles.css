@@ -4,24 +4,24 @@ body {
   height: 100%;
 }
 
-.botao-sem-fundo {
+.bottomless-button {
   background: none;
   border: none;
 }
 
-.coluna-acoes-crud-header {
+.column-action-crud-header {
   width: 110px;
 }
 
-.coluna-acoes-crud-body>a,
+.column-action-crud-body>a,
 button {
   color: #595959;
   margin-right: 0.3em;
   margin-left: 0.3em;
 }
 
-.botoes-crud-content>button {
-  margin: 0.3em;
+.buttons-crud-content>button {
+  margin-top: 0.8em;
 }
 
 .check-box {
@@ -42,3 +42,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.title-screen-create {
+  text-align:center;
+}

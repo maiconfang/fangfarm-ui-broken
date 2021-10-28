@@ -70,7 +70,7 @@
 	},
 
 	"CONTACT": {
-		"CONTACT_TITLE": "E-Mail to contact:",
+		"CONTACT_TITLE": "E-mail to contact:",
 		"CONTACT_DESCRIPTION": "gomaiconfang@gmail.com"
 	},
 
@@ -89,7 +89,8 @@
 		"REQUERID": " is required",
 		"MIN_LENGTH": " need to have at least ",
 		"MAX_LENGTH":  " may have have at most ",
-		"CHARACTERS": " characters"
+		"CHARACTERS": " characters",
+		"EMAIL": " need to have the @"
 	},
 
 	"NAV_BAR": {
@@ -102,8 +103,10 @@
 
 	"SIDE_BAR": {
 		"MODEL" : "Model",
+		"USER" : "User",
 		"SEE_POSTS": "See Records",
-		"ADD_MODEL": "Add Model"
+		"ADD_MODEL": "Add Model",
+		"ADD_USER": "Add User"
 	},
 
 	"CRUD": {
@@ -134,6 +137,18 @@
 		"TITLE": "Model",
 		"TITLE_EDIT": "Edit of Model",
 		"TITLE_NEW": "New Model"
+	},
+
+	"USER": {
+		"SEARCH_COLUMN_NAME": "User",
+		"SEARCH_COLUMN_EMAIL": "Login / E-mail",
+		"USER_LABEL_FILTER": "Name of user",
+		"LABEL_NAME": "Name of user",
+		"LABEL_EMAIL": "E-mail of user",
+		"LABEL_PASSWORD": "Password of user",
+		"TITLE": "User",
+		"TITLE_EDIT": "Edit of User",
+		"TITLE_NEW": "New User"
 	},
 
 	"PAGINATOR": {

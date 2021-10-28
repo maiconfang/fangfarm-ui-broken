@@ -1,20 +1,21 @@
 <section class="container mt-5">
-  <h1>Usuário</h1>
+  <h1>{{ 'USER.TITLE' | translate }}</h1>
 
   <form [formGroup]="form" (ngSubmit)="search()">
 
-    <div class="row justify-content-center">
-      <button type="button" class="btn btn-primary" routerLink="/app/usuario/novo">Criar Novo</button>
-      <div *ngIf="exibirGifAguarde">
-        <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
-      </div>
+    <div class="justify-content-center">
+      <button id="filter-new-user" type="button" class="btn btn-primary"
+        tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/user/new">{{ 'CRUD.NEW' | translate
+        }}</button>
     </div>
 
-    <div class="form-group form-inline">
-      <div style="margin-top: 8px;">
-        Nome: <input class="form-control ml-2" formControlName="nome"/>
-        E-Mail: <input class="form-control ml-2" formControlName="email"/>
-        <button type="submit" class="btn btn-primary" [disabled]="form.invalid"><i class="fas fa-search"></i></button>
+    <div class="input-group mb-3" style="margin-top: 8px;">
+      <input id="filter-user-name" type="text" class="form-control"
+        placeholder="{{ 'USER.USER_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2"
+        formControlName="name">
+      <div class="input-group-append">
+        <button id="filter-consult-user" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
+          type="submit"><i class="fas fa-search"></i></button>
       </div>
     </div>
 
@@ -22,21 +23,21 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col" class="coluna-acoes-crud-header">Ação</th>            
-            <th scope="col">Nome</th>
-            <th scope="col">Login</th>
+            <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+            <th scope="col">{{ 'USER.SEARCH_COLUMN_NAME' | translate }}</th>
+            <th scope="col">{{ 'USER.SEARCH_COLUMN_EMAIL' | translate }}</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let entity of entities">
+          <tr *ngFor="let entity of entities ">
             <td>
-              <div class="coluna-acoes-crud-body" *ngIf="entity.id > 0">
-                <a [routerLink]="['/app/usuario', entity.id]"><i class="fa fa-edit"></i></a>
-                <button type="button" (click)="confirmRemoval(entity)" class="botao-sem-fundo"><i class="far fa-trash-alt"></i></button>
-              </div>  
-            </td>            
-            <td>{{ entity.nome }}</td>
-            <td>{{ entity.email }}</td>
+              <div class="column-action-crud-body" *ngIf="entity.id > 0">
+                <a id="action-update-user" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
+                  [routerLink]="['/app/user', entity.id]"><i class="fa fa-edit"></i></a>
+              </div>
+            </td>
+            <td id="column-user-name" tooltip="{{ 'USER.LABEL_NAME' | translate }}">{{ entity.name }}</td>
+            <td id="column-user-email" tooltip="{{ 'USER.LABEL_EMAIL' | translate }}">{{ entity.email }}</td>
           </tr>
         </tbody>
       </table>

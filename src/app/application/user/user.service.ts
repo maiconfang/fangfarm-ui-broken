@@ -15,7 +15,7 @@ export class UserService extends CrudServiceImpl {
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.userUrl = `${environment.apiURL}/v1/usuarios`;
+    this.userUrl = `${environment.apiURL}/v1/usserrs`;
   }
 
   getUrlResource(): string {
@@ -24,8 +24,8 @@ export class UserService extends CrudServiceImpl {
 
   listPaginated(filter: UserFilter, page: number, parameters = new HttpParams()): Observable<any> {
 
-    if (filter.nome) {
-      parameters = parameters.set('nome', filter.nome);
+    if (filter.name) {
+      parameters = parameters.set('name', filter.name);
     }
 
     if (filter.email) {

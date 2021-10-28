@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { AuthenticationService } from 'src/app/authentication/authentication.service';
-import { Usuario, UserSession } from 'src/app/authentication/user-session.service';
+import { User, UserSession } from 'src/app/authentication/user-session.service';
 
 
 @Component({
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form) {
-    this.auth.login(<Usuario>this.form.value)
+    this.auth.login(<User>this.form.value)
       .subscribe(
         data => {
           console.log('Redirecionando');

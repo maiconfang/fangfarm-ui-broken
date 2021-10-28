@@ -6,7 +6,7 @@ import { Observable, throwError } from 'rxjs';
 import { tap, catchError, finalize } from 'rxjs/operators';
 
 import { StorageService } from '../shared/storage/storage.service';
-import { Usuario } from './user-session.service';
+import { User } from './user-session.service';
 import {TranslateService} from '@ngx-translate/core';
 
 @Injectable({
@@ -29,17 +29,17 @@ export class AuthenticationService {
 
   }
 
-  login(usuario: Usuario): Observable<string> {
+  login(user: User): Observable<string> {
 
-    const body = `username=${usuario.login}&password=${usuario.pass}&grant_type=password`;
+    const body = `username=${user.login}&password=${user.pass}&grant_type=password`;
 
     return this.http.post<string>(this.oauthTokenUrl + '/token', body)
 
       .pipe(
         tap((res: any) => {
           this.storage.setLocalStorage('token', res.access_token);
-          this.storage.setLocalStorage('login', usuario.login);
-          this.storage.setLocalStorage('usuario_id', res.usuario_id);
+          this.storage.setLocalStorage('login', user.login);
+          this.storage.setLocalStorage('user_id', res.usserr_id);
           this.storage.setLocalStorage('current_lang', this.translate.currentLang);
         })
 
@@ -57,7 +57,7 @@ export class AuthenticationService {
         }),
         catchError((err: HttpErrorResponse) => {
           this.storage.setLocalStorage('token', null)
-          this.storage.setLocalStorage('usuario', null)
+          this.storage.setLocalStorage('user', null)
           return throwError(err);
         })
       );
@@ -70,7 +70,7 @@ export class AuthenticationService {
       .then(() => {
         console.log('FINALIZE')
         this.storage.setLocalStorage('token', null)
-        this.storage.setLocalStorage('usuario', null)
+        this.storage.setLocalStorage('user', null)
       });
   }
 

@@ -71,7 +71,7 @@
 	},
 
 	"CONTACT": {
-		"CONTACT_TITLE": "E-Mail para contato:",
+		"CONTACT_TITLE": "E-mail para contato:",
 		"CONTACT_DESCRIPTION": "gomaiconfang@gmail.com"
 	},
 
@@ -90,7 +90,8 @@
 		"REQUERID": " é obrigatório",
 		"MIN_LENGTH": " precisa ter no mínimo ",
 		"MAX_LENGTH":  " pode ter no máximo ",
-		"CHARACTERS": " caracteres"
+		"CHARACTERS": " caracteres",
+		"EMAIL": " precisa ter o @"
 	},
 
 	"NAV_BAR": {
@@ -103,8 +104,10 @@
 
 	"SIDE_BAR": {
 		"MODEL" : "Modelo",
+		"USER" : "Usuário",
 		"SEE_POSTS": "Ver Registros",
-		"ADD_MODEL": "Adicionar Modelo"
+		"ADD_MODEL": "Adicionar Modelo",
+		"ADD_USER": "Adicionar Usuário"
 	},
 
 	"CRUD": {
@@ -116,7 +119,7 @@
 		"ACTION": "Ações",
 		"ACTION_UPDATE": "Atualizar",
 		"ACTION_REMOVE": "Remover",
-		"TOOLTIP_FILTER": "Consltar registros",
+		"TOOLTIP_FILTER": "Consultar registros",
 		"TOOLTIP_CREATE_NEW": "Criar novo registro",
 		"TOOLTIP_SAVE": "Salvar registro",
 		"TOOLTIP_BACK": "Voltar para pesquisa",
@@ -135,6 +138,18 @@
 		"TITLE": "Modelo",
 		"TITLE_EDIT": "Edição do Modelo",
 		"TITLE_NEW": "Novo Modelo"
+	},
+
+	"USER": {
+		"SEARCH_COLUMN_NAME": "Usuário",
+		"SEARCH_COLUMN_EMAIL": "Login / E-mail",
+		"USER_LABEL_FILTER": "Nome do usuário",
+		"LABEL_NAME": "Nome do usuário",
+		"LABEL_EMAIL": "E-mail do usuário",
+		"LABEL_PASSWORD": "Senha do usuário",
+		"TITLE": "Usuário",
+		"TITLE_EDIT": "Edição do Usuário",
+		"TITLE_NEW": "Novo Usuário"
 	},
 
 	"PAGINATOR": {

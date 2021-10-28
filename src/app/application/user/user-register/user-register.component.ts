@@ -16,6 +16,8 @@ export class UserRegisterComponent extends CrudRegisterImpl implements OnInit {
 
   form: FormGroup;
   titleUser: string;
+  id: number;
+  showPassword: boolean;
 
   constructor(
     protected translate: TranslateService,
@@ -24,45 +26,56 @@ export class UserRegisterComponent extends CrudRegisterImpl implements OnInit {
     private router: Router,
     protected userService: UserService,
     protected toastService: MessageToastService) {
-      super(translate, userService, toastService)
-      this.createForm();
-    }
+    super(translate, userService, toastService)
+    this.createForm();
+  }
 
-    ngOnInit() {
 
-      const id: number = this.route.snapshot.params['id'];
+  ngOnInit() {
 
-      if (id) {
-        this.titleUser = 'Edição de Usuário';
-        super.findEntity(id);
-      } else {
-        this.titleUser = 'Novo Usuário';
-      }
-    }
+    this.id = this.route.snapshot.params['id'];
 
-    createForm() {
-      this.form = this.formBuilder.group({
-        id: [''],
-        nome: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
-        email: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(100)]],
-        senha: [''],
+    if (this.id) {
+      this.translate.get('USER.TITLE_EDIT').subscribe((text: string) => {
+        this.titleUser = text;
+        this.form.removeControl('password');
+      });
+      this.findEntity(this.id);
+    } else {
+      this.translate.get('USER.TITLE_NEW').subscribe((text: string) => {
+        this.titleUser = text
       });
     }
 
-    redirectAfterAdd(entity: any) {
-      this.router.navigate(['/app/usuario', entity.id]);
-    }
-
-    backToSearch() {
-      this.router.navigate(['/usuario']);
-    }
-
-    update() {
-      this.form.removeControl('senha');
-      this.service.update(this.form.value).subscribe( entity => {
-          this.toastService.showMessageSuccess('Atualizado com sucesso');
-          this.updateFormWithEntity(entity);
-      });
+    if (typeof this.id === 'undefined') {
+      this.showPassword = true;
     }
 
   }
+
+  createForm() {
+    this.form = this.formBuilder.group({
+      id: [''],
+      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(80)]],
+      email: ['', [Validators.email, Validators.required, Validators.minLength(4), Validators.maxLength(100)]],
+      password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(80)]],
+    });
+  }
+
+  redirectAfterAdd(entity: any) {
+    this.router.navigate(['/app/user', entity.id]);
+  }
+
+  backToSearch() {
+    this.router.navigate(['/user']);
+  }
+
+  update() {
+    this.form.removeControl('password');
+    this.service.update(this.form.value).subscribe(entity => {
+      this.toastService.showMessageSuccess(this.translate.instant('CRUD.MSG_SUCCESS_UPDATED'));
+      this.updateFormWithEntity(entity);
+    });
+  }
+
+}

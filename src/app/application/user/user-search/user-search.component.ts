@@ -28,19 +28,21 @@ export class UserSearchComponent extends CrudSearchImpl implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      nome: ['', [Validators.maxLength(100)]],
+      name: ['', [Validators.maxLength(100)]],
       email: ['', [Validators.maxLength(100)]]
     });
 
-    super.search();
+    this.search();
   }
 
+  
+
   new() {
-    this.router.navigate(['/usuario/novo']);
+    this.router.navigate(['/user/new']);
   }
 
   confirmRemoval(entity: any, identification = '') {
-    super.confirmRemoval(entity, entity.username);
+    super.confirmRemoval(entity, entity.name);
   }
 
 
@@ -49,7 +51,7 @@ export class UserSearchComponent extends CrudSearchImpl implements OnInit {
     .subscribe(data => {
       this.page = data.page;
       if(data.page.totalElements > 0  ){
-        this.entities = data._embedded.usuarios;
+        this.entities = data._embedded.usserrs;
       } else 
       this.entities = [{}]
     });

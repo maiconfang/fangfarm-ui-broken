@@ -19,7 +19,9 @@ export class FormValidations {
                    `${validatorValue.requiredLength}` + this.translate.instant('FORM_VALIDATIONS.CHARACTERS'),
 
       'maxlength': `${fieldName}` + this.translate.instant('FORM_VALIDATIONS.MAX_LENGTH') +
-                   `${validatorValue.requiredLength}` + this.translate.instant('FORM_VALIDATIONS.CHARACTERS')
+                   `${validatorValue.requiredLength}` + this.translate.instant('FORM_VALIDATIONS.CHARACTERS'),
+      
+      'email': `${fieldName}` + this.translate.instant('FORM_VALIDATIONS.EMAIL')
 
     };
 

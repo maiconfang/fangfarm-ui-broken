@@ -1,41 +1,43 @@
 <section class="container mt-5">
-  <h1>{{ titleUser }}</h1>
-  
+  <h1 class="title-screen-create"> {{ titleUser }} </h1>
+
   <form [formGroup]="form" (ngSubmit)="save()">
-
-    <div class="row justify-content-center botoes-crud-content">
-      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Salvar</button>
-      <button type="button" class="btn btn-secondary" routerLink="/app/usuario">Voltar para pesquisa</button>
-    </div>
-
-
     <div class="form-row">
 
-      <div class="form-group col">
-        <label>Nome*</label>
-        <input type="text" class="form-control" formControlName="nome">
-        <app-form-messages-erro [control]="form.get('nome')" label="O nome"></app-form-messages-erro>
+      <div class="form-group col form-group mb-3">
+        <label class="requiredLabel">{{ 'USER.LABEL_NAME' | translate }}</label>
+        <input id="user-name" type="text" class="form-control" formControlName="name" tooltip="{{ 'USER.LABEL_NAME' | translate }}">
+        <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'USER.LABEL_NAME' | translate }}">
+        </app-form-messages-erro>
       </div>
 
-      <div class="form-group col">
-        <label>Login/E-mail*</label>
-        <input type="text" class="form-control" formControlName="email">
-        <app-form-messages-erro [control]="form.get('email')" label="O login"></app-form-messages-erro>
+      <div class="form-group col form-group mb-3">
+        <label class="requiredLabel">{{ 'USER.LABEL_EMAIL' | translate }}</label>
+        <input id="user-email" type="text" class="form-control" formControlName="email" tooltip="{{ 'USER.LABEL_EMAIL' | translate }}">
+        <app-form-messages-erro [control]="$any(form).controls['email']" label="{{ 'USER.LABEL_EMAIL' | translate }}">
+        </app-form-messages-erro>
       </div>
 
     </div>
 
     <div class="form-row">
 
-      <div class="form-group col" *ngIf="titleUser !== 'Edição de Usuário'">
-        <label>Senha</label>
-        <input type="password" class="form-control" formControlName="senha">
-        <app-form-messages-erro [control]="form.get(senha)" label="A senha"></app-form-messages-erro>
+      <div class="form-group col form-group mb-3" *ngIf=" showPassword === true ">
+        <label class="requiredLabel" >{{ 'USER.LABEL_PASSWORD' | translate }}</label>
+        <input id="user-password" type="password" class="form-control" formControlName="password"
+          tooltip="{{ 'USER.LABEL_PASSWORD' | translate }}">
+        <app-form-messages-erro [control]="$any(form).controls['password']"
+          label="{{ 'USER.LABEL_PASSWORD' | translate }}"></app-form-messages-erro>
       </div>
 
-      
     </div>
 
+    <div class="buttons-crud-content">
+      <button id="btn-save-user" type="submit" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}"
+        [disabled]="form.invalid">{{ 'CRUD.SAVE' | translate }}</button>
+      <button id="btn-back" type="button" class="btn btn-secondary" tooltip="{{ 'CRUD.TOOLTIP_BACK' | translate }}"
+        routerLink="/app/user">{{ 'CRUD.BACK' | translate }}</button>
+    </div>
 
 
     <!--

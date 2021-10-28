@@ -13,16 +13,16 @@ export class UserSession {
 
   constructor(private storage: StorageService) { }
 
-  get user(): Usuario {
-    return this.storage.getLocalStorage('usuario')
+  get user(): User {
+    return this.storage.getLocalStorage('user')
   }
 
-  fethUser(): Promise<Usuario> {
-    return Promise.resolve(this.storage.getLocalStorage('usuario'))
+  fethUser(): Promise<User> {
+    return Promise.resolve(this.storage.getLocalStorage('user'))
   }
 
-  getUser(): Usuario {
-    return this.storage.getLocalStorage('usuario')
+  getUser(): User {
+    return this.storage.getLocalStorage('user')
   }
 
   hasRole(...regra: string[]): boolean {
@@ -47,14 +47,14 @@ export class UserSession {
 
   }
 
-  async setUserLogged(usuario: Usuario) {
-    this.storage.setLocalStorage('usuario', usuario)
+  async setUserLogged(user: User) {
+    this.storage.setLocalStorage('user', user)
     return true;
   }
 
 }
 
-export interface Usuario {
+export interface User {
 
   id: number;
   pass: string;
