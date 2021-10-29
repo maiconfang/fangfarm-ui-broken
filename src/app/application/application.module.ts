@@ -37,6 +37,11 @@ import { GroupService } from './group/group.service';
 import { GroupRegisterComponent } from './group/group-register/group-register.component';
 import { GroupSearchComponent } from './group/group-search/group-search.component';
 
+import { EmployeeModule } from './employee/employee.module';
+import { EmployeeService } from './employee/employee.service';
+import { EmployeeRegisterComponent } from './employee/employee-register/employee-register.component';
+import { EmployeeSearchComponent } from './employee/employee-search/employee-search.component';
+
 
 const routesApp: Routes = [
   {
@@ -54,6 +59,14 @@ const routesApp: Routes = [
       { path: 'city', component: CitySearchComponent },
       { path: 'city/new', component: CityRegisterComponent },
       { path: 'city/:id', component: CityRegisterComponent },
+
+      { path: 'city', component: CitySearchComponent },
+      { path: 'city/new', component: CityRegisterComponent },
+      { path: 'city/:id', component: CityRegisterComponent },
+
+      { path: 'employee', component: EmployeeSearchComponent },
+      { path: 'employee/new', component: EmployeeRegisterComponent },
+      { path: 'employee/:id', component: EmployeeRegisterComponent },
 
       { path: 'state', component: StateSearchComponent },
       { path: 'state/new', component: StateRegisterComponent },
@@ -80,14 +93,15 @@ const routesApp: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routesApp),
+    TooltipModule.forRoot(),
     SharedModule,
     ModelModule,
     UserModule,
     CityModule,
     StateModule,
     GroupModule,
-    TooltipModule.forRoot(),
-  
+    EmployeeModule,
+    
   ],
   exports: [
     ApplicationComponent, RouterModule
@@ -98,6 +112,7 @@ const routesApp: Routes = [
     CityService,
     StateService,
     GroupService,
+    EmployeeService,
   
   ]
 })

@@ -1,0 +1,56 @@
+<section class="container mt-5">
+  <h1 class="title-screen-search">{{ 'EMPLOYEE.TITLE_CONSULT' | translate }}</h1>
+
+  <form [formGroup]="form" (ngSubmit)="search()">
+
+    <div class="justify-content-center">
+      <button id="filter-new-employee" type="button" class="btn btn-primary"
+        tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/employee/new">{{ 'CRUD.NEW' | translate
+        }}</button>
+    </div>
+
+    <div class="input-group mb-3" style="margin-top: 8px;">
+      <input id="filter-employee-name" type="text" class="form-control"
+        tooltip="{{ 'EMPLOYEE.EMPLOYEE_LABEL_FILTER' | translate }}"
+        placeholder="{{ 'EMPLOYEE.EMPLOYEE_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2"
+        formControlName="name">
+      <div class="input-group-append">
+        <button id="filter-consult-employee" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
+          type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+            <th scope="col">{{ 'EMPLOYEE.SEARCH_COLUMN_NAME' | translate }}</th>
+            <th scope="col">{{ 'EMPLOYEE.SEARCH_COLUMN_RG' | translate }}</th>
+            <th scope="col">{{ 'EMPLOYEE.SEARCH_COLUMN_CPF' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entity of entities ">
+            <td>
+              <div class="column-action-crud-body" *ngIf="entity.id > 0">
+                <a id="action-update-employee" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
+                  [routerLink]="['/app/employee', entity.id]"><i class="fa fa-edit"></i></a>
+                <button id="action-remove-employee" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" type="button"
+                  (click)="confirmRemoval(entity)" class="bottomless-button"><i class="far fa-trash-alt"></i></button>
+              </div>
+            </td>
+            <td id="column-employee-name" tooltip="{{ 'EMPLOYEE.TOOLTIP_EMPLOYEE' | translate }}">{{ entity.name }}</td>
+            <td id="column-employee-rg" tooltip="{{ 'EMPLOYEE.TOOLTIP_RG' | translate }}">{{ entity.rg }}</td>
+            <td id="column-employee-cpf" tooltip="{{ 'EMPLOYEE.TOOLTIP_CPF' | translate }}">{{ entity.cpf }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <app-pagination-table [page]="page" (paginationEvent)=changePage($event) style="width: 100%">
+      </app-pagination-table>
+    </div>
+
+  </form>
+
+  <app-form-debug [form]="form"></app-form-debug>
+</section>

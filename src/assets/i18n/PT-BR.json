@@ -105,12 +105,14 @@
 		"MODEL" : "Modelo",
 		"STATE": "Estado",
 		"CITY" : "Cidade",
+		"EMPLOYEE" : "Colaborador",
 		"GROUP" : "Grupo",
 		"USER" : "Usuário",
 		"SEE_POSTS": "Ver Registros",
 		"ADD_MODEL": "Adicionar Modelo",
 		"ADD_STATE": "Adicionar Estado",
 		"ADD_CITY": "Adicionar Cidade",
+		"ADD_EMPLOYEE": "Adicionar Colaborador",
 		"ADD_GROUP": "Adicionar Grupo",
 		"ADD_USER": "Adicionar Usuário"
 	},
@@ -191,6 +193,29 @@
 		"TITLE_EDIT": "Edição do Grupo",
 		"TITLE_NEW": "Novo Grupo",
 		"TOOLTIP_GROUP": "Nome do grupo"
+	},
+
+	"EMPLOYEE": {
+		"SEARCH_COLUMN_NAME": "Colaborador",
+		"SEARCH_COLUMN_RG": "RG",
+		"SEARCH_COLUMN_CPF": "CPF",
+		"EMPLOYEE_LABEL_FILTER": "Nome do colaborador",
+		"LABEL_NAME": "Nome",
+		"LABEL_RG": "RG",
+		"LABEL_CPF": "CPF",
+		"LABEL_ZIP": "CEP",
+		"LABEL_TYPE": "Logradouro",
+		"LABEL_NUMBER": "Número",
+		"LABEL_COMPLEMENT": "Complemento",
+		"LABEL_BLOCK": "Bairro",
+		"TITLE_CONSULT": "Consultar Colaborador",
+		"TITLE_EDIT": "Edição do Colaborador",
+		"TITLE_NEW": "Novo Colaborador",
+		"TOOLTIP_EMPLOYEE": "Nome do colaborador",
+		"TOOLTIP_RG": "RG do colaborador",
+		"TOOLTIP_CPF": "CPF do colaborador",
+		"LABEL_CITY": "Cidade",
+		"TOOLTIP_CITY": "Nome da cidade"
 	},
 
 	"PAGINATOR": {

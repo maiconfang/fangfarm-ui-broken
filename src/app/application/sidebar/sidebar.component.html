@@ -36,6 +36,17 @@
     </li>
 
     <li>
+      <a aria-expanded="false" routerLink="/app/employee">
+        <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.EMPLOYEE' | translate }}</span>
+        <i class="fas fa-angle-down"></i>
+      </a>
+      <ul aria-expanded="false">
+        <li><a routerLink="/app/employee">{{ 'SIDE_BAR.SEE_POSTS' | translate }}</a></li>
+        <li><a routerLink="/app/employee/new">{{ 'SIDE_BAR.ADD_EMPLOYEE' | translate }}</a></li>
+      </ul>
+    </li>
+
+    <li>
       <a aria-expanded="false" routerLink="/app/group">
         <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.GROUP' | translate }}</span>
         <i class="fas fa-angle-down"></i>

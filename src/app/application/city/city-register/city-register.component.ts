@@ -84,8 +84,6 @@ export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
   }
 
   onSelect(event: TypeaheadMatch) {
-    console.log(event);
-
     var i = 0;
     while (i < this.states.length) {
       if (this.states[i].name === event.item.name) {

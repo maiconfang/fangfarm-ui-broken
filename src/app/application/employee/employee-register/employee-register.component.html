@@ -1,0 +1,103 @@
+<section class="container mt-5">
+    <h1 class="title-screen-create">{{ titleEmployee }}</h1>
+  
+    <form [formGroup]="form" (ngSubmit)="save()">
+  
+      <div>
+        <div class="form-row">
+          <div formGroupName="address">
+
+            <div class="form-group col" formGroupName="city">
+
+              <input id="employee-city" formControlName="name"
+              [typeahead]="cities"
+              typeaheadOptionField="name"
+              (typeaheadOnSelect)="onSelect($event)"
+              [typeaheadOptionsLimit]="7"
+              [typeaheadMinLength]="0"
+              placeholder="{{ 'EMPLOYEE.LABEL_CITY' | translate }}"
+              class="form-control"  tooltip="{{ 'EMPLOYEE.TOOLTIP_CITY' | translate }}">
+              
+            </div>
+          </div>
+  
+          <div class="form-group col">
+            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_NAME' | translate }}</label>
+            <input id="employee-name" type="text" class="form-control" formControlName="name"
+              tooltip="{{ 'EMPLOYEE.LABEL_NAME' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'EMPLOYEE.LABEL_NAME' | translate }}">
+            </app-form-messages-erro>
+          </div>
+
+          <div class="form-group col">
+            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_RG' | translate }}</label>
+            <input id="employee-rg" type="text" class="form-control" formControlName="rg"
+              tooltip="{{ 'EMPLOYEE.LABEL_RG' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['rg']" label="{{ 'EMPLOYEE.LABEL_RG' | translate }}">
+            </app-form-messages-erro>
+          </div>
+
+          <div class="form-group col">
+            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_CPF' | translate }}</label>
+            <input id="employee-cpf" type="text" class="form-control" formControlName="cpf"
+              tooltip="{{ 'EMPLOYEE.LABEL_CPF' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['cpf']" label="{{ 'EMPLOYEE.LABEL_CPF' | translate }}">
+            </app-form-messages-erro>
+          </div>
+
+          <div class="form-group col" formGroupName="address">
+            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_ZIP' | translate }}</label>
+            <input id="employee-zip" type="text" class="form-control" formControlName="zip"
+              tooltip="{{ 'EMPLOYEE.LABEL_ZIP' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['cpf']" label="{{ 'EMPLOYEE.LABEL_ZIP' | translate }}">
+            </app-form-messages-erro>
+          </div>
+
+          <div class="form-group col" formGroupName="address">
+            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_TYPE' | translate }}</label>
+            <input id="employee-type" type="text" class="form-control" formControlName="type"
+              tooltip="{{ 'EMPLOYEE.LABEL_TYPE' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['cpf']" label="{{ 'EMPLOYEE.LABEL_TYPE' | translate }}">
+            </app-form-messages-erro>
+          </div>
+
+          <div class="form-group col" formGroupName="address">
+            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_NUMBER' | translate }}</label>
+            <input id="employee-number" type="text" class="form-control" formControlName="number"
+              tooltip="{{ 'EMPLOYEE.LABEL_NUMBER' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['cpf']" label="{{ 'EMPLOYEE.LABEL_NUMBER' | translate }}">
+            </app-form-messages-erro>
+          </div>
+
+          <div class="form-group col" formGroupName="address">
+            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_COMPLEMENT' | translate }}</label>
+            <input id="employee-complement" type="text" class="form-control" formControlName="complement"
+              tooltip="{{ 'EMPLOYEE.LABEL_COMPLEMENT' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['cpf']" label="{{ 'EMPLOYEE.LABEL_COMPLEMENT' | translate }}">
+            </app-form-messages-erro>
+          </div>
+
+          <div class="form-group col" formGroupName="address">
+            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}</label>
+            <input id="employee-block" type="text" class="form-control" formControlName="block"
+              tooltip="{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['cpf']" label="{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}">
+            </app-form-messages-erro>
+          </div>
+
+
+        </div>
+      </div>
+  
+      <div class="buttons-crud-content">
+        <button id="btn-save-employee" type="submit" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}"
+          [disabled]="form.invalid">{{ 'CRUD.SAVE' | translate }}</button>
+        <button id="btn-back" type="button" class="btn btn-secondary" tooltip="{{ 'CRUD.TOOLTIP_BACK' | translate }}"
+          routerLink="/app/employee">{{ 'CRUD.BACK' | translate }}</button>
+      </div>
+  
+  
+    </form>
+  
+    <app-form-debug [form]="form"></app-form-debug>
+  </section>
