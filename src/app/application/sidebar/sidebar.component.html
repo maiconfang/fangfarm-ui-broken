@@ -14,18 +14,26 @@
     </li>
 
     <li>
-      <a aria-expanded="false" routerLink="/app/model">
-        <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.MODEL' | translate }}</span>
+      <a aria-expanded="false" routerLink="/app/state">
+        <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.STATE' | translate }}</span>
         <i class="fas fa-angle-down"></i>
       </a>
       <ul aria-expanded="false">
-        <li><a routerLink="/app/model">{{ 'SIDE_BAR.SEE_POSTS' | translate }}</a></li>
-        <li><a routerLink="/app/model/new">{{ 'SIDE_BAR.ADD_MODEL' | translate }}</a></li>
+        <li><a routerLink="/app/state">{{ 'SIDE_BAR.SEE_POSTS' | translate }}</a></li>
+        <li><a routerLink="/app/state/new">{{ 'SIDE_BAR.ADD_STATE' | translate }}</a></li>
       </ul>
     </li>
 
-
-    <!-- User -->
+    <li>
+      <a aria-expanded="false" routerLink="/app/city">
+        <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.CITY' | translate }}</span>
+        <i class="fas fa-angle-down"></i>
+      </a>
+      <ul aria-expanded="false">
+        <li><a routerLink="/app/city">{{ 'SIDE_BAR.SEE_POSTS' | translate }}</a></li>
+        <li><a routerLink="/app/city/new">{{ 'SIDE_BAR.ADD_CITY' | translate }}</a></li>
+      </ul>
+    </li>
 
     <li>
       <a aria-expanded="false" routerLink="/app/user">

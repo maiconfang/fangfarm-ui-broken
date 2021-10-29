@@ -1,0 +1,54 @@
+<section class="container mt-5">
+    <h1 class="title-screen-search">{{ 'STATE.TITLE_CONSULT' | translate }}</h1>
+  
+    <form [formGroup]="form" (ngSubmit)="search()">
+  
+      <div class="justify-content-center">
+        <button id="filter-new-state" type="button" class="btn btn-primary"
+          tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/state/new">{{ 'CRUD.NEW' | translate
+          }}</button>
+      </div>
+  
+      <div class="input-group mb-3" style="margin-top: 8px;">
+        <input id="filter-state-name" type="text" class="form-control" tooltip="{{ 'STATE.STATE_LABEL_FILTER' | translate }}"
+          placeholder="{{ 'STATE.STATE_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2"
+          formControlName="name">
+        <div class="input-group-append">
+          <button id="filter-consult-state" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
+            type="submit"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+              <th scope="col">{{ 'STATE.SEARCH_COLUMN_NAME' | translate }}</th>
+              <th scope="col">{{ 'STATE.SEARCH_COLUMN_FS' | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let entity of entities ">
+              <td>
+                <div class="column-action-crud-body" *ngIf="entity.id > 0">
+                  <a id="action-update-state" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
+                    [routerLink]="['/app/state', entity.id]"><i class="fa fa-edit"></i></a>
+                  <button id="action-remove-state" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" type="button"
+                    (click)="confirmRemoval(entity)" class="bottomless-button"><i
+                      class="far fa-trash-alt"></i></button>
+                </div>
+              </td>
+              <td id="column-state-name" tooltip="{{ 'STATE.LABEL_NAME' | translate }}">{{ entity.name }}</td>
+              <td id="column-state-fs" tooltip="{{ 'STATE.LABEL_FS' | translate }}">{{ entity.fs }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <app-pagination-table [page]="page" (paginationEvent)=changePage($event) style="width: 100%">
+        </app-pagination-table>
+      </div>
+  
+    </form>
+  
+    <app-form-debug [form]="form"></app-form-debug>
+  </section>

@@ -103,16 +103,20 @@
 
 	"SIDE_BAR": {
 		"MODEL" : "Model",
+		"STATE": "State",
+		"CITY" : "City",
 		"USER" : "User",
 		"SEE_POSTS": "See Records",
 		"ADD_MODEL": "Add Model",
+		"ADD_STATE": "Add State",
+		"ADD_CITY": "Add City",
 		"ADD_USER": "Add User"
 	},
 
 	"CRUD": {
 		"SAVE" : "Save",
 		"BACK": "Back to search",
-		"NEW": "Create new",
+		"NEW": "Create record",
 		"EXPORT": "Export",
 		"IMPORT": "Import",
 		"ACTION": "Actions",
@@ -134,7 +138,7 @@
 		"SEARCH_COLUMN_NAME": "Model",
 		"MODEL_LABEL_FILTER": "Name of model",
 		"LABEL_NAME": "Name of model",
-		"TITLE": "Model",
+		"TITLE": "Consult Model",
 		"TITLE_EDIT": "Edit of Model",
 		"TITLE_NEW": "New Model"
 	},
@@ -146,9 +150,35 @@
 		"LABEL_NAME": "Name of user",
 		"LABEL_EMAIL": "E-mail of user",
 		"LABEL_PASSWORD": "Password of user",
-		"TITLE": "User",
+		"TITLE_CONSULT": "Consult User",
 		"TITLE_EDIT": "Edit of User",
 		"TITLE_NEW": "New User"
+	},
+
+	"STATE": {
+		"SEARCH_COLUMN_NAME": "State",
+		"SEARCH_COLUMN_FS": "Federation of state",
+		"STATE_LABEL_FILTER": "Name of state",
+		"LABEL_NAME": "Name of state",
+		"LABEL_FS": "Name of federation of state",
+		"TITLE_CONSULT": "Consult State",
+		"TITLE_EDIT": "Edit of state",
+		"TITLE_NEW": "New state",
+		"TOOLTIP_STATE": "Name of state",
+		"TOOLTIP_FS": "Name of federation of state"
+	},
+	
+	"CITY": {
+		"SEARCH_COLUMN_NAME": "City",
+		"SEARCH_COLUMN_STATE": "State",
+		"CITY_LABEL_FILTER": "Name of city",
+		"LABEL_NAME": "Name of city",
+		"LABEL_STATE": "Type the name of state",
+		"TITLE_CONSULT": "Consult City",
+		"TITLE_EDIT": "Edit of City",
+		"TITLE_NEW": "New City",
+		"TOOLTIP_CITY": "Name of city",
+		"TOOLTIP_STATE": "Name of state"
 	},
 
 	"PAGINATOR": {

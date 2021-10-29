@@ -3,26 +3,26 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 import { CrudServiceImpl } from 'src/app/core/crud-generic/crud-service-impl';
-import { ModelFilter } from './model';
+import { CityFilter } from './city';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ModelService extends CrudServiceImpl {
+export class CityService extends CrudServiceImpl {
 
-  modelUrl: string;
+  cityUrl: string;
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.modelUrl = `${environment.apiURL}/v1/models`;
+    this.cityUrl = `${environment.apiURL}/v1/cities`;
   }
 
   getUrlResource(): string {
-    return this.modelUrl;
+    return this.cityUrl;
   }
 
-  listPaginated(filter: ModelFilter, page: number, parameters = new HttpParams()): Observable<any> {
+  listPaginated(filter: CityFilter, page: number, parameters = new HttpParams()): Observable<any> {
 
     if (filter.name) {
       parameters = parameters.set('name', filter.name);
@@ -32,7 +32,7 @@ export class ModelService extends CrudServiceImpl {
   }
 
   listAll(): Promise<any> {
-    return this.http.get<any>(this.modelUrl)
+    return this.http.get<any>(this.cityUrl)
       .toPromise()
       .then(response => response);
   }

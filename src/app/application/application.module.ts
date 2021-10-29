@@ -22,6 +22,16 @@ import { NotAuthorizedComponent } from '../core/not-authorized.component';
 import { PageNotFoundComponent } from '../core/page-not-found.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
+import { CityModule } from './city/city.module';
+import { CityService } from './city/city.service';
+import { CityRegisterComponent } from './city/city-register/city-register.component';
+import { CitySearchComponent } from './city/city-search/city-search.component';
+
+import { StateModule } from './state/state.module';
+import { StateService } from './state/state.service';
+import { StateRegisterComponent } from './state/state-register/state-register.component';
+import { StateSearchComponent } from './state/state-search/state-search.component';
+
 
 const routesApp: Routes = [
   {
@@ -36,6 +46,14 @@ const routesApp: Routes = [
       { path: 'user/new', component: UserRegisterComponent },
       { path: 'user/:id', component: UserRegisterComponent },
 
+      { path: 'city', component: CitySearchComponent },
+      { path: 'city/new', component: CityRegisterComponent },
+      { path: 'city/:id', component: CityRegisterComponent },
+
+      { path: 'state', component: StateSearchComponent },
+      { path: 'state/new', component: StateRegisterComponent },
+      { path: 'state/:id', component: StateRegisterComponent },
+
       { path: 'not-authorized', component: NotAuthorizedComponent },
       { path: 'page-not-found', component: PageNotFoundComponent }
     ]
@@ -48,7 +66,7 @@ const routesApp: Routes = [
     ApplicationComponent,
     NavbarComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     CommonModule,
@@ -56,6 +74,8 @@ const routesApp: Routes = [
     SharedModule,
     ModelModule,
     UserModule,
+    CityModule,
+    StateModule,
     TooltipModule.forRoot(),
   
   ],
@@ -65,6 +85,8 @@ const routesApp: Routes = [
   providers: [
     ModelService,
     UserService,
+    CityService,
+    StateService,
   
   ]
 })

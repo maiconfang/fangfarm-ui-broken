@@ -46,3 +46,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .title-screen-create {
   text-align:center;
 }
+
+.title-screen-search {
+  text-align:center;
+}

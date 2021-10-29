@@ -1,0 +1,44 @@
+<section class="container mt-5">
+    <h1 class="title-screen-create">{{ titleState }}</h1>
+
+    <form [formGroup]="form" (ngSubmit)="save()">
+
+        <div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label class="requiredLabel">{{ 'STATE.LABEL_NAME' | translate }}</label>
+                    <input id="state-name" type="text" class="form-control" formControlName="name"
+                        tooltip="{{ 'STATE.LABEL_NAME' | translate }}">
+                    <app-form-messages-erro [control]="$any(form).controls['name']"
+                        label="{{ 'STATE.LABEL_NAME' | translate }}">
+                    </app-form-messages-erro>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col">
+                    <label class="requiredLabel">{{ 'STATE.LABEL_FS' | translate }}</label>
+                    <input id="state-fs" type="text" class="form-control" formControlName="fs"
+                        tooltip="{{ 'STATE.LABEL_FS' | translate }}">
+                    <app-form-messages-erro [control]="$any(form).controls['fs']"
+                        label="{{ 'STATE.LABEL_FS' | translate }}">
+                    </app-form-messages-erro>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="buttons-crud-content">
+            <button id="btn-save-state" type="submit" class="btn btn-primary"
+                tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}" [disabled]="form.invalid">{{ 'CRUD.SAVE' | translate
+                }}</button>
+            <button id="btn-back" type="button" class="btn btn-secondary"
+                tooltip="{{ 'CRUD.TOOLTIP_BACK' | translate }}" routerLink="/app/state">{{ 'CRUD.BACK' | translate
+                }}</button>
+        </div>
+
+
+    </form>
+
+    <app-form-debug [form]="form"></app-form-debug>
+</section>

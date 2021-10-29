@@ -1,5 +1,4 @@
 {
-
 	"NAVBAR":{
 		"NAVBAR_ITEM_1": "HOME",
 		"NAVBAR_ITEM_2": "SOBRE",
@@ -104,16 +103,20 @@
 
 	"SIDE_BAR": {
 		"MODEL" : "Modelo",
+		"STATE": "Estado",
+		"CITY" : "Cidade",
 		"USER" : "Usuário",
 		"SEE_POSTS": "Ver Registros",
 		"ADD_MODEL": "Adicionar Modelo",
+		"ADD_STATE": "Adicionar Estado",
+		"ADD_CITY": "Adicionar Cidade",
 		"ADD_USER": "Adicionar Usuário"
 	},
 
 	"CRUD": {
 		"SAVE" : "Salvar",
 		"BACK": "Voltar para pesquisa",
-		"NEW": "Criar novo ",
+		"NEW": "Criar registro",
 		"EXPORT": "Exportar",
 		"IMPORT": "Importar",
 		"ACTION": "Ações",
@@ -135,7 +138,7 @@
 		"SEARCH_COLUMN_NAME": "Modelo",
 		"MODEL_LABEL_FILTER": "Nome do modelo",
 		"LABEL_NAME": "Nome do modelo",
-		"TITLE": "Modelo",
+		"TITLE_CONSULT": "Consultar Modelo",
 		"TITLE_EDIT": "Edição do Modelo",
 		"TITLE_NEW": "Novo Modelo"
 	},
@@ -147,9 +150,35 @@
 		"LABEL_NAME": "Nome do usuário",
 		"LABEL_EMAIL": "E-mail do usuário",
 		"LABEL_PASSWORD": "Senha do usuário",
-		"TITLE": "Usuário",
+		"TITLE_CONSULT": "Consultar Usuário",
 		"TITLE_EDIT": "Edição do Usuário",
 		"TITLE_NEW": "Novo Usuário"
+	},
+
+	"STATE": {
+		"SEARCH_COLUMN_NAME": "Estado",
+		"SEARCH_COLUMN_FS": "Sigla do estado",
+		"STATE_LABEL_FILTER": "Nome do estado",
+		"LABEL_NAME": "Nome do estado",
+		"LABEL_FS": "Sigla do estado",
+		"TITLE_CONSULT": "Consultar Estado",
+		"TITLE_EDIT": "Edição do Estado",
+		"TITLE_NEW": "Novo Estado",
+		"TOOLTIP_STATE": "Nome do estado",
+		"TOOLTIP_FS": "Sigla do estado"
+	},
+
+	"CITY": {
+		"SEARCH_COLUMN_NAME": "Cidade",
+		"SEARCH_COLUMN_STATE": "Estado",
+		"CITY_LABEL_FILTER": "Nome da cidade",
+		"LABEL_NAME": "Nome da cidade",
+		"LABEL_STATE": "Digite o nome do estado",
+		"TITLE_CONSULT": "Consultar Cidade",
+		"TITLE_EDIT": "Edição da Cidade",
+		"TITLE_NEW": "Nova Cidade",
+		"TOOLTIP_CITY": "Nome da cidade",
+		"TOOLTIP_STATE": "Nome do estado"
 	},
 
 	"PAGINATOR": {
