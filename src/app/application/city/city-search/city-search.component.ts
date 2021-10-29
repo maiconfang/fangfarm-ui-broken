@@ -12,7 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-city-search',
   templateUrl: './city-search.component.html',
-  styleUrls: ['./city-search.component.css']
+  styleUrls: ['./city-search.component.scss']
 })
 export class CitySearchComponent extends CrudSearchImpl implements OnInit {
 

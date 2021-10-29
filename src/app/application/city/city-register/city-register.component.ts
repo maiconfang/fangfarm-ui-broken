@@ -12,7 +12,7 @@ import { TypeaheadMatch } from 'ngx-bootstrap/typeahead/typeahead-match.class';
 @Component({
   selector: 'app-city-register',
   templateUrl: './city-register.component.html',
-  styleUrls: ['./city-register.component.css']
+  styleUrls: ['./city-register.component.scss']
 })
 export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
 

@@ -105,11 +105,13 @@
 		"MODEL" : "Modelo",
 		"STATE": "Estado",
 		"CITY" : "Cidade",
+		"GROUP" : "Grupo",
 		"USER" : "Usuário",
 		"SEE_POSTS": "Ver Registros",
 		"ADD_MODEL": "Adicionar Modelo",
 		"ADD_STATE": "Adicionar Estado",
 		"ADD_CITY": "Adicionar Cidade",
+		"ADD_GROUP": "Adicionar Grupo",
 		"ADD_USER": "Adicionar Usuário"
 	},
 
@@ -179,6 +181,16 @@
 		"TITLE_NEW": "Nova Cidade",
 		"TOOLTIP_CITY": "Nome da cidade",
 		"TOOLTIP_STATE": "Nome do estado"
+	},
+
+	"GROUP": {
+		"SEARCH_COLUMN_NAME": "Grupo",
+		"GROUP_LABEL_FILTER": "Nome do grupo",
+		"LABEL_NAME": "Nome do grupo",
+		"TITLE_CONSULT": "Consultar Grupo",
+		"TITLE_EDIT": "Edição do Grupo",
+		"TITLE_NEW": "Novo Grupo",
+		"TOOLTIP_GROUP": "Nome do grupo"
 	},
 
 	"PAGINATOR": {

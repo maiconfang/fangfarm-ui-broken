@@ -32,6 +32,11 @@ import { StateService } from './state/state.service';
 import { StateRegisterComponent } from './state/state-register/state-register.component';
 import { StateSearchComponent } from './state/state-search/state-search.component';
 
+import { GroupModule } from './group/group.module';
+import { GroupService } from './group/group.service';
+import { GroupRegisterComponent } from './group/group-register/group-register.component';
+import { GroupSearchComponent } from './group/group-search/group-search.component';
+
 
 const routesApp: Routes = [
   {
@@ -53,6 +58,10 @@ const routesApp: Routes = [
       { path: 'state', component: StateSearchComponent },
       { path: 'state/new', component: StateRegisterComponent },
       { path: 'state/:id', component: StateRegisterComponent },
+
+      { path: 'group', component: GroupSearchComponent },
+      { path: 'group/new', component: GroupRegisterComponent },
+      { path: 'group/:id', component: GroupRegisterComponent },
 
       { path: 'not-authorized', component: NotAuthorizedComponent },
       { path: 'page-not-found', component: PageNotFoundComponent }
@@ -76,6 +85,7 @@ const routesApp: Routes = [
     UserModule,
     CityModule,
     StateModule,
+    GroupModule,
     TooltipModule.forRoot(),
   
   ],
@@ -87,6 +97,7 @@ const routesApp: Routes = [
     UserService,
     CityService,
     StateService,
+    GroupService,
   
   ]
 })

@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-model-register',
   templateUrl: './model-register.component.html',
-  styleUrls: ['./model-register.component.css']
+  styleUrls: ['./model-register.component.scss']
 })
 export class ModelRegisterComponent extends CrudRegisterImpl implements OnInit {
 

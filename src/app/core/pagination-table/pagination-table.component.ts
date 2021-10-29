@@ -4,7 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-pagination-table',
   templateUrl: './pagination-table.component.html',
-  styleUrls: ['./pagination-table.component.css']
+  styleUrls: ['./pagination-table.component.scss']
 })
 export class PaginationTableComponent implements OnInit {
 

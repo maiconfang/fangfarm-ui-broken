@@ -105,11 +105,13 @@
 		"MODEL" : "Model",
 		"STATE": "State",
 		"CITY" : "City",
+		"GROUP" : "Group",
 		"USER" : "User",
 		"SEE_POSTS": "See Records",
 		"ADD_MODEL": "Add Model",
 		"ADD_STATE": "Add State",
 		"ADD_CITY": "Add City",
+		"ADD_GROUP": "Add Group",
 		"ADD_USER": "Add User"
 	},
 
@@ -138,7 +140,7 @@
 		"SEARCH_COLUMN_NAME": "Model",
 		"MODEL_LABEL_FILTER": "Name of model",
 		"LABEL_NAME": "Name of model",
-		"TITLE": "Consult Model",
+		"TITLE_CONSULT": "Consult Model",
 		"TITLE_EDIT": "Edit of Model",
 		"TITLE_NEW": "New Model"
 	},
@@ -162,8 +164,8 @@
 		"LABEL_NAME": "Name of state",
 		"LABEL_FS": "Name of federation of state",
 		"TITLE_CONSULT": "Consult State",
-		"TITLE_EDIT": "Edit of state",
-		"TITLE_NEW": "New state",
+		"TITLE_EDIT": "Edit of State",
+		"TITLE_NEW": "New State",
 		"TOOLTIP_STATE": "Name of state",
 		"TOOLTIP_FS": "Name of federation of state"
 	},
@@ -179,6 +181,16 @@
 		"TITLE_NEW": "New City",
 		"TOOLTIP_CITY": "Name of city",
 		"TOOLTIP_STATE": "Name of state"
+	},
+
+	"GROUP": {
+		"SEARCH_COLUMN_NAME": "Group",
+		"GROUP_LABEL_FILTER": "Name of group",
+		"LABEL_NAME": "Name of group",
+		"TITLE_CONSULT": "Consult Group",
+		"TITLE_EDIT": "Edit of group",
+		"TITLE_NEW": "New group",
+		"TOOLTIP_GROUP": "Name of group"
 	},
 
 	"PAGINATOR": {

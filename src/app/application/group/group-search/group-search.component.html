@@ -1,0 +1,52 @@
+<section class="container mt-5">
+    <h1 class="title-screen-search">{{ 'GROUP.TITLE_CONSULT' | translate }}</h1>
+  
+    <form [formGroup]="form" (ngSubmit)="search()">
+  
+      <div class="justify-content-center">
+        <button id="filter-new-group" type="button" class="btn btn-primary"
+          tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/group/new">{{ 'CRUD.NEW' | translate
+          }}</button>
+      </div>
+  
+      <div class="input-group mb-3" style="margin-top: 8px;">
+        <input id="filter-group-name" type="text" class="form-control" tooltip="{{ 'GROUP.GROUP_LABEL_FILTER' | translate }}"
+          placeholder="{{ 'GROUP.GROUP_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2"
+          formControlName="name">
+        <div class="input-group-append">
+          <button id="filter-consult-group" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
+            type="submit"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+              <th scope="col">{{ 'GROUP.SEARCH_COLUMN_NAME' | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let entity of entities ">
+              <td>
+                <div class="column-action-crud-body" *ngIf="entity.id > 0">
+                  <a id="action-update-group" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
+                    [routerLink]="['/app/group', entity.id]"><i class="fa fa-edit"></i></a>
+                  <button id="action-remove-group" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" type="button"
+                    (click)="confirmRemoval(entity)" class="bottomless-button"><i
+                      class="far fa-trash-alt"></i></button>
+                </div>
+              </td>
+              <td id="column-group-name" tooltip="{{ 'GROUP.LABEL_NAME' | translate }}">{{ entity.name }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <app-pagination-table [page]="page" (paginationEvent)=changePage($event) style="width: 100%">
+        </app-pagination-table>
+      </div>
+  
+    </form>
+  
+    <app-form-debug [form]="form"></app-form-debug>
+  </section>
