@@ -8,6 +8,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { CityService } from '../city.service';
 import { MessageToastService } from 'src/app/core/message-toast/message.toast.service';
 import { TranslateService } from '@ngx-translate/core';
+import { StateService } from '../../state/state.service';
 
 @Component({
   selector: 'app-city-search',
@@ -17,6 +18,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class CitySearchComponent extends CrudSearchImpl implements OnInit {
 
   constructor(
+    protected stateService: StateService,
     protected translate: TranslateService,
     private formBuilder: FormBuilder,
     private router: Router,
@@ -32,6 +34,7 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
     });
 
     this.search();
+    this.listAllState();
   }
 
   new() {
@@ -52,5 +55,23 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
           this.entities = [{}]
       });
   }
+
+  changePageM(event) {
+    this.listAllState(event.page);
+  }
+
+  listAllState(paginator = 0) {
+    this.stateService.listPaginated(this.form.value, paginator)
+    .subscribe(data => {
+      this.pageStateSelect = data.page;
+      if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
+        this.entitiesStateSelect = data._embedded.states
+      } else
+        this.entitiesStateSelect = [{}]
+    });
+      
+  }
+
+  
 
 }

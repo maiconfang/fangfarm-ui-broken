@@ -6,6 +6,7 @@ import { CityRegisterComponent } from './city-register/city-register.component';
 import { CitySearchComponent } from './city-search/city-search.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PaginationTableModule } from 'src/app/core/pagination-table/pagination-table.module';
+import { FarmStateSelectModule } from 'src/app/core/custom/components/advanced-select/farm-state-select/farm-state-select.module';
 
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
@@ -19,6 +20,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     CommonModule,
     SharedModule,
     PaginationTableModule,
+    FarmStateSelectModule,
     TabsModule.forRoot(),
     TooltipModule.forRoot(),
     AccordionModule.forRoot(),

@@ -19,6 +19,9 @@ export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
   titleCity: string;
 
   states = [];
+  familia: Object[];
+
+  teste: [];
 
   constructor(
     private stateService: StateService,
@@ -30,9 +33,29 @@ export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
     protected toastService: MessageToastService) {
     super(translate, cityService, toastService);
     this.createForm();
+
+    this.familia = [
+      {
+        nome: 'Vitor',
+        sobreNome: 'Borges'
+      },
+      {
+        nome: 'Emerson',
+        sobreNome: 'Daniel'
+      },
+      {
+        nome: 'Thiago',
+        sobreNome: 'Contre!'
+      }
+    ];
+
   }
 
   ngOnInit() {
+    
+    console.log(this.familia);
+    console.log(this.teste);
+    
 
     const id = this.route.snapshot.params['id'];
 
@@ -103,6 +126,12 @@ export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
       this.add();
     }
   }
+
+    // função para receber emit Output do Filho
+    reciverFeedback(respostaFamilia?) {
+      this.teste = respostaFamilia;
+      console.log('Foi emitido o evento e chegou no pai >>>> ', respostaFamilia);
+    }
 
 
 }

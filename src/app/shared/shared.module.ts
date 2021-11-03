@@ -8,13 +8,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import {TranslateModule} from '@ngx-translate/core';
-
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
     FormDebugComponent,
-    FormMessagesErroComponent,
+    FormMessagesErroComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +32,7 @@ import {TranslateModule} from '@ngx-translate/core';
     NgxMaskModule,
     AlertModule,
     BsDropdownModule,
-    TranslateModule
+    TranslateModule,
   ],
   providers: [
 

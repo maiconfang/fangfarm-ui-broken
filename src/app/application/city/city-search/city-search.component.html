@@ -1,6 +1,10 @@
 <section class="container mt-5">
   <h1 class="title-screen-search">{{ 'CITY.TITLE_CONSULT' | translate }}</h1>
 
+  <app-farm-state-select [entitiesM]="entitiesStateSelect" [page]="pageStateSelect"
+    (paginationEvent)=changePageM($event) style="width: 100%">
+  </app-farm-state-select>
+
   <form [formGroup]="form" (ngSubmit)="search()">
 
     <div class="justify-content-center">
@@ -11,8 +15,7 @@
 
     <div class="input-group mb-3" style="margin-top: 8px;">
       <input id="filter-city-name" type="text" class="form-control" tooltip="{{ 'CITY.CITY_LABEL_FILTER' | translate }}"
-        placeholder="{{ 'CITY.CITY_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2"
-        formControlName="name">
+        placeholder="{{ 'CITY.CITY_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2" formControlName="name">
       <div class="input-group-append">
         <button id="filter-consult-city" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
           type="submit"><i class="fas fa-search"></i></button>
@@ -35,8 +38,7 @@
                 <a id="action-update-city" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
                   [routerLink]="['/app/city', entity.id]"><i class="fa fa-edit"></i></a>
                 <button id="action-remove-city" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" type="button"
-                  (click)="confirmRemoval(entity)" class="bottomless-button"><i
-                    class="far fa-trash-alt"></i></button>
+                  (click)="confirmRemoval(entity)" class="bottomless-button"><i class="far fa-trash-alt"></i></button>
               </div>
             </td>
             <td id="column-city-name" tooltip="{{ 'CITY.TOOLTIP_CITY' | translate }}">{{ entity.name }}</td>
