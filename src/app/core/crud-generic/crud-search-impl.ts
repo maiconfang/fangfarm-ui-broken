@@ -5,14 +5,11 @@ import { CrudServiceImpl } from 'src/app/core/crud-generic/crud-service-impl';
 import { Page } from '../pagination-table/pagination-table';
 import { MessageToastService } from '../message-toast/message.toast.service';
 import { TranslateService } from '@ngx-translate/core';
-import { PageStateSelect } from '../custom/components/advanced-select/farm-state-select/farm-state-select';
 
 export abstract class CrudSearchImpl {
 
     public entities = [];
-    public entitiesStateSelect = [];
     public page: Page;
-    public pageStateSelect: PageStateSelect;
     public form: FormGroup;
     protected modalRef: BsModalRef;
     public exibirGifAguarde = false;

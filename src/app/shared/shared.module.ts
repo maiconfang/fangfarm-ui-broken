@@ -9,6 +9,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TranslateModule } from '@ngx-translate/core';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TranslateModule } from '@ngx-translate/core';
     RouterModule,
     NgxMaskModule.forRoot(),
     AlertModule.forRoot(),
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
   ],
   exports: [
     FormsModule,
@@ -33,6 +35,7 @@ import { TranslateModule } from '@ngx-translate/core';
     AlertModule,
     BsDropdownModule,
     TranslateModule,
+    TooltipModule,
   ],
   providers: [
 

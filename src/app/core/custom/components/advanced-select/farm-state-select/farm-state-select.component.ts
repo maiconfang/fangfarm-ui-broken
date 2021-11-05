@@ -1,7 +1,10 @@
 import { Component, Input, Output, OnInit, TemplateRef, EventEmitter  } from '@angular/core';
 
-import { TranslateService } from '@ngx-translate/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { StateService } from 'src/app/application/state/state.service'; 
+import { Page } from 'src/app/core/pagination-table/pagination-table'; 
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-farm-state-select',
@@ -10,51 +13,30 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class FarmStateSelectComponent implements OnInit {
 
-  back: string;
-  next: string;
+  @Output() public stateSelectOutPut: EventEmitter<any> = new EventEmitter();
 
-  private size: number = 10;
-  private i: number;
-  public page;
-  @Input("page") public set value(page: any) {
-    if (!page) return;
-    this.page = page;
-    this.setPagetion();
-  }
-  @Output() public paginationEvent: EventEmitter<any> = new EventEmitter();
-
-  @Input() entitiesM;
-
-  @Input() recebeFamilia;
-  // Original
-  //@Output() respostaFamilia = new EventEmitter();
-  @Output() public respostaFamilia: EventEmitter<any> = new EventEmitter();
-  //@Output() public paginationEvent: EventEmitter<any> = new EventEmitter();
-
+  public entitiesStateSelect = [];
+  public pageStateSelect: Page;
+  public form: FormGroup;
+  
   
   modalRef: BsModalRef;
-  LABEL_STATE: string;
-  nameState: string;
 
   constructor(
-    protected translate: TranslateService,
-    private modalService: BsModalService
-    ) { }
+    private formBuilder: FormBuilder,
+    protected stateService: StateService,
+    private modalService: BsModalService,
+    ) {}
 
   ngOnInit(): void {
 
-    this.translate.get('PAGINATOR.BACK').subscribe((text: string) => {
-      this.back = text;
+    this.form = this.formBuilder.group({
+      name: ['', [Validators.maxLength(100)]]
     });
-    
-    this.translate.get('PAGINATOR.NEXT').subscribe((text: string) => {
-      this.next = text;
-    });
-    //console.log(this.recebeFamilia);
-    //console.log('Objeto familia recebido do component pai via Input: ', this.recebeFamilia);
+
+    this.search();
+
   }
-
-
 
   openModalWithClass(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(
@@ -68,33 +50,28 @@ export class FarmStateSelectComponent implements OnInit {
   }
 
   selectState(entity: any){
-    this.nameState = entity.name;
+    this.stateSelectOutPut.emit(entity)
     this.closeModalWithClass();
     
   }
 
-  reciverFeedback() {
-    this.respostaFamilia.emit({"nome": "Raphella resp", "SobreNome": "Souza re"})
-    console.log('Resposta para o component pai', this.respostaFamilia.emit({"nome": "Raphella resp", "SobreNome": "Souza re"}));
+  changePageSelect(event) {
+    this.search(event.page);
   }
 
-  changePage(page?) {
-    setTimeout(() => {
-      this.paginationEvent.emit({ page: page ? page : 0, size: this.size });
+  search(paginator = 0) {
+    this.stateService.listPaginated(this.form.value, paginator)
+    .subscribe(data => {
+      this.pageStateSelect = data.page;
+      if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
+        this.entitiesStateSelect = data._embedded.states
+      } else
+        this.entitiesStateSelect = [{}]
     });
+      
   }
 
-  setPagetion() {
-    let pages = new Array<number>();
-    let inc = (this.page.number - 2) <= 0 ? (4 - this.page.number) : 2;
-    let dec = (this.page.number + 2) >= this.page.totalPages ? (5 - (this.page.totalPages - this.page.number)) : 2;
-    let inicio = (this.page.number - dec) <= 0 ? 0 : (this.page.number - dec);
-    let fim = (this.page.number + inc) < this.page.totalPages ? (this.page.number + inc) : (this.page.totalPages - 1);
-    for (let i = inicio; i <= fim; i++) {
-      pages.push(i);
-    }
-    this.page.pages = pages;
-  }
+
 
 }
 

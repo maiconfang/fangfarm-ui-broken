@@ -33,22 +33,6 @@ export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
     protected toastService: MessageToastService) {
     super(translate, cityService, toastService);
     this.createForm();
-
-    this.familia = [
-      {
-        nome: 'Vitor',
-        sobreNome: 'Borges'
-      },
-      {
-        nome: 'Emerson',
-        sobreNome: 'Daniel'
-      },
-      {
-        nome: 'Thiago',
-        sobreNome: 'Contre!'
-      }
-    ];
-
   }
 
   ngOnInit() {

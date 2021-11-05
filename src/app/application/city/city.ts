@@ -5,4 +5,5 @@ export class City {
 
 export class CityFilter {
     name: string;
+    stateId: number;
   }

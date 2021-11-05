@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { NotAuthorizedComponent } from './not-authorized.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { NotAuthorizedComponent } from './not-authorized.component';
     BrowserAnimationsModule,
     ToastrModule,
     WrapperModule,
+    TranslateModule,
   ],
   providers:[
     {provide: HTTP_INTERCEPTORS, useClass: InterceptorRequestHandleService, multi: true},

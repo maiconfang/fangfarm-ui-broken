@@ -30,11 +30,17 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      name: ['', [Validators.maxLength(100)]]
+      name: ['', [Validators.maxLength(100)]],
+      stateId: [''],
+
+      state: this.formBuilder.group({
+        id: [null],
+        name: [],
+      }),
+
     });
 
     this.search();
-    this.listAllState();
   }
 
   new() {
@@ -46,6 +52,11 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
   }
 
   search(paginator = 0) {
+    console.log("entrou no método search");
+
+    console.log(this.form.value);
+
+
     this.service.listPaginated(this.form.value, paginator)
       .subscribe(data => {
         this.page = data.page;
@@ -56,22 +67,26 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
       });
   }
 
-  changePageM(event) {
-    this.listAllState(event.page);
+  recieveStateOfSelect(answerStateSelect) {
+    //console.log('Foi emitido o evento e chegou no pai >>>> ', answerStateSelect);
+    //console.log(answerStateSelect.id);
+    //  this.form.value.state.id = answerStateSelect.id
+    //  this.form.value.state.name = answerStateSelect.name
+    //  console.log(this.form.value.state);
+    this.populaDadosForm(answerStateSelect);
+
   }
 
-  listAllState(paginator = 0) {
-    this.stateService.listPaginated(this.form.value, paginator)
-    .subscribe(data => {
-      this.pageStateSelect = data.page;
-      if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
-        this.entitiesStateSelect = data._embedded.states
-      } else
-        this.entitiesStateSelect = [{}]
+  populaDadosForm(dados) {
+    this.form.patchValue({
+      stateId: dados.id,
+
+      state: {
+        id: dados.id,
+        name: dados.name
+      }
+
     });
-      
   }
-
-  
 
 }

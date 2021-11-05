@@ -1,116 +1,66 @@
-<form>
-    
+<form [formGroup]="form">
 
-    <div class="container">
-
-        <ul>
-            <li *ngFor="let f of recebeFamilia">
-              {{f.nome}} {{f.sobreNome}}
-            </li>
-          </ul>
-
-        <div class="row">
-          <div class="col-3">
-            <label class="requiredLabel">Estado</label>
-            <input id="employee-name" type="text" class="form-control" value="{{nameState}}"> 
-          </div>
-          <div class="col-2">
-            <div style="width: fit-content;margin: auto;margin-top: 18px;">
-                <button type="button" class="btn btn-primary" (click)="openModalWithClass(template)">Select State</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="input-group-append">
+        <button type="button" class="btn btn-primary" (click)="openModalWithClass(template)">
+            {{'FARM_STATE_SELECT.BUTTON_SELECT_STATE' | translate }}</button>
+    </div>
 
     <br>
 
     <ng-template #template>
         <div class="modal-header">
-            <h4 class="modal-title pull-left">Lista de Estados</h4>
-            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                <span aria-hidden="true">xxx</span>
+            <h4 class="modal-title pull-left">{{'FARM_STATE_SELECT.TITLE' | translate }}</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.hide()" 
+            tooltip="{{'FARM_STATE_SELECT.TOOLTIP_BUTTON_CLOSE' | translate }}">
+                <span aria-hidden="true"></span>
             </button>
         </div>
 
-        <div class="modal-body">
-            <div class="row">
-                <div class="form-group col">
-                    <label>Estado </label>
-                    <input id="state-name" type="text" class="form-control">
-                </div>
+        <div class="input-group" style="margin-top: 8px;">
+            <input id="filter-state-name" type="text" class="form-control"
+                tooltip="{{'FARM_STATE_SELECT.LABEL_STATE' | translate }}"
+                placeholder="{{'FARM_STATE_SELECT.PLACE_HOLDER_NAME' | translate }}" aria-describedby="basic-addon2"
+                formControlName="name">
+            <div class="input-group-append">
+                <button id="farm-select-state-filter-name" class="btn btn-primary"
+                    tooltip="{{'CRUD.TOOLTIP_FILTER' | translate }}" (click)="search()"><i
+                        class="fas fa-search"></i></button>
             </div>
+        </div>
+
+        <div class="modal-body">
 
             <ul>
                 <div class="form-row">
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Nome do estado</th>
+                                <th scope="col">{{'FARM_STATE_SELECT.SEARCH_COLUMN_ID' | translate }}</th>
+                                <th scope="col">{{'FARM_STATE_SELECT.SEARCH_COLUMN_NAME' | translate }}</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let entity of entitiesM ">
-                                <td id="column-state-name" (click)="selectState(entity)">{{ entity.id }}</td>
-                                <td id="column-state-name" (click)="selectState(entity)">{{ entity.name }}</td>
+                            <tr *ngFor="let entity of entitiesStateSelect ">
+                                <td id="column-state-name" tooltip="{{'FARM_STATE_SELECT.TOOLTIP_ID' | translate }}"
+                                    (click)="selectState(entity)">{{ entity.id }}</td>
+                                <td id="column-state-name" tooltip="{{'FARM_STATE_SELECT.TOOLTIP_NAME' | translate }}"
+                                    (click)="selectState(entity)">{{ entity.name }}</td>
                             </tr>
                         </tbody>
                     </table>
-                    <!--
-                  <app-pagination-table [page]="page" (paginationEvent)=changePage($event) style="width: 100%">
+                    <app-pagination-table [page]="pageStateSelect" (paginationEvent)=changePageSelect($event)
+                        style="width: 100%">
                     </app-pagination-table>
-                    -->
 
                 </div>
-
 
             </ul>
         </div>
 
-        <div class="pagination-container" *ngIf="page && page.totalPages > 0">
-            <nav aria-label="Page navigation">
-              <ul class="pagination">
-          
-                <li tooltip="{{ back }}" class="page-item" [ngClass]="page.first ? 'disabled' : '' ">
-                  <a class="page-link" *ngIf="page.first" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                  <a class="page-link" style="cursor: pointer" *ngIf="!page.first" (click)="changePage(page.number-1)"
-                    aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-          
-                <li class="page-item" *ngFor="let pageAux of page.pages" [ngClass]="(pageAux == page.number) ? 'active' : ''"
-                  [ngClass]="page.i == page.number ? 'active' : '' ">
-                  <a class="page-link" style="cursor: pointer" (click)="changePage(pageAux)">{{pageAux+1}}</a>
-                </li>
-          
-                <li tooltip="{{ next }}" class="page-item" [ngClass]="page.last ? 'disabled' : '' ">
-                  <a class="page-link" *ngIf="page.last" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                  <a class="page-link" style="cursor: pointer" *ngIf="!page.last" (click)="changePage(page.number+1)"
-                    aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-                <!--
-                <select (ngModelChange)="changePage()" [(ngModel)]="size" class="custom-select">
-                  <option value="5">5</option>
-                  <option value="10" selected>10</option>
-                  <option value="15">15</option>
-                  <option value="20">20</option>
-                </select>
-                -->
-              </ul>
-            </nav>
-          
-          </div>
-        
-
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" (click)="modalRef.hide()">Close</button>
+            <button type="button" class="btn btn-secondary"
+                tooltip="{{'FARM_STATE_SELECT.TOOLTIP_BUTTON_CLOSE' | translate }}"
+                (click)="modalRef.hide()">{{'FARM_STATE_SELECT.BUTTON_CLOSE' | translate }}</button>
         </div>
     </ng-template>
 

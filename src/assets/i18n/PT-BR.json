@@ -176,6 +176,7 @@
 		"SEARCH_COLUMN_NAME": "Cidade",
 		"SEARCH_COLUMN_STATE": "Estado",
 		"CITY_LABEL_FILTER": "Nome da cidade",
+		"STATE_LABEL_FILTER": "Nome do estado",
 		"LABEL_NAME": "Nome da cidade",
 		"LABEL_STATE": "Estado",
 		"LABEL_STATE_PLACE_HOLDER": "Digite o nome do estado",
@@ -233,6 +234,21 @@
 		"STATUS_405": "Método não permitido",
 		"STATUS_500": "Erro ao processar sua requisição",
 		"STATUS_DEFAULT": "Servidor não encontrado"
+	},
+
+	"FARM_STATE_SELECT": {
+		"BUTTON_SELECT_STATE": "Selecione o Estado",
+		"TOOLTIP_BUTTON_SELECT_STATE": "Selecione o estado",
+		"TITLE": "Lista de Estados",
+		"LABEL_STATE": "Nome do estado",
+		"TOOLTIP_BUTTON_FILTER": "Consultar estado",
+		"SEARCH_COLUMN_ID": "Código",
+		"SEARCH_COLUMN_NAME": "Estado",
+		"BUTTON_CLOSE": "Fechar",
+		"TOOLTIP_BUTTON_CLOSE": "Fechar",
+		"TOOLTIP_ID": "Código do estado",
+		"TOOLTIP_NAME": "Nome do estado",
+		"PLACE_HOLDER_NAME": "Nome do estado"
 	}
 
 
