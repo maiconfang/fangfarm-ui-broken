@@ -244,10 +244,12 @@
 		"TOOLTIP_BUTTON_FILTER": "Consult of state",
 		"SEARCH_COLUMN_ID": "Code",
 		"SEARCH_COLUMN_NAME": "State",
+		"SEARCH_COLUMN_FS": "Federation of State",
 		"BUTTON_CLOSE": "Close",
 		"TOOLTIP_BUTTON_CLOSE": "Close",
 		"TOOLTIP_ID": "Code of state",
 		"TOOLTIP_NAME": "Name of state",
+		"TOOLTIP_FS": "Federation of State",
 		"PLACE_HOLDER_NAME": "Name of state"
 	}
 

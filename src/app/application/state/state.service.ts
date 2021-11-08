@@ -32,7 +32,7 @@ export class StateService extends CrudServiceImpl {
   }
 
   listAll(): Promise<any> {
-    return this.http.get<any>(this.stateUrl)
+    return this.http.get<any>(this.stateUrl + "/noPagination")
       .toPromise()
       .then(response => response);
   }

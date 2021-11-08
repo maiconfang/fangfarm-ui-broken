@@ -9,6 +9,7 @@ import { CityService } from '../city.service';
 import { MessageToastService } from 'src/app/core/message-toast/message.toast.service';
 import { TranslateService } from '@ngx-translate/core';
 import { StateService } from '../../state/state.service';
+import { TypeaheadMatch } from 'ngx-bootstrap/typeahead/typeahead-match.class';
 
 @Component({
   selector: 'app-city-search',
@@ -16,6 +17,8 @@ import { StateService } from '../../state/state.service';
   styleUrls: ['./city-search.component.scss']
 })
 export class CitySearchComponent extends CrudSearchImpl implements OnInit {
+
+  states = [];
 
   constructor(
     protected stateService: StateService,
@@ -41,6 +44,7 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
     });
 
     this.search();
+    this.loadStates();
   }
 
   new() {
@@ -51,12 +55,15 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
     super.confirmRemoval(entity, entity.name);
   }
 
+  loadStates() {
+    return this.stateService.listAll()
+      .then(cities => {
+        this.states = cities._embedded.states
+      })
+      .catch();
+  }
+
   search(paginator = 0) {
-    console.log("entrou no método search");
-
-    console.log(this.form.value);
-
-
     this.service.listPaginated(this.form.value, paginator)
       .subscribe(data => {
         this.page = data.page;
@@ -68,25 +75,42 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
   }
 
   recieveStateOfSelect(answerStateSelect) {
-    //console.log('Foi emitido o evento e chegou no pai >>>> ', answerStateSelect);
-    //console.log(answerStateSelect.id);
-    //  this.form.value.state.id = answerStateSelect.id
-    //  this.form.value.state.name = answerStateSelect.name
-    //  console.log(this.form.value.state);
-    this.populaDadosForm(answerStateSelect);
-
+    this.populateDataForm(answerStateSelect);
   }
 
-  populaDadosForm(dados) {
+  populateDataForm(data) {
     this.form.patchValue({
-      stateId: dados.id,
+      stateId: data.id,
 
       state: {
-        id: dados.id,
-        name: dados.name
+        id: data.id,
+        name: data.name
       }
-
     });
   }
+
+  onSelect(event: TypeaheadMatch) {
+    var i = 0;
+    while (i < this.states.length) {
+      if (this.states[i].name === event.item.name) {
+        this.form.value.state.id = this.states[i].id;
+        break;
+      }
+      i = i + 1;
+    }
+    this.populateDataFormOnSelect(this.form.value)
+  }
+
+  populateDataFormOnSelect(data) {
+    this.form.patchValue({
+      stateId: data.state.id,
+
+      state: {
+        id: data.state.id,
+        name: data.state.name
+      }
+    });
+  }
+
 
 }

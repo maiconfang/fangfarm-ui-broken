@@ -5,8 +5,6 @@
             {{'FARM_STATE_SELECT.BUTTON_SELECT_STATE' | translate }}</button>
     </div>
 
-    <br>
-
     <ng-template #template>
         <div class="modal-header">
             <h4 class="modal-title pull-left">{{'FARM_STATE_SELECT.TITLE' | translate }}</h4>
@@ -17,18 +15,18 @@
         </div>
 
         <div class="input-group" style="margin-top: 8px;">
-            <input id="filter-state-name" type="text" class="form-control"
+            <input id="filter-state-name" type="text" style="margin-left: 10px;" class="form-control"
                 tooltip="{{'FARM_STATE_SELECT.LABEL_STATE' | translate }}"
                 placeholder="{{'FARM_STATE_SELECT.PLACE_HOLDER_NAME' | translate }}" aria-describedby="basic-addon2"
                 formControlName="name">
             <div class="input-group-append">
-                <button id="farm-select-state-filter-name" class="btn btn-primary"
+                <button id="farm-select-state-filter-name" style="margin-right: 10px;" class="btn btn-primary"
                     tooltip="{{'CRUD.TOOLTIP_FILTER' | translate }}" (click)="search()"><i
                         class="fas fa-search"></i></button>
             </div>
         </div>
 
-        <div class="modal-body">
+        <div >
 
             <ul>
                 <div class="form-row">
@@ -37,6 +35,7 @@
                             <tr>
                                 <th scope="col">{{'FARM_STATE_SELECT.SEARCH_COLUMN_ID' | translate }}</th>
                                 <th scope="col">{{'FARM_STATE_SELECT.SEARCH_COLUMN_NAME' | translate }}</th>
+                                <th scope="col">{{'FARM_STATE_SELECT.SEARCH_COLUMN_FS' | translate }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,6 +44,8 @@
                                     (click)="selectState(entity)">{{ entity.id }}</td>
                                 <td id="column-state-name" tooltip="{{'FARM_STATE_SELECT.TOOLTIP_NAME' | translate }}"
                                     (click)="selectState(entity)">{{ entity.name }}</td>
+                                    <td id="column-state-fs" tooltip="{{'FARM_STATE_SELECT.TOOLTIP_UF' | translate }}"
+                                    (click)="selectState(entity)">{{ entity.fs }}</td>
                             </tr>
                         </tbody>
                     </table>

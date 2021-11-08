@@ -31,8 +31,6 @@ export class CityService extends CrudServiceImpl {
     if (filter.stateId) {
       parameters = parameters.set('stateId', filter.stateId);
     }
-    console.log(parameters);
-    
 
     return super.listPaginated(filter, page, parameters);
   }
