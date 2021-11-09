@@ -130,6 +130,7 @@
 		"TOOLTIP_CREATE_NEW": "Criar novo registro",
 		"TOOLTIP_SAVE": "Salvar registro",
 		"TOOLTIP_BACK": "Voltar para pesquisa",
+		"TOOLTIP_ERASER": "Limpar campos",
 		"MSG_CONFIRM_REMOVE": "Deseja realmente excluir ",
 		"MSG_CONFIRM_REMOVE_YES": "Sim",
 		"MSG_CONFIRM_REMOVE_NO": "Não",

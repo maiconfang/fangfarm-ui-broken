@@ -9,43 +9,32 @@
         }}</button>
     </div>
 
-    <div class="row">
+    <div class="input-group mb-3" style="margin-top: 8px;">
 
-    </div>
-
-    <div class="row">
-      
-      <div class="col-3" style="margin-top: 8px;">
-        <input id="filter-city-name" type="text" class="form-control" tooltip="{{ 'CITY.CITY_LABEL_FILTER' | translate }}"
-        placeholder="{{ 'CITY.CITY_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2" formControlName="name">
+      <div style="padding-right: 10px; width: 500px;">
+        <input id="filter-city-name" type="text" class="form-control"
+        tooltip="{{ 'CITY.CITY_LABEL_FILTER' | translate }}" placeholder="{{ 'CITY.CITY_LABEL_FILTER' | translate }}"
+        aria-describedby="basic-addon2" formControlName="name">
+  
       </div>
-      
-      <!--
-      <div class="col-3" style="margin-top: 8px;" formGroupName="state">
-        <input id="filter-city-name" [attr.disabled]="true" type="text" class="form-control" tooltip="{{ 'CITY.STATE_LABEL_FILTER' | translate }}"
-        placeholder="{{ 'CITY.STATE_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2" formControlName="name">
-      </div>
-      -->
-
-      <div class="col-3" style="margin-top: 8px;">
-        <div class="form-group col" formGroupName="state">
-          <input id="city-state" formControlName="name" [typeahead]="states" typeaheadOptionField="name"
-            (typeaheadOnSelect)="onSelect($event)" [typeaheadOptionsLimit]="7" [typeaheadMinLength]="0"
-            placeholder="{{ 'CITY.LABEL_STATE_PLACE_HOLDER' | translate }}" class="form-control"
-            tooltip="{{ 'CITY.TOOLTIP_STATE' | translate }}">
-        </div>
+     
+      <div style="padding-right: 6px;" class="form-group col" formGroupName="state" >
+        <input id="city-state" formControlName="name" [typeahead]="states" typeaheadOptionField="name"
+          (typeaheadOnSelect)="onSelect($event)" [typeaheadOptionsLimit]="7" [typeaheadMinLength]="0"
+          placeholder="{{ 'CITY.LABEL_STATE_PLACE_HOLDER' | translate }}" class="form-control"
+          tooltip="{{ 'CITY.TOOLTIP_STATE' | translate }}">
       </div>
 
+      <app-farm-state-select (stateSelectOutPut)="recieveStateOfSelect($event)"> </app-farm-state-select>
 
-      <div class="col-3" style="margin-top: 8px;">
-        <app-farm-state-select (stateSelectOutPut)="recieveStateOfSelect($event)"> </app-farm-state-select>
-      </div>
-      
-      <div class="col-3" style="margin-top: 8px;">
+      <div class="input-group-append">
         <button id="filter-consult-city" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
-        type="submit"><i class="fas fa-search"></i></button>
-      </div>
+          type="submit"><i class="fas fa-search"></i></button>
 
+        <button id="filter-consult-clear-fields" class="btn btn-secondary"
+          tooltip="{{ 'CRUD.TOOLTIP_ERASER' | translate }}" (click)="resetDataForm()" type="submit"
+          [disabled]="form.invalid"><i class="fas fa-eraser"></i></button>
+      </div>
     </div>
 
     <div class="form-row">

@@ -18,7 +18,7 @@
             <input id="filter-state-name" type="text" style="margin-left: 10px;" class="form-control"
                 tooltip="{{'FARM_STATE_SELECT.LABEL_STATE' | translate }}"
                 placeholder="{{'FARM_STATE_SELECT.PLACE_HOLDER_NAME' | translate }}" aria-describedby="basic-addon2"
-                formControlName="name">
+                formControlName="name" (keyup.enter)="onEnter()">
             <div class="input-group-append">
                 <button id="farm-select-state-filter-name" style="margin-right: 10px;" class="btn btn-primary"
                     tooltip="{{'CRUD.TOOLTIP_FILTER' | translate }}" (click)="search()"><i

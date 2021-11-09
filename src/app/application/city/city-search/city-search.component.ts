@@ -78,6 +78,21 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
     this.populateDataForm(answerStateSelect);
   }
 
+  onSelect(event: TypeaheadMatch) {
+    var i = 0;
+    while (i < this.states.length) {
+      if (this.states[i].name === event.item.name) {
+        this.form.value.name = this.states[i].name;
+        this.form.value.id = this.states[i].id;
+
+        break;
+      }
+      i = i + 1;
+    }
+
+    this.populateDataForm(this.form.value)
+  }
+
   populateDataForm(data) {
     this.form.patchValue({
       stateId: data.id,
@@ -87,30 +102,21 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
         name: data.name
       }
     });
+
   }
 
-  onSelect(event: TypeaheadMatch) {
-    var i = 0;
-    while (i < this.states.length) {
-      if (this.states[i].name === event.item.name) {
-        this.form.value.state.id = this.states[i].id;
-        break;
-      }
-      i = i + 1;
-    }
-    this.populateDataFormOnSelect(this.form.value)
-  }
-
-  populateDataFormOnSelect(data) {
+  resetDataForm() {
     this.form.patchValue({
-      stateId: data.state.id,
+      name: null,
+      stateId: null,
 
       state: {
-        id: data.state.id,
-        name: data.state.name
+        id: null,
+        name: null,
       }
     });
   }
+
 
 
 }

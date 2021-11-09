@@ -39,6 +39,8 @@ export class FarmStateSelectComponent implements OnInit {
   }
 
   openModalWithClass(template: TemplateRef<any>) {
+    this.resetDataForm();
+    this.search();
     this.modalRef = this.modalService.show(
       template,
       Object.assign({}, { class: 'gray modal-lg' })
@@ -46,6 +48,7 @@ export class FarmStateSelectComponent implements OnInit {
   }
 
   closeModalWithClass() {
+    this.resetDataForm();
      this.modalService.hide();
   }
 
@@ -71,6 +74,18 @@ export class FarmStateSelectComponent implements OnInit {
       
   }
 
+  resetDataForm() {
+    this.form.patchValue({
+      id: null,
+      name: null,
+      fs: null,
+      
+    });
+  }
+
+  onEnter() {
+    this.search();
+  }
 
 
 }

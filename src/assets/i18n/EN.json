@@ -130,6 +130,7 @@
 		"TOOLTIP_CREATE_NEW": "Create new record",
 		"TOOLTIP_SAVE": "Save record",
 		"TOOLTIP_BACK": "Back to search",
+		"TOOLTIP_ERASER": "Eraser fields",
 		"MSG_CONFIRM_REMOVE": "Do you really want to delete ",
 		"MSG_CONFIRM_REMOVE_YES": "Yes",
 		"MSG_CONFIRM_REMOVE_NO": "No",
