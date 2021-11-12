@@ -210,10 +210,10 @@
 		"LABEL_TYPE": "Type",
 		"LABEL_NUMBER": "Number",
 		"LABEL_COMPLEMENT": "Complement",
-		"LABEL_BLOCK": "Block",
+		"LABEL_BLOCK": "Neighborhood",
 		"TITLE_CONSULT": "Consult employee",
-		"TITLE_EDIT": "Edit of employee",
-		"TITLE_NEW": "New employee",
+		"TITLE_EDIT": "Edit of Employee",
+		"TITLE_NEW": "New Employee",
 		"TOOLTIP_EMPLOYEE": "Name of employee",
 		"TOOLTIP_RG": "RG of employee",
 		"TOOLTIP_CPF": "CPF of employee",
@@ -248,10 +248,27 @@
 		"SEARCH_COLUMN_FS": "Federation of State",
 		"BUTTON_CLOSE": "Close",
 		"TOOLTIP_BUTTON_CLOSE": "Close",
+		"TOOLTIP_BUTTON_SELECT": "Select the state",
 		"TOOLTIP_ID": "Code of state",
 		"TOOLTIP_NAME": "Name of state",
 		"TOOLTIP_FS": "Federation of State",
 		"PLACE_HOLDER_NAME": "Name of state"
+	},
+
+	"FARM_CITY_SELECT": {
+		"BUTTON_SELECT_CITY": "Select City",
+		"TOOLTIP_BUTTON_SELECT_CITY": "Select city",
+		"TITLE": "List of Cities",
+		"LABEL_CITY": "Name of ciy",
+		"TOOLTIP_BUTTON_FILTER": "Consult of city",
+		"TOOLTIP_BUTTON_SELECT": "Select a city",
+		"SEARCH_COLUMN_ID": "Code",
+		"SEARCH_COLUMN_NAME": "City",
+		"BUTTON_CLOSE": "Close",
+		"TOOLTIP_BUTTON_CLOSE": "Close",
+		"TOOLTIP_ID": "Code of city",
+		"TOOLTIP_NAME": "Name of city",
+		"PLACE_HOLDER_NAME": "Name of city"
 	}
 
 

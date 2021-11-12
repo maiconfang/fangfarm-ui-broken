@@ -31,7 +31,7 @@ export class StateService extends CrudServiceImpl {
     return super.listPaginated(filter, page, parameters);
   }
 
-  listAll(): Promise<any> {
+  listAllNoPagination(): Promise<any> {
     return this.http.get<any>(this.stateUrl + "/noPagination")
       .toPromise()
       .then(response => response);

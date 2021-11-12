@@ -248,10 +248,27 @@
 		"SEARCH_COLUMN_FS": "UF",
 		"BUTTON_CLOSE": "Fechar",
 		"TOOLTIP_BUTTON_CLOSE": "Fechar",
+		"TOOLTIP_BUTTON_SELECT": "Selecione o estado",
 		"TOOLTIP_ID": "Código do estado",
 		"TOOLTIP_NAME": "Nome do estado",
 		"TOOLTIP_FS": "UF",
 		"PLACE_HOLDER_NAME": "Nome do estado"
+	},
+
+	"FARM_CITY_SELECT": {
+		"BUTTON_SELECT_CITY": "Selecione uma Cidade",
+		"TOOLTIP_BUTTON_SELECT_CITY": "Selecione a cidade",
+		"TITLE": "Lista de Cidades",
+		"LABEL_CITY": "Nome da cidade",
+		"TOOLTIP_BUTTON_FILTER": "Consultar cidade",
+		"TOOLTIP_BUTTON_SELECT": "Selecione uma cidade",
+		"SEARCH_COLUMN_ID": "Código",
+		"SEARCH_COLUMN_NAME": "Cidade",
+		"BUTTON_CLOSE": "Fechar",
+		"TOOLTIP_BUTTON_CLOSE": "Fechar",
+		"TOOLTIP_ID": "Código da cidade",
+		"TOOLTIP_NAME": "Nome da cidade",
+		"PLACE_HOLDER_NAME": "Nome do cidade"
 	}
 
 

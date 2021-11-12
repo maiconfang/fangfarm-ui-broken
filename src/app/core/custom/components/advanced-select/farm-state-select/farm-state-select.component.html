@@ -1,7 +1,8 @@
 <form [formGroup]="form">
 
     <div class="input-group-append">
-        <button type="button" class="btn btn-primary" (click)="openModalWithClass(template)">
+        <button type="button" class="btn btn-primary" (click)="openModalWithClass(template)"
+        tooltip="{{'FARM_STATE_SELECT.TOOLTIP_BUTTON_SELECT' | translate }}">
             {{'FARM_STATE_SELECT.BUTTON_SELECT_STATE' | translate }}</button>
     </div>
 

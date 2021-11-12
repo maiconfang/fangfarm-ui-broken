@@ -53,7 +53,7 @@ export class UserSearchComponent extends CrudSearchImpl implements OnInit {
       if(data.page.totalElements > 0  ){
         this.entities = data._embedded.usserrs;
       } else 
-      this.entities = [{}]
+      this.entities = []
     });
 }
 

@@ -49,7 +49,7 @@ export class ModelSearchComponent extends CrudSearchImpl implements OnInit {
         if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
           this.entities = data._embedded.models
         } else
-          this.entities = [{}]
+          this.entities = []
       });
   }
 

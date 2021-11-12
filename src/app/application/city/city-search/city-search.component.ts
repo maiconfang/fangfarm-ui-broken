@@ -56,7 +56,7 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
   }
 
   loadStates() {
-    return this.stateService.listAll()
+    return this.stateService.listAllNoPagination()
       .then(cities => {
         this.states = cities._embedded.states
       })
@@ -70,7 +70,7 @@ export class CitySearchComponent extends CrudSearchImpl implements OnInit {
         if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
           this.entities = data._embedded.cities
         } else
-          this.entities = [{}]
+          this.entities = []
       });
   }
 

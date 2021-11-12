@@ -10,6 +10,7 @@ import { PaginationTableModule } from 'src/app/core/pagination-table/pagination-
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { FarmCitySelectModule } from 'src/app/core/custom/components/advanced-select/farm-city-select/farm-city-select.module';
 
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
@@ -21,7 +22,8 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     PaginationTableModule,
     TabsModule.forRoot(),
     TooltipModule.forRoot(),
-    TypeaheadModule.forRoot()
+    TypeaheadModule.forRoot(),
+    FarmCitySelectModule
   ],
   exports: [EmployeeRegisterComponent, EmployeeSearchComponent]
 })

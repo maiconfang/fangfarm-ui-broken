@@ -19,10 +19,7 @@ export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
   titleCity: string;
 
   states = [];
-  familia: Object[];
-
-  teste: [];
-
+  
   constructor(
     private stateService: StateService,
     protected translate: TranslateService,
@@ -37,10 +34,6 @@ export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
 
   ngOnInit() {
     
-    console.log(this.familia);
-    console.log(this.teste);
-    
-
     const id = this.route.snapshot.params['id'];
 
     if (id) {
@@ -65,7 +58,7 @@ export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
 
       state: this.formBuilder.group({
         id: [null],
-        name: [],
+        name: ['', [Validators.required]],
       }),
 
     });
@@ -83,7 +76,7 @@ export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
   }
 
   loadStates() {
-    return this.stateService.listAll()
+    return this.stateService.listAllNoPagination()
       .then(states => {
         this.states = states._embedded.states
       })
@@ -110,12 +103,6 @@ export class CityRegisterComponent extends CrudRegisterImpl implements OnInit {
       this.add();
     }
   }
-
-    // função para receber emit Output do Filho
-    reciverFeedback(respostaFamilia?) {
-      this.teste = respostaFamilia;
-      console.log('Foi emitido o evento e chegou no pai >>>> ', respostaFamilia);
-    }
 
 
 }

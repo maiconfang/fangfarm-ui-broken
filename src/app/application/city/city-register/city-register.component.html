@@ -3,26 +3,27 @@
 
   <form [formGroup]="form" (ngSubmit)="save()">
 
-    <div>
-      <div class="form-row">
+    <div class="input-group mb-3" style="margin-top: 8px;">
 
-        <!--
-        <div class="form-group col" formGroupName="state">
-          <label class="requiredLabel">{{ 'CITY.LABEL_STATE' | translate }}</label>
-          <input id="city-state" formControlName="name" [typeahead]="states" typeaheadOptionField="name"
-            (typeaheadOnSelect)="onSelect($event)" [typeaheadOptionsLimit]="7" [typeaheadMinLength]="0"
-            placeholder="{{ 'CITY.LABEL_STATE_PLACE_HOLDER' | translate }}" class="form-control"
-            tooltip="{{ 'CITY.TOOLTIP_STATE' | translate }}">
-        </div>
-        -->
+      <div style="padding-right: 10px; width: 500px;" formGroupName="state">
+        <label class="requiredLabel">{{ 'CITY.LABEL_STATE' | translate }}</label>
+        <input id="city-state" formControlName="name" [typeahead]="states" typeaheadOptionField="name"
+          (typeaheadOnSelect)="onSelect($event)" [typeaheadOptionsLimit]="7" [typeaheadMinLength]="0"
+          placeholder="{{ 'CITY.LABEL_STATE_PLACE_HOLDER' | translate }}" class="form-control"
+          tooltip="{{ 'CITY.TOOLTIP_STATE' | translate }}">
+        <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'CITY.LABEL_STATE' | translate }}">
+        </app-form-messages-erro>
+      </div>
 
-        <div class="form-group col">
-          <label class="requiredLabel">{{ 'CITY.LABEL_NAME' | translate }}</label>
-          <input id="city-name" type="text" class="form-control" formControlName="name"
-            tooltip="{{ 'CITY.LABEL_NAME' | translate }}">
-          <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'CITY.LABEL_NAME' | translate }}">
-          </app-form-messages-erro>
-        </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div>
+        <label class="requiredLabel">{{ 'CITY.LABEL_NAME' | translate }}</label>
+        <input id="city-name" type="text" style="width: 490px;" class="form-control" formControlName="name"
+          tooltip="{{ 'CITY.LABEL_NAME' | translate }}">
+        <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'CITY.LABEL_NAME' | translate }}">
+        </app-form-messages-erro>
       </div>
     </div>
 

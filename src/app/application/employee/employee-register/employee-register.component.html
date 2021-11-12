@@ -6,7 +6,7 @@
     <div>
 
       <div class="row">
-        <div class="col-4">
+        <div class="col-5">
           <div class="form-group col">
             <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_NAME' | translate }}</label>
             <input id="employee-name" type="text" class="form-control" formControlName="name"
@@ -40,17 +40,7 @@
 
       </div>
 
-      <div class="row">
-        <div class="col-2">
-          <div class="form-group col" formGroupName="address">
-            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_ZIP' | translate }}</label>
-            <input id="employee-zip" type="text" class="form-control" formControlName="zip"
-              tooltip="{{ 'EMPLOYEE.LABEL_ZIP' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['zip']"
-              label="{{ 'EMPLOYEE.LABEL_ZIP' | translate }}">
-            </app-form-messages-erro>
-          </div>
-        </div>
+      <div class="row" style="margin-top: 8px;">
 
         <div class="col-3">
           <div class="form-group col" formGroupName="address">
@@ -74,6 +64,17 @@
           </div>
         </div>
 
+        <div class="col-2">
+          <div class="form-group col" formGroupName="address">
+            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}</label>
+            <input id="employee-block" type="text" class="form-control" formControlName="block"
+              tooltip="{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['block']"
+              label="{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}">
+            </app-form-messages-erro>
+          </div>
+        </div>
+
         <div class="col-3">
           <div class="form-group col" formGroupName="address">
             <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_COMPLEMENT' | translate }}</label>
@@ -87,130 +88,35 @@
 
         <div class="col-2">
           <div class="form-group col" formGroupName="address">
-            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}</label>
-            <input id="employee-block" type="text" class="form-control" formControlName="block"
-              tooltip="{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['block']"
-              label="{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}">
-            </app-form-messages-erro>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <div formGroupName="address">
-            <div class="form-group col" formGroupName="city">
-              <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_CITY' | translate }}</label>
-              <input id="employee-city" formControlName="name" [typeahead]="cities" typeaheadOptionField="name"
-                (typeaheadOnSelect)="onSelect($event)" [typeaheadOptionsLimit]="7" [typeaheadMinLength]="0"
-                placeholder="{{ 'EMPLOYEE.LABEL_CITY' | translate }}" class="form-control"
-                tooltip="{{ 'EMPLOYEE.TOOLTIP_CITY' | translate }}">
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-
-
-
-
-
-
-
-      <!--
-
-
-        <div class="form-row">
-  
-          <div class="form-group col">
-            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_NAME' | translate }}</label>
-            <input id="employee-name" type="text" class="form-control" formControlName="name"
-              tooltip="{{ 'EMPLOYEE.LABEL_NAME' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'EMPLOYEE.LABEL_NAME' | translate }}">
-            </app-form-messages-erro>
-          </div>
-
-          <div class="form-group col">
-            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_RG' | translate }}</label>
-            <input id="employee-rg" type="text" class="form-control" formControlName="rg"
-              tooltip="{{ 'EMPLOYEE.LABEL_RG' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['rg']" label="{{ 'EMPLOYEE.LABEL_RG' | translate }}">
-            </app-form-messages-erro>
-          </div>
-
-          <div class="form-group col">
-            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_CPF' | translate }}</label>
-            <input id="employee-cpf" type="text" class="form-control" formControlName="cpf"
-              tooltip="{{ 'EMPLOYEE.LABEL_CPF' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['cpf']" label="{{ 'EMPLOYEE.LABEL_CPF' | translate }}">
-            </app-form-messages-erro>
-          </div>
-
-          <div class="form-group col" formGroupName="address">
             <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_ZIP' | translate }}</label>
             <input id="employee-zip" type="text" class="form-control" formControlName="zip"
               tooltip="{{ 'EMPLOYEE.LABEL_ZIP' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['zip']" label="{{ 'EMPLOYEE.LABEL_ZIP' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['zip']"
+              label="{{ 'EMPLOYEE.LABEL_ZIP' | translate }}">
             </app-form-messages-erro>
           </div>
-
-          <div class="form-group col" formGroupName="address">
-            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_TYPE' | translate }}</label>
-            <input id="employee-type" type="text" class="form-control" formControlName="type"
-              tooltip="{{ 'EMPLOYEE.LABEL_TYPE' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['type']" label="{{ 'EMPLOYEE.LABEL_TYPE' | translate }}">
-            </app-form-messages-erro>
-          </div>
-
-          <div class="form-group col" formGroupName="address">
-            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_NUMBER' | translate }}</label>
-            <input id="employee-number" type="text" class="form-control" formControlName="number"
-              tooltip="{{ 'EMPLOYEE.LABEL_NUMBER' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['number']" label="{{ 'EMPLOYEE.LABEL_NUMBER' | translate }}">
-            </app-form-messages-erro>
-          </div>
-
-          <div class="form-group col" formGroupName="address">
-            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_COMPLEMENT' | translate }}</label>
-            <input id="employee-complement" type="text" class="form-control" formControlName="complement"
-              tooltip="{{ 'EMPLOYEE.LABEL_COMPLEMENT' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['cpf']" label="{{ 'EMPLOYEE.LABEL_COMPLEMENT' | translate }}">
-            </app-form-messages-erro>
-          </div>
-
-          <div class="form-group col" formGroupName="address">
-            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}</label>
-            <input id="employee-block" type="text" class="form-control" formControlName="block"
-              tooltip="{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['block']" label="{{ 'EMPLOYEE.LABEL_BLOCK' | translate }}">
-            </app-form-messages-erro>
-          </div>
-
-          <div formGroupName="address">
-
-            <div class="form-group col" formGroupName="city">
-
-              <input id="employee-city" formControlName="name"
-              [typeahead]="cities"
-              typeaheadOptionField="name"
-              (typeaheadOnSelect)="onSelect($event)"
-              [typeaheadOptionsLimit]="7"
-              [typeaheadMinLength]="0"
-              placeholder="{{ 'EMPLOYEE.LABEL_CITY' | translate }}"
-              class="form-control"  tooltip="{{ 'EMPLOYEE.TOOLTIP_CITY' | translate }}">
-              
-            </div>
-          </div>
-
-
         </div>
--->
+
+      </div>
+
+      <div class="row" style="margin-top: 8px;">
+        <div class="col-6" formGroupName="address">
+          <div class="form-group col" formGroupName="city">
+            <label class="requiredLabel">{{ 'EMPLOYEE.LABEL_CITY' | translate }}</label>
+            <input id="employee-city" [attr.disabled]="true" type="text" class="form-control" formControlName="name"
+              tooltip="{{ 'EMPLOYEE.LABEL_CITY' | translate }}">
+            <app-form-messages-erro [control]="$any(form).controls['name']"
+              label="{{ 'EMPLOYEE.LABEL_CITY' | translate }}">
+            </app-form-messages-erro>
+          </div>
+        </div>
+
+        <div class="col-6" style="margin-top: 20px;">
+          <app-farm-city-select (citySelectOutPut)="recieveCityOfSelect($event)"> </app-farm-city-select>
+        </div>
+
+      </div>
+
 
     </div>
 

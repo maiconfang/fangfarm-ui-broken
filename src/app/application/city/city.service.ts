@@ -41,4 +41,12 @@ export class CityService extends CrudServiceImpl {
       .then(response => response);
   }
 
+  listAllNoPagination(): Promise<any> {
+    console.log(this.cityUrl + "/noPagination");
+    
+    return this.http.get<any>(this.cityUrl + "/noPagination")
+      .toPromise()
+      .then(response => response);
+  }
+
 }

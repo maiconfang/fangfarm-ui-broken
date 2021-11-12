@@ -1,22 +1,22 @@
 import { Component, Input, Output, OnInit, TemplateRef, EventEmitter  } from '@angular/core';
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { StateService } from 'src/app/application/state/state.service'; 
+import { CityService } from 'src/app/application/city/city.service';
 import { Page } from 'src/app/core/pagination-table/pagination-table'; 
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-farm-state-select',
-  templateUrl: './farm-state-select.component.html',
-  styleUrls: ['./farm-state-select.component.scss']
+  selector: 'app-farm-city-select',
+  templateUrl: './farm-city-select.component.html',
+  styleUrls: ['./farm-city-select.component.scss']
 })
-export class FarmStateSelectComponent implements OnInit {
+export class FarmCitySelectComponent implements OnInit {
 
-  @Output() public stateSelectOutPut: EventEmitter<any> = new EventEmitter();
+  @Output() public citySelectOutPut: EventEmitter<any> = new EventEmitter();
 
-  public entitiesStateSelect = [];
-  public pageStateSelect: Page;
+  public entitiesCitySelect = [];
+  public pageCitySelect: Page;
   public form: FormGroup;
   
   
@@ -24,7 +24,7 @@ export class FarmStateSelectComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    protected stateService: StateService,
+    protected cityService: CityService,
     private modalService: BsModalService,
     ) {}
 
@@ -52,8 +52,8 @@ export class FarmStateSelectComponent implements OnInit {
      this.modalService.hide();
   }
 
-  selectState(entity: any){
-    this.stateSelectOutPut.emit(entity)
+  selectCity(entity: any){
+    this.citySelectOutPut.emit(entity)
     this.closeModalWithClass();
     
   }
@@ -63,13 +63,13 @@ export class FarmStateSelectComponent implements OnInit {
   }
 
   search(paginator = 0) {
-    this.stateService.listPaginated(this.form.value, paginator)
+    this.cityService.listPaginated(this.form.value, paginator)
     .subscribe(data => {
-      this.pageStateSelect = data.page;
+      this.pageCitySelect = data.page;
       if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
-        this.entitiesStateSelect = data._embedded.states
+        this.entitiesCitySelect = data._embedded.cities
       } else
-        this.entitiesStateSelect = []
+        this.entitiesCitySelect = []
     });
       
   }

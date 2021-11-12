@@ -48,8 +48,6 @@ export class EmployeeRegisterComponent extends CrudRegisterImpl implements OnIni
       });
     }
 
-    this.loadCities();
-
   }
 
   createForm() {
@@ -85,16 +83,6 @@ export class EmployeeRegisterComponent extends CrudRegisterImpl implements OnIni
     this.router.navigate(['/employee']);
   }
 
-  loadCities() {
-    return this.cityService.listAll()
-      .then(cities => {
-        this.cities = cities._embedded.cities
-        console.log(this.cities);
-        
-      })
-      .catch();
-  }
-
   onSelect(event: TypeaheadMatch) {
     var i = 0;
     while (i < this.cities.length) {
@@ -114,6 +102,26 @@ export class EmployeeRegisterComponent extends CrudRegisterImpl implements OnIni
     } else {
       this.add();
     }
+  }
+
+  recieveCityOfSelect(answerCitySelect) {
+    this.populateDataForm(answerCitySelect);
+  }
+
+  populateDataForm(data) {
+    this.form.patchValue({
+
+      address: {
+        city: {
+          id: data.id,
+          name: data.name,
+          state: {
+            fs: data.fs,
+          }
+        }
+      }
+    });
+
   }
 
 

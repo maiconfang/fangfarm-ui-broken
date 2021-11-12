@@ -106,14 +106,14 @@ export class InterceptorResponseHandleService implements HttpInterceptor {
       this.toasterService.error(msg, 'Opps!!', {
         //closeButton: true,
         positionClass: 'toast-bottom-right',
-        timeOut: 6000,
+        timeOut: 3000,
         //onActivateTick: true
       });
     } else {
       this.toasterService.success(msg, 'Opps!!', {
         closeButton: true,
         positionClass: 'toast-bottom-right',
-        timeOut: 8000,
+        timeOut: 3000,
         //onActivateTick: true
       });
     }
