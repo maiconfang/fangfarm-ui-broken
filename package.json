@@ -31,7 +31,9 @@
     "ngx-toastr": "^14.1.3",
     "rxjs": "^6.6.7",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.6",
     "@angular/cli": "~12.2.6",
     "@angular/compiler-cli": "~12.2.0",
@@ -45,9 +47,7 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.3.5"
   },
-  "devDependencies": {
-  },
-  "engines": {
+    "engines": {
     "node": "12.16.3",
     "npm": "6.14.4"
   }
