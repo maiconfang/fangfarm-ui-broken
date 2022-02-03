@@ -12,7 +12,7 @@ export abstract class CrudSearchImpl {
     public page: Page;
     public form: FormGroup;
     protected modalRef: BsModalRef;
-    public exibirGifAguarde = false;
+    public showGifWait = false;
 
     constructor(
         protected translate: TranslateService,

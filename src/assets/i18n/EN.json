@@ -43,7 +43,7 @@
 		"LANGUAGESTEXT_DESCRIPTION_3.1": "Native",
 
 		"COURSESTEXT_LINE_1": "Spring REST Specialist, 240 hours, at Algaworks",
-		"COURSESTEXT_LINE_2": "Angular and Spring Fullstack, 230 hours, at Algaworks",
+		"COURSESTEXT_LINE_2": "Angular and Spring Fullstack, 120 hours, at Algaworks",
 		"COURSESTEXT_LINE_3": "Java and Object-oriented, 22 hours, at Algaworks"
 	},
 
@@ -107,6 +107,7 @@
 		"CITY" : "City",
 		"EMPLOYEE" : "Employee",
 		"GROUP" : "Group",
+		"GROUP_PERMISSION" : "Group Permission",
 		"USER" : "User",
 		"SEE_POSTS": "See Records",
 		"ADD_MODEL": "Add Model",
@@ -114,6 +115,7 @@
 		"ADD_CITY": "Add City",
 		"ADD_EMPLOYEE": "Add Employee",
 		"ADD_GROUP": "Add Group",
+		"ADD_GROUP_PERMISSION": "Add Group Permission",
 		"ADD_USER": "Add User"
 	},
 
@@ -269,6 +271,17 @@
 		"TOOLTIP_ID": "Code of city",
 		"TOOLTIP_NAME": "Name of city",
 		"PLACE_HOLDER_NAME": "Name of city"
+	},
+
+	"GROUP_PERMISSION": {
+		"SEARCH_COLUMN_NAME": "Group Permission",
+		"GROUP_PERMISSION_LABEL_FILTER": "Name of group permission",
+		"LABEL_NAME": "Name of group permission",
+		"TITLE_CONSULT": "Consult Group Permission",
+		"TITLE_EDIT": "Edit of Group Permission",
+		"TITLE_NEW": "New Group Permission",
+		"GROUP_PERMISSION_LABEL_GROUP": "Group",
+		"GROUP_PERMISSION_SELECT_GROUP": "Select a group"
 	}
 
 

@@ -42,6 +42,11 @@ import { EmployeeService } from './employee/employee.service';
 import { EmployeeRegisterComponent } from './employee/employee-register/employee-register.component';
 import { EmployeeSearchComponent } from './employee/employee-search/employee-search.component';
 
+import { GroupPermissionModule } from './group-permission/group-permission.module';
+import { GroupPermissionService } from './group-permission/group-permission.service';
+import { GroupPermissionRegisterComponent } from './group-permission/group-permission-register/group-permission-register.component';
+import { GroupPermissionSearchComponent } from './group-permission/group-permission-search/group-permission-search.component';
+
 
 const routesApp: Routes = [
   {
@@ -76,6 +81,10 @@ const routesApp: Routes = [
       { path: 'group/new', component: GroupRegisterComponent },
       { path: 'group/:id', component: GroupRegisterComponent },
 
+      { path: 'group-permission', component: GroupPermissionSearchComponent },
+      { path: 'group-permission/new', component: GroupPermissionRegisterComponent },
+      { path: 'group-permission/:id', component: GroupPermissionRegisterComponent },
+
       { path: 'not-authorized', component: NotAuthorizedComponent },
       { path: 'page-not-found', component: PageNotFoundComponent }
     ]
@@ -88,7 +97,7 @@ const routesApp: Routes = [
     ApplicationComponent,
     NavbarComponent,
     SidebarComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -101,6 +110,7 @@ const routesApp: Routes = [
     StateModule,
     GroupModule,
     EmployeeModule,
+    GroupPermissionModule,
     
   ],
   exports: [
@@ -113,6 +123,7 @@ const routesApp: Routes = [
     StateService,
     GroupService,
     EmployeeService,
+    GroupPermissionService
   
   ]
 })
