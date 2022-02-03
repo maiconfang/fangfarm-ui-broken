@@ -15,7 +15,7 @@ export class UserService extends CrudServiceImpl {
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.userUrl = `${environment.apiURL}/v1/usserrs`;
+    this.userUrl = `${environment.apiUrl}/v1/usserrs`;
   }
 
   getUrlResource(): string {

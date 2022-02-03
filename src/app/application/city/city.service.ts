@@ -15,7 +15,7 @@ export class CityService extends CrudServiceImpl {
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.cityUrl = `${environment.apiURL}/v1/cities`;
+    this.cityUrl = `${environment.apiUrl}/v1/cities`;
   }
 
   getUrlResource(): string {

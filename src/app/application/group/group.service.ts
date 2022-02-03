@@ -15,7 +15,7 @@ export class GroupService extends CrudServiceImpl {
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.groupUrl = `${environment.apiURL}/v1/groups`;
+    this.groupUrl = `${environment.apiUrl}/v1/groups`;
   }
 
   getUrlResource(): string {

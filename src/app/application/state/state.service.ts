@@ -15,7 +15,7 @@ export class StateService extends CrudServiceImpl {
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.stateUrl = `${environment.apiURL}/v1/states`;
+    this.stateUrl = `${environment.apiUrl}/v1/states`;
   }
 
   getUrlResource(): string {

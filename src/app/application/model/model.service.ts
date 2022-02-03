@@ -15,7 +15,7 @@ export class ModelService extends CrudServiceImpl {
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.modelUrl = `${environment.apiURL}/v1/models`;
+    this.modelUrl = `${environment.apiUrl}/v1/models`;
   }
 
   getUrlResource(): string {

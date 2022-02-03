@@ -23,8 +23,8 @@ export class AuthenticationService {
     public translate: TranslateService
     ) {
 
-    this.oauthTokenUrl = environment.apiURL + '/oauth';
-    this.revokeTokenUrl = `${environment.apiURL}/v1/tokens`;
+    this.oauthTokenUrl = environment.apiUrl + '/oauth';
+    this.revokeTokenUrl = `${environment.apiUrl}/v1/tokens`;
     
 
   }

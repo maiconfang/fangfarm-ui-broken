@@ -15,7 +15,7 @@ export class EmployeeService extends CrudServiceImpl {
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.employeeUrl = `${environment.apiURL}/v1/employees`;
+    this.employeeUrl = `${environment.apiUrl}/v1/employees`;
   }
 
   getUrlResource(): string {
