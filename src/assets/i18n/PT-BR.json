@@ -19,7 +19,7 @@
 		"FORMATIONTAB": "Formação",
 		"LANGUAGESTAB": "Idiomas",
 		"COURSESTAB": "Cursos",
-		"ABOUTMETEXT": "Iniciei minha carreira com desenvolvimento java, porém mudei para testes com o qual trabalhei por mais de 5 anos. No ano de 2018 voltei meus estudos para desenvolvimento e atualmente tenho habilidades em: Java, Angular CLI, Spring Boot, REST API, JUnit, MySql, SQL Server e Postgresql. Para aprimorar meus conhecimentos trabalhei em parceria com colegas na criação de projetos utilizando Java, Angular e REST API.",
+		"ABOUTMETEXT": "Sou Desenvolvedor de Software com mais de 3 anos de experiência e já trabalhei com tecnologias como Angular, Java, MySQL, SQL Server e Postgresql. Também estou familiarizado com o HP Quality Center, Selenium WebDriver, Oracle, JUnit e HTML. Trabalhei com desenvolvimento front-end e back-end, construção e implantação de software e solução de problemas. Sou graduado em Sistemas de Informação e pós-graduado em Engenharia de Software. Considero-me uma pessoa dedicada, comunicativa e extrovertida",
 		"SKILLSTEXT": " Programação Orientado a Objeto",
 		"EXPERIENCETEXT_LINE_TITLE_2": "Desenvolvimento Java Junior - Sabro Tecnologia Int. Ltda. 2011 - 2012",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_2.1": "Criação de funcionalidade/rotinas java",
@@ -28,7 +28,13 @@
 		"EXPERIENCETEXT_LINE_DESCRIPTION_1.2": "Testes de automação usando Selenium WebDriver",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_1.3": "Criação e execução de cenários de testes",
 		"EXPERIENCETEXT_LINE_TITLE_3": "Desenvolvedor Java, Angular Junior - NTT DATA Business Solutions Brazil. 2020 - Atual",
-		"EXPERIENCETEXT_LINE_DESCRIPTION_3.1": "Atualizações e implementação de funcionalides",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.1": "Desenvolvimento e manutenção de sistemas usando Angular JS, HTML e CSS",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.2": "Desenvolvimento e manutenção de sistemas usando Java",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.3": "Acesso e uso de dados com API REST, serviços SOAP e também protocolo OData",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.4": "Compilação e implantação de software usando Jira e Bamboo",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.5": "Verificação de bancos de dados e criação tabelas e visualizadores usando bancos de dados MySQL, SQL Server e PostgreSQL",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.6": "Apoiar a melhoria contínua e a adoção das melhores práticas treinando colegas de trabalho",
+
 
 		"FORMATIONTEXT_LINE_TITLE_1": "Universidade Federal do Paraná 2013 - 2014" ,
 		"FORMATIONTEXT_DESCRIPTION_1.1": "Pós-Graduação em Engenharia de Software ",
@@ -70,8 +76,10 @@
 	},
 
 	"CONTACT": {
-		"CONTACT_TITLE": "E-mail para contato:",
-		"CONTACT_DESCRIPTION": "maicon.fang@gmail.com"
+		"CONTACT_TITLE": "Contatos:",
+		"CONTACT_DESCRIPTION_1.1": "maicon.fang@gmail.com",
+		"CONTACT_DESCRIPTION_1.2": "https://www.linkedin.com/in/maicon-alexander-illes-fang-4673242a/",
+		"CONTACT_DESCRIPTION_1.3": "https://github.com/maiconfang"
 	},
 
 	"LOGIN": {

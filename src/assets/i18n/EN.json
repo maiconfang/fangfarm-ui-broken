@@ -19,7 +19,7 @@
 		"FORMATIONTAB": "Formation",
 		"LANGUAGESTAB": "Languages",
 		"COURSESTAB": "Courses",
-		"ABOUTMETEXT": "At the beginning of my career, I worked with Java development, however, after 2 years I started working with test software. I have worked with testing for more than 5 years. In 2018 I decided to start focusing my studies on software development, therefore, nowadays I have skills in the following areas: Java, Angular CLI, Spring Boot, REST API, JUnit, MySql, SQL Server, and Postgresql. In order to improve my knowledge I have worked in partnership with co-workers to create projects using Java, Angular CLI, and REST API.",
+		"ABOUTMETEXT": "I am a Software Developer with more than 3 years of experience and I have worked with technologies such as Angular, Java, MySQL, SQL Server, and Postgresql. I am also familiar with HP Quality Center, Selenium WebDriver, Oracle, JUnit, and HTML. I have worked with front-end and back-end development, software build and deploy, and troubleshooting. I hold a Bachelor’s Degree in Information Systems and a Post-Graduation in Software Engineering. I consider myself a dedicated, communicative and outgoing person", 
 		"SKILLSTEXT": "Object-oriented Programming",
 		"EXPERIENCETEXT_LINE_TITLE_2": "Junior Java Development - Sabro Tecnologia Int. Ltda. 2011 - 2012",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_2.1": "Creation of functionality / java routines",
@@ -27,8 +27,13 @@
 		"EXPERIENCETEXT_LINE_DESCRIPTION_1.1": "Test Analyst",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_1.2": "Automation tests using Selenium WebDriver",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_1.3": "Creation and execution of test scenarios",
-		"EXPERIENCETEXT_LINE_TITLE_3": "Junior Java, Angular Development - NTT DATA Business Solutions Brazil. 2020 - Now",
-		"EXPERIENCETEXT_LINE_DESCRIPTION_3.1": "Creation of functionality / java, angular routines",
+		"EXPERIENCETEXT_LINE_TITLE_3": "  Software Developer Java and Angular - NTT DATA Business Solutions Brazil. 2020 - Current",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.1": "Develop and maintain front-end applications using Angular JS, HTML, and CSS",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.2": "Develop and maintain back-end applications using Java",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.3": "Access and use data with REST API, SOAP services, and also OData protocol",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.4": "Software build and deploy using Jira and Bamboo",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.5": "Check databases and create tables and viewers using MySQL, SQL Server and PostgreSQL databases",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_3.6": "Support continuous improvement and adoption of best practices by training coworkers",
 
 		"FORMATIONTEXT_LINE_TITLE_1": "Federal University of Paraná 2013 - 2014" ,
 		"FORMATIONTEXT_DESCRIPTION_1.1": "Post-Graduation in Software Engineering",
@@ -70,8 +75,10 @@
 	},
 
 	"CONTACT": {
-		"CONTACT_TITLE": "E-mail to contact:",
-		"CONTACT_DESCRIPTION": "maicon.fang@gmail.com"
+		"CONTACT_TITLE": "Contacts:",
+		"CONTACT_DESCRIPTION_1.1": "maicon.fang@gmail.com",
+		"CONTACT_DESCRIPTION_1.2": "https://www.linkedin.com/in/maicon-alexander-illes-fang-4673242a/",
+		"CONTACT_DESCRIPTION_1.3": "https://github.com/maiconfang"
 	},
 
 	"LOGIN": {

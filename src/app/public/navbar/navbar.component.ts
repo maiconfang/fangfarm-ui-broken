@@ -15,10 +15,10 @@ export class NavbarComponent implements OnInit {
     public translate: TranslateService
   ) { 
     translate.addLangs(['PT-BR', 'EN']);
-    translate.setDefaultLang('PT-BR');
+    translate.setDefaultLang('EN');
 
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/PT-BR|EN/) ? browserLang : 'PT-BR');
+    translate.use(browserLang.match(/PT-BR|EN/) ? browserLang : 'EN');
   }
 
   ngOnInit() {  }

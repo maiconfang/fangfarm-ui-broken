@@ -15,7 +15,7 @@ export class SidebarComponent implements OnInit {
   ) {
 
     const browserLang = this.storage.getLocalStorage('current_lang');
-    translate.use(browserLang.match(/PT-BR|EN/) ? browserLang : 'PT-BR');
+    translate.use(browserLang.match(/PT-BR|EN/) ? browserLang : 'EN');
 
   }
 
