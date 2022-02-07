@@ -2,14 +2,14 @@
 	"NAVBAR":{
 		"NAVBAR_ITEM_1": "HOME",
 		"NAVBAR_ITEM_2": "ABOUT",
-		"NAVBAR_ITEM_3": "PROJECT",
+		"NAVBAR_ITEM_3": "PROJECTS",
 		"NAVBAR_ITEM_4": "CONTACT",
 		"NAVBAR_LANGUAGE" :"Language"
 	},
 
 	"HOME": {
 	  "APRESENTATION": "Hi, my name is Maicon Fang and I am a Software Developer (Java, Angular CLI) and a Test Analyst.",
-	  "ABSTRACT": "I concluded the Bachelor of Information Systems course at the end of 2010 and since then I have been working with software development and testing. From 2011 to 2012 I worked with Java development, and from 2012 to the end of 2019 I worked focused on automated tests. Besides that,  I have taken courses in the Java REST API and Angular CLI development areas. In addition, I have a postgraduate degree in Software Engineering from the Federal University of Paraná (Brazil)."
+	  "ABSTRACT": "I am a Software Developer with more than 3 years of experience and I have worked with technologies such as Angular, Java, MySQL, SQL Server, and Postgresql. I am also familiar with HP Quality Center, Selenium Web Driver, Oracle, JUnit, and HTML. I have worked with front-end and back-end development, software build and deploy, and troubleshooting. I hold a Bachelor’s Degree in Information Systems and a Post-Graduation in Soft ware Engineering. I consider myself a dedicated, communicative, and outgoing person."
 	},
 
 	"ABOUT": {
@@ -21,12 +21,13 @@
 		"COURSESTAB": "Courses",
 		"ABOUTMETEXT": "I am a Software Developer with more than 3 years of experience and I have worked with technologies such as Angular, Java, MySQL, SQL Server, and Postgresql. I am also familiar with HP Quality Center, Selenium WebDriver, Oracle, JUnit, and HTML. I have worked with front-end and back-end development, software build and deploy, and troubleshooting. I hold a Bachelor’s Degree in Information Systems and a Post-Graduation in Software Engineering. I consider myself a dedicated, communicative and outgoing person", 
 		"SKILLSTEXT": "Object-oriented Programming",
-		"EXPERIENCETEXT_LINE_TITLE_2": "Junior Java Development - Sabro Tecnologia Int. Ltda. 2011 - 2012",
-		"EXPERIENCETEXT_LINE_DESCRIPTION_2.1": "Creation of functionality / java routines",
-		"EXPERIENCETEXT_LINE_TITLE_1": "Test Analyst - Velti Tecnologia 2014 - 2019",
-		"EXPERIENCETEXT_LINE_DESCRIPTION_1.1": "Test Analyst",
-		"EXPERIENCETEXT_LINE_DESCRIPTION_1.2": "Automation tests using Selenium WebDriver",
-		"EXPERIENCETEXT_LINE_DESCRIPTION_1.3": "Creation and execution of test scenarios",
+		"EXPERIENCETEXT_LINE_TITLE_1": "Test Analyst - Velti Tecnologia. 2014 - 2019",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_1.1": " Performed Test Analyses with JUnit and JMeter",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_1.2": " Worked with Test Automation using Selenium WebDriver",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_1.3": "Created and maintained the test repository, including test suites and test cases",
+		"EXPERIENCETEXT_LINE_TITLE_2": "Software Tester - M2sys Tecnologia e Serviços S/A. 2013 - 2014",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_2.1": "Performed Test Analyses mainly directed to HSBC Bank System",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_2.2": "Elaborated and executed manual tests",
 		"EXPERIENCETEXT_LINE_TITLE_3": "  Software Developer Java and Angular - NTT DATA Business Solutions Brazil. 2020 - Current",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.1": "Develop and maintain front-end applications using Angular JS, HTML, and CSS",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.2": "Develop and maintain back-end applications using Java",
@@ -71,7 +72,14 @@
 		"PROJECT_DESCRIPTION_SUB_TITLE_2.1": "It was created in MVC and each layer was responsible for a certain action;",
 		"PROJECT_DESCRIPTION_SUB_TITLE_2.2": "Here we also used object orientation for creating classes;",
 		"PROJECT_DESCRIPTION_SUB_TITLE_2.3": "JPA was used for database integration;",
-		"PROJECT_DESCRIPTION_SUB_TITLE_2.4": "We used Flyway to manage database tables."
+		"PROJECT_DESCRIPTION_SUB_TITLE_2.4": "We used Flyway to manage database tables.",
+
+		"PROJECT_NAME_TITLE_2": "FangFarm",
+		"PROJECT_DESCRIPTION_2.1": "FangFarm was developed using the following tools: Spring Boot, Java, REST API, and MySQL in the Back-end and Angular CLI in the Front-end." ,
+		"PROJECT_DESCRIPTION_2.2": "The objective of this project is to provide an efficient software for farm management.",
+		"PROJECT_DESCRIPTION_2.3": "You can access FangFarm by clicking on the “LOGIN” tab and then logging in using the user available on the website. Please note that the website is hosted at free Heroku server so it may take up to 40 seconds to login.",
+		"PROJECT_DESCRIPTION_2.4": "See more (API):",
+		"PROJECT_DESCRIPTION_2.5": "See more (Front-end):"
 	},
 
 	"CONTACT": {
@@ -116,6 +124,7 @@
 		"GROUP" : "Group",
 		"GROUP_PERMISSION" : "Group Permission",
 		"USER" : "User",
+		"BRAND" : "Brand",
 		"SEE_POSTS": "See Records",
 		"ADD_MODEL": "Add Model",
 		"ADD_STATE": "Add State",
@@ -123,7 +132,8 @@
 		"ADD_EMPLOYEE": "Add Employee",
 		"ADD_GROUP": "Add Group",
 		"ADD_GROUP_PERMISSION": "Add Group Permission",
-		"ADD_USER": "Add User"
+		"ADD_USER": "Add User",
+		"ADD_BRAND": "Add Brand"
 	},
 
 	"CRUD": {
@@ -230,6 +240,21 @@
 		"TOOLTIP_CITY": "Nam of city"
 	},
 
+	"BRAND": {
+		"SEARCH_COLUMN_NAME": "Brand",
+		"SEARCH_COLUMN_MODEL": "Model",
+		"BRAND_LABEL_FILTER": "Name of brand",
+		"MODEL_LABEL_FILTER": "Name of model",
+		"LABEL_NAME": "Name of brand",
+		"LABEL_MODEL": "Model",
+		"LABEL_MODEL_PLACE_HOLDER": "Type the name of model",
+		"TITLE_CONSULT": "Consult Brand",
+		"TITLE_EDIT": "Edit of Brand",
+		"TITLE_NEW": "New Brand",
+		"TOOLTIP_BRAND": "Name of brand",
+		"TOOLTIP_MODEL": "Name of model"
+	},
+
 	"PAGINATOR": {
 		"BACK": "Back",
 		"NEXT": "Next"
@@ -278,6 +303,22 @@
 		"TOOLTIP_ID": "Code of city",
 		"TOOLTIP_NAME": "Name of city",
 		"PLACE_HOLDER_NAME": "Name of city"
+	},
+
+	"FARM_MODEL_SELECT": {
+		"BUTTON_SELECT_MODEL": "Select Model",
+		"TOOLTIP_BUTTON_SELECT_MODEL": "Select model",
+		"TITLE": "List of Models",
+		"LABEL_MODEL": "Name of model",
+		"TOOLTIP_BUTTON_FILTER": "Consult of model",
+		"TOOLTIP_BUTTON_SELECT": "Select a model",
+		"SEARCH_COLUMN_ID": "Code",
+		"SEARCH_COLUMN_NAME": "Model",
+		"BUTTON_CLOSE": "Close",
+		"TOOLTIP_BUTTON_CLOSE": "Close",
+		"TOOLTIP_ID": "Code of model",
+		"TOOLTIP_NAME": "Name of model",
+		"PLACE_HOLDER_NAME": "Name of model"
 	},
 
 	"GROUP_PERMISSION": {

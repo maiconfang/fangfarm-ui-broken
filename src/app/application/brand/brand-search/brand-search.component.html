@@ -1,0 +1,71 @@
+<section class="container mt-5">
+  <h1 class="title-screen-search">{{ 'BRAND.TITLE_CONSULT' | translate }}</h1>
+
+  <form [formGroup]="form" (ngSubmit)="search()">
+
+    <div class="justify-content-center">
+      <button id="filter-new-brand" type="button" class="btn btn-primary"
+        tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/brand/new">{{ 'CRUD.NEW' | translate
+        }}</button>
+    </div>
+
+    <div class="input-group mb-3" style="margin-top: 8px;">
+
+      <div style="padding-right: 10px; width: 500px;">
+        <input id="filter-brand-name" type="text" class="form-control"
+        tooltip="{{ 'BRAND.BRAND_LABEL_FILTER' | translate }}" placeholder="{{ 'BRAND.BRAND_LABEL_FILTER' | translate }}"
+        aria-describedby="basic-addon2" formControlName="name">
+  
+      </div>
+     
+      <div style="padding-right: 6px;" class="form-group col" formGroupName="model" >
+        <input id="brand-model" formControlName="name" [typeahead]="models" typeaheadOptionField="name"
+          (typeaheadOnSelect)="onSelect($event)" [typeaheadOptionsLimit]="7" [typeaheadMinLength]="0"
+          placeholder="{{ 'BRAND.LABEL_MODEL_PLACE_HOLDER' | translate }}" class="form-control"
+          tooltip="{{ 'BRAND.TOOLTIP_MODEL' | translate }}">
+      </div>
+
+      <app-farm-model-select (modelSelectOutPut)="recieveModelOfSelect($event)"> </app-farm-model-select>
+
+      <div class="input-group-append">
+        <button id="filter-consult-brand" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
+          type="submit"><i class="fas fa-search"></i></button>
+
+        <button id="filter-consult-clear-fields" class="btn btn-secondary"
+          tooltip="{{ 'CRUD.TOOLTIP_ERASER' | translate }}" (click)="resetDataForm()" type="submit"
+          [disabled]="form.invalid"><i class="fas fa-eraser"></i></button>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+            <th scope="col">{{ 'BRAND.SEARCH_COLUMN_NAME' | translate }}</th>
+            <th scope="col">{{ 'BRAND.SEARCH_COLUMN_MODEL' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entity of entities ">
+            <td>
+              <div class="column-action-crud-body" *ngIf="entity.id > 0">
+                <a id="action-update-brand" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
+                  [routerLink]="['/app/brand', entity.id]"><i class="fa fa-edit"></i></a>
+                <button id="action-remove-brand" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" type="button"
+                  (click)="confirmRemoval(entity)" class="bottomless-button"><i class="far fa-trash-alt"></i></button>
+              </div>
+            </td>
+            <td id="column-brand-name" tooltip="{{ 'BRAND.TOOLTIP_BRAND' | translate }}">{{ entity.name }}</td>
+            <td id="column-model-name" tooltip="{{ 'BRAND.TOOLTIP_MODEL' | translate }}">{{ entity.model.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <app-pagination-table [page]="page" (paginationEvent)=changePage($event) style="width: 100%">
+      </app-pagination-table>
+    </div>
+
+  </form>
+
+  <app-form-debug [form]="form"></app-form-debug>
+</section>

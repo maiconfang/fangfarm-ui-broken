@@ -47,6 +47,10 @@ import { GroupPermissionService } from './group-permission/group-permission.serv
 import { GroupPermissionRegisterComponent } from './group-permission/group-permission-register/group-permission-register.component';
 import { GroupPermissionSearchComponent } from './group-permission/group-permission-search/group-permission-search.component';
 
+import { BrandModule } from './brand/brand.module';
+import { BrandService } from './brand/brand.service';
+import { BrandRegisterComponent } from './brand/brand-register/brand-register.component';
+import { BrandSearchComponent } from './brand/brand-search/brand-search.component';
 
 const routesApp: Routes = [
   {
@@ -86,7 +90,12 @@ const routesApp: Routes = [
       { path: 'group-permission/:id', component: GroupPermissionRegisterComponent },
 
       { path: 'not-authorized', component: NotAuthorizedComponent },
-      { path: 'page-not-found', component: PageNotFoundComponent }
+      { path: 'page-not-found', component: PageNotFoundComponent },
+
+      { path: 'brand', component: BrandSearchComponent },
+      { path: 'brand/new', component: BrandRegisterComponent },
+      { path: 'brand/:id', component: BrandRegisterComponent }
+
     ]
   },
 ];
@@ -111,6 +120,7 @@ const routesApp: Routes = [
     GroupModule,
     EmployeeModule,
     GroupPermissionModule,
+    BrandModule,
     
   ],
   exports: [
@@ -123,7 +133,8 @@ const routesApp: Routes = [
     StateService,
     GroupService,
     EmployeeService,
-    GroupPermissionService
+    GroupPermissionService,
+    BrandService
   
   ]
 })

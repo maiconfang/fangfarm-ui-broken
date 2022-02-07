@@ -1,0 +1,66 @@
+<form [formGroup]="form">
+
+    <div class="input-group-append">
+        <button type="button" class="btn btn-primary" (click)="openModalWithClass(template)" 
+        tooltip="{{'FARM_MODEL_SELECT.TOOLTIP_BUTTON_SELECT' | translate }}" >
+            {{'FARM_MODEL_SELECT.BUTTON_SELECT_MODEL' | translate }} </button>
+    </div>
+
+    <ng-template #template>
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">{{'FARM_MODEL_SELECT.TITLE' | translate }}</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.hide()" 
+            tooltip="{{'FARM_MODEL_SELECT.TOOLTIP_BUTTON_CLOSE' | translate }}">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <div class="input-group" style="margin-top: 8px;">
+            <input id="filter-model-name" type="text" style="margin-left: 10px;" class="form-control"
+                tooltip="{{'FARM_MODEL_SELECT.LABEL_MODEL' | translate }}"
+                placeholder="{{'FARM_MODEL_SELECT.PLACE_HOLDER_NAME' | translate }}" aria-describedby="basic-addon2"
+                formControlName="name" (keyup.enter)="onEnter()">
+            <div class="input-group-append">
+                <button id="farm-select-model-filter-name" style="margin-right: 10px;" class="btn btn-primary"
+                    tooltip="{{'CRUD.TOOLTIP_FILTER' | translate }}" (click)="search()"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <div >
+
+            <ul>
+                <div class="form-row">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">{{'FARM_MODEL_SELECT.SEARCH_COLUMN_ID' | translate }}</th>
+                                <th scope="col">{{'FARM_MODEL_SELECT.SEARCH_COLUMN_NAME' | translate }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let entity of entitiesModelSelect ">
+                                <td id="column-model-name" tooltip="{{'FARM_MODEL_SELECT.TOOLTIP_ID' | translate }}"
+                                    (click)="selectModel(entity)">{{ entity.id }}</td>
+                                <td id="column-model-name" tooltip="{{'FARM_MODEL_SELECT.TOOLTIP_NAME' | translate }}"
+                                    (click)="selectModel(entity)">{{ entity.name }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <app-pagination-table [page]="pageModelSelect" (paginationEvent)=changePageSelect($event)
+                        style="width: 100%">
+                    </app-pagination-table>
+
+                </div>
+
+            </ul>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary"
+                tooltip="{{'FARM_MODEL_SELECT.TOOLTIP_BUTTON_CLOSE' | translate }}"
+                (click)="modalRef.hide()">{{'FARM_MODEL_SELECT.BUTTON_CLOSE' | translate }}</button>
+        </div>
+    </ng-template>
+
+</form>

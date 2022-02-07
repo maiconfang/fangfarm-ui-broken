@@ -1,0 +1,41 @@
+<section class="container mt-5">
+  <h1 class="title-screen-create">{{ titleBrand }}</h1>
+
+  <form [formGroup]="form" (ngSubmit)="save()">
+
+    <div class="input-group mb-3" style="margin-top: 8px;">
+
+      <div style="padding-right: 10px; width: 500px;" formGroupName="model">
+        <label class="requiredLabel">{{ 'BRAND.LABEL_MODEL' | translate }}</label>
+        <input id="brand-model" formControlName="name" [typeahead]="models" typeaheadOptionField="name"
+          (typeaheadOnSelect)="onSelect($event)" [typeaheadOptionsLimit]="7" [typeaheadMinLength]="0"
+          placeholder="{{ 'BRAND.LABEL_MODEL_PLACE_HOLDER' | translate }}" class="form-control"
+          tooltip="{{ 'BRAND.TOOLTIP_MODEL' | translate }}">
+        <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'BRAND.LABEL_MODEL' | translate }}">
+        </app-form-messages-erro>
+      </div>
+
+    </div>
+
+    <div class="input-group mb-3">
+      <div>
+        <label class="requiredLabel">{{ 'BRAND.LABEL_NAME' | translate }}</label>
+        <input id="brand-name" type="text" style="width: 490px;" class="form-control" formControlName="name"
+          tooltip="{{ 'BRAND.LABEL_NAME' | translate }}">
+        <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'BRAND.LABEL_NAME' | translate }}">
+        </app-form-messages-erro>
+      </div>
+    </div>
+
+    <div class="buttons-crud-content">
+      <button id="btn-save-brand" type="submit" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}"
+        [disabled]="form.invalid">{{ 'CRUD.SAVE' | translate }}</button>
+      <button id="btn-back" type="button" class="btn btn-secondary" tooltip="{{ 'CRUD.TOOLTIP_BACK' | translate }}"
+        routerLink="/app/brand">{{ 'CRUD.BACK' | translate }}</button>
+    </div>
+
+
+  </form>
+
+  <app-form-debug [form]="form"></app-form-debug>
+</section>

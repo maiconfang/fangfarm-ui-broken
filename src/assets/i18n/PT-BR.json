@@ -9,7 +9,7 @@
 
 	"HOME": {
 	  "APRESENTATION": "Olá! Meu nome é Maicon Fang e sou Desenvolvedor Java, Angular CLI e Analista de Testes. ",
-	  "ABSTRACT": "Conclui o curso em Bacharel em Sistemas de Informação no final de 2010 e desde então estou trabalhando com desenvolvimento e testes de software. Entre 2011 e 2012 trabalhei com desenvolvimento Java, após este período, até final de 2019, trabalhei focado em testes automatizados. Além disso fiz cursos nas áreas de  desenvolvimento Java, REST API e Angular CLI. Tenho pós graduação em Engenharia de Software pela Universidade Federal do Paraná."
+	  "ABSTRACT": "Sou Desenvolvedor de Software com mais de 3 anos de experiência e já trabalhei com tecnologias como Angular, Java, MySQL, SQL Server e Postgresql. Também estou familiarizado com o HP Quality Center, Selenium Web Driver, Oracle, JUnit e HTML. Trabalhei com desenvolvimento front-end e back-end, construção e implantação de software e solução de problemas. Sou Bacharel em Sistemas de Informação e Pós-Graduado em Engenharia de Software. Considero-me uma pessoa dedicada, comunicativa e extrovertida."
 	},
 
 	"ABOUT": {
@@ -21,13 +21,14 @@
 		"COURSESTAB": "Cursos",
 		"ABOUTMETEXT": "Sou Desenvolvedor de Software com mais de 3 anos de experiência e já trabalhei com tecnologias como Angular, Java, MySQL, SQL Server e Postgresql. Também estou familiarizado com o HP Quality Center, Selenium WebDriver, Oracle, JUnit e HTML. Trabalhei com desenvolvimento front-end e back-end, construção e implantação de software e solução de problemas. Sou graduado em Sistemas de Informação e pós-graduado em Engenharia de Software. Considero-me uma pessoa dedicada, comunicativa e extrovertida",
 		"SKILLSTEXT": " Programação Orientado a Objeto",
-		"EXPERIENCETEXT_LINE_TITLE_2": "Desenvolvimento Java Junior - Sabro Tecnologia Int. Ltda. 2011 - 2012",
-		"EXPERIENCETEXT_LINE_DESCRIPTION_2.1": "Criação de funcionalidade/rotinas java",
-		"EXPERIENCETEXT_LINE_TITLE_1": "Analista de Testes - Velti Tecnologia 2014 - 2019",
+		"EXPERIENCETEXT_LINE_TITLE_1": "Analista de Testes - Velti Tecnologia. 2014 - 2019",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_1.1": "Analista de testes",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_1.2": "Testes de automação usando Selenium WebDriver",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_1.3": "Criação e execução de cenários de testes",
-		"EXPERIENCETEXT_LINE_TITLE_3": "Desenvolvedor Java, Angular Junior - NTT DATA Business Solutions Brazil. 2020 - Atual",
+		"EXPERIENCETEXT_LINE_TITLE_2": "Software Tester - M2sys Tecnologia e Serviços S/A. 2013 - 2014",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_2.1": "Análises de Testes Realizados principalmente direcionados ao Sistema Bancário HSBC",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_2.2": "Elaboração e execução de testes manuais",
+		"EXPERIENCETEXT_LINE_TITLE_3": "Software Developer - NTT DATA Business Solutions Brasil. 2020 - Atual",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.1": "Desenvolvimento e manutenção de sistemas usando Angular JS, HTML e CSS",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.2": "Desenvolvimento e manutenção de sistemas usando Java",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.3": "Acesso e uso de dados com API REST, serviços SOAP e também protocolo OData",
@@ -51,7 +52,6 @@
 		"COURSESTEXT_LINE_1": "Especialista Spring REST, 240 horas, na Algaworks",
 		"COURSESTEXT_LINE_2": "Fullstack Angular e Spring, 120 horas, na Algaworks",
 		"COURSESTEXT_LINE_3": "Java e Orientação a Objetos, 22 horas, na Algaworks"
-		
 	},
 
 	"PROJECT": {
@@ -72,7 +72,14 @@
 		"PROJECT_DESCRIPTION_SUB_TITLE_2.1": "Foi criado em MVC e cada camada era responsável por determinada ação;",
 		"PROJECT_DESCRIPTION_SUB_TITLE_2.2": "Aqui também utilizamos orientação a objetos para criação das classes e funcionalidades;",
 		"PROJECT_DESCRIPTION_SUB_TITLE_2.3": "Foi utilizado o JPA para integração com banco de dados;",
-		"PROJECT_DESCRIPTION_SUB_TITLE_2.4": "Utilizamos o Flyway para gerenciamento das tabelas do banco de dados."
+		"PROJECT_DESCRIPTION_SUB_TITLE_2.4": "Utilizamos o Flyway para gerenciamento das tabelas do banco de dados.",
+
+		"PROJECT_NAME_TITLE_2": "FangFarm",
+		"PROJECT_DESCRIPTION_2.1": "FangFarm foi desenvolvido usando as seguintes ferramentas Spring Boot, Java, REST API e MySQL no Back-End e Angular CLI no Front-End." ,
+		"PROJECT_DESCRIPTION_2.2": "O objetivo desse projeto é auxiliar no gerenciamento de uma fazenda.",
+		"PROJECT_DESCRIPTION_2.3": "Ele pode ser acessado clicando na aba “LOGIN” e depois no botão entrar, pode demorar até 40 segundos para ter acesso ao sistema pois está hospedado de forma gratuita no Heroku server.",
+		"PROJECT_DESCRIPTION_2.4": "Veja mais (API):",
+		"PROJECT_DESCRIPTION_2.5": "Veja mais (Front-end):"
 	},
 
 	"CONTACT": {
@@ -117,6 +124,7 @@
 		"GROUP" : "Grupo",
 		"GROUP_PERMISSION" : "Grupo Permissão",
 		"USER" : "Usuário",
+		"BRAND" : "Marca",
 		"SEE_POSTS": "Ver Registros",
 		"ADD_MODEL": "Adicionar Modelo",
 		"ADD_STATE": "Adicionar Estado",
@@ -124,7 +132,8 @@
 		"ADD_EMPLOYEE": "Adicionar Colaborador",
 		"ADD_GROUP": "Adicionar Grupo",
 		"ADD_GROUP_PERMISSION": "Adicionar Grupo Permissão",
-		"ADD_USER": "Adicionar Usuário"
+		"ADD_USER": "Adicionar Usuário",
+		"ADD_BRAND": "Adicionar Marca"
 	},
 
 	"CRUD": {
@@ -231,6 +240,21 @@
 		"TOOLTIP_CITY": "Nome da cidade"
 	},
 
+	"BRAND": {
+		"SEARCH_COLUMN_NAME": "Marca",
+		"SEARCH_COLUMN_MODEL": "Modelo",
+		"BRAND_LABEL_FILTER": "Nome da marca",
+		"MODEL_LABEL_FILTER": "Nome do modelo",
+		"LABEL_NAME": "Nome da marca",
+		"LABEL_MODEL": "Modelo",
+		"LABEL_MODEL_PLACE_HOLDER": "Digite o nome do modelo",
+		"TITLE_CONSULT": "Consultar Marca",
+		"TITLE_EDIT": "Edição da Marca",
+		"TITLE_NEW": "Nova Marca",
+		"TOOLTIP_BRAND": "Nome da marca",
+		"TOOLTIP_MODEL": "Nome do modelo"
+	},
+
 	"PAGINATOR": {
 		"BACK": "Voltar",
 		"NEXT": "Avançar"
@@ -278,7 +302,23 @@
 		"TOOLTIP_BUTTON_CLOSE": "Fechar",
 		"TOOLTIP_ID": "Código da cidade",
 		"TOOLTIP_NAME": "Nome da cidade",
-		"PLACE_HOLDER_NAME": "Nome do cidade"
+		"PLACE_HOLDER_NAME": "Nome da cidade"
+	},
+
+	"FARM_MODEL_SELECT": {
+		"BUTTON_SELECT_MODEL": "Selecione um Modelo",
+		"TOOLTIP_BUTTON_SELECT_MODEL": "Selecione um modelo",
+		"TITLE": "Lista de Modelos",
+		"LABEL_MODEL": "Nome do modelo",
+		"TOOLTIP_BUTTON_FILTER": "Consultar modelo",
+		"TOOLTIP_BUTTON_SELECT": "Selecione um modelo",
+		"SEARCH_COLUMN_ID": "Código",
+		"SEARCH_COLUMN_NAME": "Modelo",
+		"BUTTON_CLOSE": "Fechar",
+		"TOOLTIP_BUTTON_CLOSE": "Fechar",
+		"TOOLTIP_ID": "Código do modelo",
+		"TOOLTIP_NAME": "Nome do modelo",
+		"PLACE_HOLDER_NAME": "Nome do modelo"
 	},
 
 	"GROUP_PERMISSION": {

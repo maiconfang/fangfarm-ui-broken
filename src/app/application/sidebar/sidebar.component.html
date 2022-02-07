@@ -14,6 +14,17 @@
     </li>
 
     <li>
+      <a aria-expanded="false" routerLink="/app/brand">
+        <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.BRAND' | translate }}</span>
+        <i class="fas fa-angle-down"></i>
+      </a>
+      <ul aria-expanded="false">
+        <li><a routerLink="/app/brand">{{ 'SIDE_BAR.SEE_POSTS' | translate }}</a></li>
+        <li><a routerLink="/app/brand/new">{{ 'SIDE_BAR.ADD_BRAND' | translate }}</a></li>
+      </ul>
+    </li>
+
+    <li>
       <a aria-expanded="false" routerLink="/app/state">
         <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.STATE' | translate }}</span>
         <i class="fas fa-angle-down"></i>

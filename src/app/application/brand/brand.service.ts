@@ -3,42 +3,48 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 import { CrudServiceImpl } from 'src/app/core/crud-generic/crud-service-impl';
-import { ModelFilter } from './model';
+import { BrandFilter } from './brand';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ModelService extends CrudServiceImpl {
+export class BrandService extends CrudServiceImpl {
 
-  modelUrl: string;
+  brandUrl: string;
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.modelUrl = `${environment.apiUrl}/v1/models`;
+    this.brandUrl = `${environment.apiUrl}/v1/brands`;
   }
 
   getUrlResource(): string {
-    return this.modelUrl;
+    return this.brandUrl;
   }
 
-  listPaginated(filter: ModelFilter, page: number, parameters = new HttpParams()): Observable<any> {
+  listPaginated(filter: BrandFilter, page: number, parameters = new HttpParams()): Observable<any> {
 
     if (filter.name) {
       parameters = parameters.set('name', filter.name);
+    }
+
+    if (filter.modelId) {
+      parameters = parameters.set('modelId', filter.modelId);
     }
 
     return super.listPaginated(filter, page, parameters);
   }
 
   listAll(): Promise<any> {
-    return this.http.get<any>(this.modelUrl)
+    return this.http.get<any>(this.brandUrl)
       .toPromise()
       .then(response => response);
   }
 
   listAllNoPagination(): Promise<any> {
-    return this.http.get<any>(this.modelUrl + "/noPagination")
+    console.log(this.brandUrl + "/noPagination");
+    
+    return this.http.get<any>(this.brandUrl + "/noPagination")
       .toPromise()
       .then(response => response);
   }
