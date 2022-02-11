@@ -1,0 +1,79 @@
+<section class="container mt-5">
+  <h1 class="title-screen-search">{{ 'VEHICLE.TITLE_CONSULT' | translate }}</h1>
+
+  <form [formGroup]="form" (ngSubmit)="search()">
+
+    <div class="justify-content-center">
+      <button id="filter-new-vehicle" type="button" class="btn btn-primary"
+        tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/vehicle/new">{{ 'CRUD.NEW' | translate
+        }}</button>
+    </div>
+
+    <div class="input-group mb-3" style="margin-top: 8px;">
+
+      <div style="padding-right: 10px; width: 500px;">
+        <input id="filter-vehicle-license-plate" type="text" class="form-control"
+        tooltip="{{ 'VEHICLE.LICENSE_PLATE_LABEL_FILTER' | translate }}" placeholder="{{ 'VEHICLE.LICENSE_PLATE_LABEL_FILTER' | translate }}"
+        aria-describedby="basic-addon2" formControlName="licensePlate">
+  
+      </div>
+     
+      <div style="padding-right: 6px;" class="form-group col" formGroupName="brand" >
+        <input id="vehicle-brand" formControlName="name" [typeahead]="brands" typeaheadOptionField="name"
+          (typeaheadOnSelect)="onSelect($event)" [typeaheadOptionsLimit]="7" [typeaheadMinLength]="0"
+          placeholder="{{ 'VEHICLE.LABEL_BRAND_PLACE_HOLDER' | translate }}" class="form-control"
+          tooltip="{{ 'VEHICLE.TOOLTIP_BRAND' | translate }}">
+      </div>
+
+      <app-farm-brand-select (brandSelectOutPut)="recieveBrandOfSelect($event)"> </app-farm-brand-select>
+
+      <div class="input-group-append">
+        <button id="filter-consult-vehicle" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
+          type="submit"><i class="fas fa-search"></i></button>
+
+        <button id="filter-consult-clear-fields" class="btn btn-secondary"
+          tooltip="{{ 'CRUD.TOOLTIP_ERASER' | translate }}" (click)="resetDataForm()" type="submit"
+          [disabled]="form.invalid"><i class="fas fa-eraser"></i></button>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+            <th scope="col">{{ 'VEHICLE.SEARCH_COLUMN_LICENSE_PLATE' | translate }}</th>
+            <th scope="col">{{ 'VEHICLE.SEARCH_COLUMN_COLOR' | translate }}</th>
+            <th scope="col">{{ 'VEHICLE.SEARCH_COLUMN_YEAR' | translate }}</th>
+            <th scope="col">{{ 'VEHICLE.SEARCH_COLUMN_FUEL' | translate }}</th>
+            <th scope="col">{{ 'VEHICLE.SEARCH_COLUMN_DESCRIPTION' | translate }}</th>
+            <th scope="col">{{ 'VEHICLE.SEARCH_COLUMN_BRAND' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entity of entities ">
+            <td>
+              <div class="column-action-crud-body" *ngIf="entity.id > 0">
+                <a id="action-update-vehicle" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
+                  [routerLink]="['/app/vehicle', entity.id]"><i class="fa fa-edit"></i></a>
+                <button id="action-remove-vehicle" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" type="button"
+                  (click)="confirmRemoval(entity)" class="bottomless-button"><i class="far fa-trash-alt"></i></button>
+              </div>
+            </td>
+            <td id="column-vehicle-license-plate" tooltip="{{ 'VEHICLE.TOOLTIP_LICENSE_PLATE' | translate }}">{{ entity.licensePlate }}</td>
+            <td id="column-vehicle-color" tooltip="{{ 'VEHICLE.TOOLTIP_COLOR' | translate }}">{{ entity.color }}</td>
+            <td id="column-vehicle-year" tooltip="{{ 'VEHICLE.TOOLTIP_YEAR' | translate }}">{{ entity.year }}</td>
+            <td id="column-vehicle-fuel" tooltip="{{ 'VEHICLE.TOOLTIP_FUEL' | translate }}">{{ entity.fuel }}</td>
+            <td id="column-vehicle-description" tooltip="{{ 'VEHICLE.TOOLTIP_DESCRIPTION' | translate }}">{{ entity.description }}</td>
+            <td id="column-brand-name" tooltip="{{ 'VEHICLE.TOOLTIP_BRAND' | translate }}">{{ entity.brand.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <app-pagination-table [page]="page" (paginationEvent)=changePage($event) style="width: 100%">
+      </app-pagination-table>
+    </div>
+
+  </form>
+
+  <app-form-debug [form]="form"></app-form-debug>
+</section>

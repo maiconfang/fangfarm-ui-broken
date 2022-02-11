@@ -125,6 +125,7 @@
 		"GROUP_PERMISSION" : "Group Permission",
 		"USER" : "User",
 		"BRAND" : "Brand",
+		"VEHICLE" : "Vehicle",
 		"SEE_POSTS": "See Records",
 		"ADD_MODEL": "Add Model",
 		"ADD_STATE": "Add State",
@@ -133,7 +134,8 @@
 		"ADD_GROUP": "Add Group",
 		"ADD_GROUP_PERMISSION": "Add Group Permission",
 		"ADD_USER": "Add User",
-		"ADD_BRAND": "Add Brand"
+		"ADD_BRAND": "Add Brand",
+		"ADD_VEHICLE": "Add Vehicle"
 	},
 
 	"CRUD": {
@@ -255,6 +257,34 @@
 		"TOOLTIP_MODEL": "Name of model"
 	},
 
+	"VEHICLE": {
+		"SEARCH_COLUMN_COLOR": "Color",
+		"SEARCH_COLUMN_YEAR": "Year",
+		"SEARCH_COLUMN_FUEL": "Fuel",
+		"SEARCH_COLUMN_DESCRIPTION": "Descrição",
+		"SEARCH_COLUMN_LICENSE_PLATE": "License Plate",
+		"SEARCH_COLUMN_BRAND": "Brand",
+		"COLOR_LABEL_FILTER": "Color of vehicle",
+		"LICENSE_PLATE_LABEL_FILTER": "License plate of vehicle",
+		"BRAND_LABEL_FILTER": "Name of brand",
+		"LABEL_COLOR": "Color",
+		"LABEL_LICENSE_PLATE": "License Plate",
+		"LABEL_YEAR": "Year",
+		"LABEL_FUEL": "Fuel",
+		"LABEL_DESCRIPTION": "Description",
+		"LABEL_BRAND": "Brand",
+		"LABEL_BRAND_PLACE_HOLDER": "Type the name of brand",
+		"TITLE_CONSULT": "Consult Vehicle",
+		"TITLE_EDIT": "Edit of Vehicle",
+		"TITLE_NEW": "New Vehicle",
+		"TOOLTIP_COLOR": "Color of vehicle",
+		"TOOLTIP_YEAR": "Year of vehicle",
+		"TOOLTIP_FUEL": "Fuel of vehicle",
+		"TOOLTIP_DESCRIPTION": "Description of vehicle",
+		"TOOLTIP_LICENSE_PLATE": "License plate of vehicle",
+		"TOOLTIP_BRAND": "Name of brand"
+	},
+
 	"PAGINATOR": {
 		"BACK": "Back",
 		"NEXT": "Next"
@@ -293,7 +323,7 @@
 		"BUTTON_SELECT_CITY": "Select City",
 		"TOOLTIP_BUTTON_SELECT_CITY": "Select city",
 		"TITLE": "List of Cities",
-		"LABEL_CITY": "Name of ciy",
+		"LABEL_CITY": "Name of city",
 		"TOOLTIP_BUTTON_FILTER": "Consult of city",
 		"TOOLTIP_BUTTON_SELECT": "Select a city",
 		"SEARCH_COLUMN_ID": "Code",
@@ -319,6 +349,22 @@
 		"TOOLTIP_ID": "Code of model",
 		"TOOLTIP_NAME": "Name of model",
 		"PLACE_HOLDER_NAME": "Name of model"
+	},
+
+	"FARM_BRAND_SELECT": {
+		"BUTTON_SELECT_BRAND": "Select Brand",
+		"TOOLTIP_BUTTON_SELECT_BRAND": "Select brand",
+		"TITLE": "List of Brands",
+		"LABEL_BRAND": "Name of brand",
+		"TOOLTIP_BUTTON_FILTER": "Consult of brand",
+		"TOOLTIP_BUTTON_SELECT": "Select a brand",
+		"SEARCH_COLUMN_ID": "Code",
+		"SEARCH_COLUMN_NAME": "Brand",
+		"BUTTON_CLOSE": "Close",
+		"TOOLTIP_BUTTON_CLOSE": "Close",
+		"TOOLTIP_ID": "Code of brand",
+		"TOOLTIP_NAME": "Name of brand",
+		"PLACE_HOLDER_NAME": "Name of brand"
 	},
 
 	"GROUP_PERMISSION": {

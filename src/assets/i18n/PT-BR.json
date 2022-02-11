@@ -125,6 +125,7 @@
 		"GROUP_PERMISSION" : "Grupo Permissão",
 		"USER" : "Usuário",
 		"BRAND" : "Marca",
+		"VEHICLE" : "Veículo",
 		"SEE_POSTS": "Ver Registros",
 		"ADD_MODEL": "Adicionar Modelo",
 		"ADD_STATE": "Adicionar Estado",
@@ -133,7 +134,8 @@
 		"ADD_GROUP": "Adicionar Grupo",
 		"ADD_GROUP_PERMISSION": "Adicionar Grupo Permissão",
 		"ADD_USER": "Adicionar Usuário",
-		"ADD_BRAND": "Adicionar Marca"
+		"ADD_BRAND": "Adicionar Marca",
+		"ADD_VEHICLE": "Adicionar Veículo"
 	},
 
 	"CRUD": {
@@ -255,6 +257,34 @@
 		"TOOLTIP_MODEL": "Nome do modelo"
 	},
 
+	"VEHICLE": {
+		"SEARCH_COLUMN_COLOR": "Cor",
+		"SEARCH_COLUMN_YEAR": "Ano",
+		"SEARCH_COLUMN_FUEL": "Combustível",
+		"SEARCH_COLUMN_DESCRIPTION": "Descrição",
+		"SEARCH_COLUMN_LICENSE_PLATE": "Placa",
+		"SEARCH_COLUMN_BRAND": "Marca",
+		"COLOR_LABEL_FILTER": "Cor do veículo",
+		"LICENSE_PLATE_LABEL_FILTER": "Placa do veículo",
+		"BRAND_LABEL_FILTER": "Nome da marca",
+		"LABEL_COLOR": "Cor",
+		"LABEL_LICENSE_PLATE": "Placa",
+		"LABEL_YEAR": "Ano",
+		"LABEL_FUEL": "Combustível",
+		"LABEL_DESCRIPTION": "Descrição",
+		"LABEL_BRAND": "Marca",
+		"LABEL_BRAND_PLACE_HOLDER": "Digite o nome da marca",
+		"TITLE_CONSULT": "Consultar Veículo",
+		"TITLE_EDIT": "Edição do Veículo",
+		"TITLE_NEW": "Novo Veículo",
+		"TOOLTIP_COLOR": "Cor do veículo",
+		"TOOLTIP_YEAR": "Ano do veículo",
+		"TOOLTIP_FUEL": "Combustível do veículo",
+		"TOOLTIP_DESCRIPTION": "Descrição do veículo",
+		"TOOLTIP_LICENSE_PLATE": "Placa do veículo",
+		"TOOLTIP_BRAND": "Nome da marca"
+	},
+
 	"PAGINATOR": {
 		"BACK": "Voltar",
 		"NEXT": "Avançar"
@@ -319,6 +349,22 @@
 		"TOOLTIP_ID": "Código do modelo",
 		"TOOLTIP_NAME": "Nome do modelo",
 		"PLACE_HOLDER_NAME": "Nome do modelo"
+	},
+
+	"FARM_BRAND_SELECT": {
+		"BUTTON_SELECT_BRAND": "Selecione uma Marca",
+		"TOOLTIP_BUTTON_SELECT_BRAND": "Selecione a marca",
+		"TITLE": "Lista de Marcas",
+		"LABEL_BRAND": "Nome da marca",
+		"TOOLTIP_BUTTON_FILTER": "Consultar marca",
+		"TOOLTIP_BUTTON_SELECT": "Selecione uma marca",
+		"SEARCH_COLUMN_ID": "Código",
+		"SEARCH_COLUMN_NAME": "Marca",
+		"BUTTON_CLOSE": "Fechar",
+		"TOOLTIP_BUTTON_CLOSE": "Fechar",
+		"TOOLTIP_ID": "Código da marca",
+		"TOOLTIP_NAME": "Nome da marca",
+		"PLACE_HOLDER_NAME": "Nome da marca"
 	},
 
 	"GROUP_PERMISSION": {

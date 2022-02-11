@@ -52,6 +52,11 @@ import { BrandService } from './brand/brand.service';
 import { BrandRegisterComponent } from './brand/brand-register/brand-register.component';
 import { BrandSearchComponent } from './brand/brand-search/brand-search.component';
 
+import { VehicleModule } from './vehicle/vehicle.module';
+import { VehicleService } from './vehicle/vehicle.service';
+import { VehicleRegisterComponent } from './vehicle/vehicle-register/vehicle-register.component';
+import { VehicleSearchComponent } from './vehicle/vehicle-search/vehicle-search.component';
+
 const routesApp: Routes = [
   {
     path: 'app', component: ApplicationComponent,
@@ -94,7 +99,11 @@ const routesApp: Routes = [
 
       { path: 'brand', component: BrandSearchComponent },
       { path: 'brand/new', component: BrandRegisterComponent },
-      { path: 'brand/:id', component: BrandRegisterComponent }
+      { path: 'brand/:id', component: BrandRegisterComponent },
+
+      { path: 'vehicle', component: VehicleSearchComponent },
+      { path: 'vehicle/new', component: VehicleRegisterComponent },
+      { path: 'vehicle/:id', component: VehicleRegisterComponent }
 
     ]
   },
@@ -121,7 +130,7 @@ const routesApp: Routes = [
     EmployeeModule,
     GroupPermissionModule,
     BrandModule,
-    
+    VehicleModule
   ],
   exports: [
     ApplicationComponent, RouterModule
@@ -134,8 +143,8 @@ const routesApp: Routes = [
     GroupService,
     EmployeeService,
     GroupPermissionService,
-    BrandService
-  
+    BrandService,
+    VehicleService
   ]
 })
 export class ApplicationModule { }

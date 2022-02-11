@@ -25,6 +25,17 @@
     </li>
 
     <li>
+      <a aria-expanded="false" routerLink="/app/vehicle">
+        <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.VEHICLE' | translate }}</span>
+        <i class="fas fa-angle-down"></i>
+      </a>
+      <ul aria-expanded="false">
+        <li><a routerLink="/app/vehicle">{{ 'SIDE_BAR.SEE_POSTS' | translate }}</a></li>
+        <li><a routerLink="/app/vehicle/new">{{ 'SIDE_BAR.ADD_VEHICLE' | translate }}</a></li>
+      </ul>
+    </li>
+
+    <li>
       <a aria-expanded="false" routerLink="/app/state">
         <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.STATE' | translate }}</span>
         <i class="fas fa-angle-down"></i>
