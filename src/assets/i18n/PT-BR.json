@@ -19,6 +19,7 @@
 		"FORMATIONTAB": "Formação",
 		"LANGUAGESTAB": "Idiomas",
 		"COURSESTAB": "Cursos",
+		"BOOKSTAB": "Livros",
 		"ABOUTMETEXT": "Sou Desenvolvedor de Software com mais de 3 anos de experiência e já trabalhei com tecnologias como Angular, Java, MySQL, SQL Server e Postgresql. Também estou familiarizado com o HP Quality Center, Selenium WebDriver, Oracle, JUnit e HTML. Trabalhei com desenvolvimento front-end e back-end, construção e implantação de software e solução de problemas. Sou graduado em Sistemas de Informação e pós-graduado em Engenharia de Software. Considero-me uma pessoa dedicada, comunicativa e extrovertida",
 		"SKILLSTEXT": " Programação Orientado a Objeto",
 		"EXPERIENCETEXT_LINE_TITLE_1": "Analista de Testes - Velti Tecnologia. 2014 - 2019",
@@ -35,6 +36,10 @@
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.4": "Compilação e implantação de software usando Jira e Bamboo",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.5": "Verificação de bancos de dados e criação tabelas e visualizadores usando bancos de dados MySQL, SQL Server e PostgreSQL",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.6": "Apoiar a melhoria contínua e a adoção das melhores práticas treinando colegas de trabalho",
+		"EXPERIENCETEXT_LINE_TITLE_4": "Analista de Sistema - Cloud and More. 2022 - NOW",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_4.1": "Desenvolvimento e manutenção de sistemas usando Java",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_4.2": "Migração de Software: Java 8 para Java 11 e Tomcat 8.5 para Tomcat 9",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_4.3": "Acesse e use dados com serviços SOAP",
 
 
 		"FORMATIONTEXT_LINE_TITLE_1": "Universidade Federal do Paraná 2013 - 2014" ,
@@ -51,7 +56,14 @@
 
 		"COURSESTEXT_LINE_1": "Especialista Spring REST, 240 horas, na Algaworks",
 		"COURSESTEXT_LINE_2": "Fullstack Angular e Spring, 120 horas, na Algaworks",
-		"COURSESTEXT_LINE_3": "Java e Orientação a Objetos, 22 horas, na Algaworks"
+		"COURSESTEXT_LINE_3": "Java e Orientação a Objetos, 22 horas, na Algaworks",
+		"COURSESTEXT_LINE_4": "jQuery e AJAX para Iniciantes - O Guia Definitivo, 2.5 horas, na Udemy",
+		"COURSESTEXT_LINE_5": "Introdução a Programação Python, 1.5 horas, na Udemy",
+
+		"BOOKSTEXT_LINE_1": "Código Limpo - Habilidades Práticas do Agile Software",
+		"BOOKSTEXT_LINE_2": "Tocando O Vazio",
+		"BOOKSTEXT_LINE_3": "Dracula",
+		"BOOKSTEXT_LINE_4": "O Fantasma da Opera"
 	},
 
 	"PROJECT": {

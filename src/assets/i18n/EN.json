@@ -19,6 +19,7 @@
 		"FORMATIONTAB": "Formation",
 		"LANGUAGESTAB": "Languages",
 		"COURSESTAB": "Courses",
+		"BOOKSTAB": "Books",
 		"ABOUTMETEXT": "I am a Software Developer with more than 3 years of experience and I have worked with technologies such as Angular, Java, MySQL, SQL Server, and Postgresql. I am also familiar with HP Quality Center, Selenium WebDriver, Oracle, JUnit, and HTML. I have worked with front-end and back-end development, software build and deploy, and troubleshooting. I hold a Bachelor’s Degree in Information Systems and a Post-Graduation in Software Engineering. I consider myself a dedicated, communicative and outgoing person", 
 		"SKILLSTEXT": "Object-oriented Programming",
 		"EXPERIENCETEXT_LINE_TITLE_1": "Test Analyst - Velti Tecnologia. 2014 - 2019",
@@ -28,13 +29,17 @@
 		"EXPERIENCETEXT_LINE_TITLE_2": "Software Tester - M2sys Tecnologia e Serviços S/A. 2013 - 2014",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_2.1": "Performed Test Analyses mainly directed to HSBC Bank System",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_2.2": "Elaborated and executed manual tests",
-		"EXPERIENCETEXT_LINE_TITLE_3": "  Software Developer Java and Angular - NTT DATA Business Solutions Brazil. 2020 - 2022",
+		"EXPERIENCETEXT_LINE_TITLE_3": "Software Developer Java and Angular - NTT DATA Business Solutions Brazil. 2020 - 2022",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.1": "Develop and maintain front-end applications using Angular JS, HTML, and CSS",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.2": "Develop and maintain back-end applications using Java",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.3": "Access and use data with REST API, SOAP services, and also OData protocol",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.4": "Software build and deploy using Jira and Bamboo",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.5": "Check databases and create tables and viewers using MySQL, SQL Server and PostgreSQL databases",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.6": "Support continuous improvement and adoption of best practices by training coworkers",
+		"EXPERIENCETEXT_LINE_TITLE_4": "System Analyst - Cloud and More. 2022 - NOW",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_4.1": "Develop and maintain back-end applications using Java",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_4.2": "Software Migration: Java 8 to Java 11 and Tomcat 8.5 to Tomcat 9",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_4.3": "Access and use data with SOAP services",
 
 		"FORMATIONTEXT_LINE_TITLE_1": "Federal University of Paraná 2013 - 2014" ,
 		"FORMATIONTEXT_DESCRIPTION_1.1": "Post-Graduation in Software Engineering",
@@ -50,7 +55,14 @@
 
 		"COURSESTEXT_LINE_1": "Spring REST Specialist, 240 hours, at Algaworks",
 		"COURSESTEXT_LINE_2": "Angular and Spring Fullstack, 120 hours, at Algaworks",
-		"COURSESTEXT_LINE_3": "Java and Object-oriented, 22 hours, at Algaworks"
+		"COURSESTEXT_LINE_3": "Java and Object-oriented, 22 hours, at Algaworks",
+		"COURSESTEXT_LINE_4": "jQuery and AJAX for Beginners - The Definitive Guide, 2.5 hours, at Udemy",
+		"COURSESTEXT_LINE_5": "Introduction To Python Programming, 1.5 hours, at Udemy",
+
+		"BOOKSTEXT_LINE_1": "Clean Code: A Handbook of Agile Software Craftsmanship",
+		"BOOKSTEXT_LINE_2": "Touching the Void: The True Story of One Man's Miraculous Survival",
+		"BOOKSTEXT_LINE_3": "Dracula",
+		"BOOKSTEXT_LINE_4": "The Phantom of the Opera"
 	},
 
 	  
