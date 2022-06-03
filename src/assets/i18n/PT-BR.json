@@ -60,10 +60,16 @@
 		"COURSESTEXT_LINE_4": "jQuery e AJAX para Iniciantes - O Guia Definitivo, 2.5 horas, na Udemy",
 		"COURSESTEXT_LINE_5": "Introdução a Programação Python, 1.5 horas, na Udemy",
 
-		"BOOKSTEXT_LINE_1": "Código Limpo - Habilidades Práticas do Agile Software",
-		"BOOKSTEXT_LINE_2": "Tocando O Vazio",
-		"BOOKSTEXT_LINE_3": "Dracula",
-		"BOOKSTEXT_LINE_4": "O Fantasma da Opera"
+		"BOOKSTEXT_LINE_1": "Clean Code: A Handbook of Agile Software Craftsmanship - Dean Wampler and Robert C. Martin",
+		"BOOKSTEXT_LINE_2": "The Everest Story - Tim Vicary",
+		"BOOKSTEXT_LINE_3": "Dracula - Bram Stoker",
+		"BOOKSTEXT_LINE_4": "High Live, Low Life - Alan Battersby",
+		"BOOKSTEXT_LINE_5": "Dolphin Music - Antoinette Moses",
+		"BOOKSTEXT_LINE_6": "Touching the Void - Joe Simpson",
+		"BOOKSTEXT_LINE_7": "Great Expectations - Charles Dickens",
+		"BOOKSTEXT_LINE_8": "The Phantom of the Opera - Gaston Leroux",
+		"BOOKSTEXT_LINE_9": "The Advetures of Huckleberry Finn - Mark Twain",
+		"BOOKSTEXT_LINE_10": "Leonardo da Vinci - Georgia Clarke"
 	},
 
 	"PROJECT": {
