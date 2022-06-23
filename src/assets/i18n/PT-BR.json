@@ -54,13 +54,14 @@
 		"LANGUAGESTEXT_LINE_TITLE_3": "Português",
 		"LANGUAGESTEXT_DESCRIPTION_3.1": "Nativo",
 
-		"COURSESTEXT_LINE_1": "Especialista Spring REST, 240 horas, na Algaworks",
-		"COURSESTEXT_LINE_2": "Fullstack Angular e Spring, 120 horas, na Algaworks",
-		"COURSESTEXT_LINE_3": "Java e Orientação a Objetos, 22 horas, na Algaworks",
-		"COURSESTEXT_LINE_4": "jQuery e AJAX para Iniciantes - O Guia Definitivo, 2.5 horas, na Udemy",
-		"COURSESTEXT_LINE_5": "Introdução a Programação Python, 1.5 horas, na Udemy",
-		"COURSESTEXT_LINE_6": "Currículo completo de programação jQuery e AJAX, 2.5 horas, na Udemy",
-
+		"COURSESTEXT_LINE_1": "Especialista Spring REST, 240h, na Algaworks",
+		"COURSESTEXT_LINE_2": "Fullstack Angular e Spring, 120h, na Algaworks",
+		"COURSESTEXT_LINE_3": "Java e Orientação a Objetos, 22h , na Algaworks",
+		"COURSESTEXT_LINE_4": "jQuery e AJAX para Iniciantes - O Guia Definitivo, 2h 5m, na Udemy",
+		"COURSESTEXT_LINE_5": "Introdução a Programação Python, 1h 5m, na Udemy",
+		"COURSESTEXT_LINE_6": "Currículo completo de programação jQuery e AJAX, 2h 5m, na Udemy",
+		"COURSESTEXT_LINE_7": "Apreendendo Kubernetes, 2h 28m, no Linkedin Learning",
+		
 		"BOOKSTEXT_LINE_1": "Clean Code: A Handbook of Agile Software Craftsmanship - Dean Wampler and Robert C. Martin",
 		"BOOKSTEXT_LINE_2": "The Everest Story - Tim Vicary",
 		"BOOKSTEXT_LINE_3": "Dracula - Bram Stoker",
