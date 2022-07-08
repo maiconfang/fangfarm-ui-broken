@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 import { AuthenticationService } from 'src/app/authentication/authentication.service';
 import { User, UserSession } from 'src/app/authentication/user-session.service';
-
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-login',
@@ -15,21 +15,22 @@ import { User, UserSession } from 'src/app/authentication/user-session.service';
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
+  typeSelected: string;
 
   constructor(
     private auth: AuthenticationService,
     private user: UserSession,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private spinnerService: NgxSpinnerService
   ) { 
 
     this.createForm();
     this.doLoginAutomatic();
-
+    this.typeSelected = 'pacman';
   }
 
   ngOnInit() {
-
   }
 
   createForm() {
@@ -44,6 +45,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         data => {
           console.log('Redirecionando');
+          this.spinnerService.hide();
           this.router.navigate(['/app']);
         }
       );
@@ -58,5 +60,15 @@ export class LoginComponent implements OnInit {
       } 
     })
   }
+
+
+
+public showSpinner(): void {
+  this.spinnerService.show();
+
+  setTimeout(() => {
+    this.spinnerService.hide();
+  }, 50000); // 5 seconds
+}
 
 }

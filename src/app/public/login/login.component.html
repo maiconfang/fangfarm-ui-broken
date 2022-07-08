@@ -28,7 +28,11 @@
         <app-form-messages-erro [control]="$any(form).controls['pass']" label="{{ 'LOGIN.REQUERID_PASSWORD' | translate }}"></app-form-messages-erro>
       </div>
 
-      <button type="submit" class="btn btn-primary btn-lg btn-block m-0" [disabled]="form.invalid">{{ 'LOGIN.ENTER' | translate }}</button>
+      <div class="container">
+        <div class="col-md-12 text-center">
+            <button id="loginLine33" type="button" class="btn btn-primary" (click)="showSpinner()" [disabled]="form.invalid">{{ 'LOGIN.ENTER' | translate }}</button>
+        </div>
+    </div>
 
       <div class="d-flex align-items-center justify-content-between mt-3">
 
@@ -50,5 +54,9 @@
   </section>
 
   <app-form-debug [form]="form"></app-form-debug>
+  
+  <ngx-spinner size="medium" [type]="typeSelected"></ngx-spinner>
 
 </section>
+
+

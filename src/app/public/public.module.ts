@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 
 import { SharedModule } from './../shared/shared.module';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 const routesPub: Routes = [
   {
@@ -42,6 +43,7 @@ const routesPub: Routes = [
     RouterModule.forChild(routesPub),
     SharedModule,
     TabsModule.forRoot(),
+    NgxSpinnerModule,
   ], 
   exports: [
     PublicComponent, RouterModule
