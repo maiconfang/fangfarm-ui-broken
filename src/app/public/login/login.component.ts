@@ -68,7 +68,7 @@ public showSpinner(): void {
 
   setTimeout(() => {
     this.spinnerService.hide();
-  }, 50000); // 5 seconds
+  }, 150000);
 }
 
 }
