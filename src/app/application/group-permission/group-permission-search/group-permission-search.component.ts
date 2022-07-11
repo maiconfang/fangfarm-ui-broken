@@ -68,9 +68,6 @@ export class GroupPermissionSearchComponent extends CrudSearchImpl implements On
         try {
           this.page = data.page;
           this.entities = data._embedded.permssions;
-          console.log("data._embedded.permssions");
-          console.log(data._embedded.permssions);
-          
           
         } catch (error) {
           this.entities = []
@@ -83,9 +80,6 @@ export class GroupPermissionSearchComponent extends CrudSearchImpl implements On
     return this.groupService.listAll()
       .then(group => {
         this.page = group.page;
-        console.log(" loadGroup() {");
-        
-        console.log(group._embedded.groups);
         
         this.groupss = group._embedded.groups
       })

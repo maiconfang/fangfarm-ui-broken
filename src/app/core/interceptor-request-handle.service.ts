@@ -35,7 +35,6 @@ export class InterceptorRequestHandleService implements HttpInterceptor {
             this.refreshTokenInProgress = true;
             return this.auth.refreshToken().pipe(
               flatMap((res: any) => {
-                console.log(res.access_token);
                 return next.handle(this.applyCredentials(req, res.access_token)
                 );
               }),

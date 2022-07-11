@@ -52,8 +52,10 @@
 .sidebar ul a:hover,
 .sidebar ul a:focus,
 .sidebar ul a:active {
-  color: #fff;
+  color: rgb(11, 94, 215);
   text-decoration: none;
+  font-weight: 600;
+  
 }
 
 .sidebar a,
@@ -61,6 +63,11 @@
 .sidebar a:focus,
 .sidebar a:active {
   outline: none;
+  text-decoration: none;
+}
+
+.sidebar ul li {
+  font-weight: 500;
 }
 
 .sidebar ul li ul {

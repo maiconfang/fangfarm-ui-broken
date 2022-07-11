@@ -42,7 +42,6 @@ export class VehicleService extends CrudServiceImpl {
   }
 
   listAllNoPagination(): Promise<any> {
-    console.log(this.vehicleUrl + "/noPagination");
     
     return this.http.get<any>(this.vehicleUrl + "/noPagination")
       .toPromise()

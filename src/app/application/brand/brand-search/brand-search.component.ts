@@ -75,8 +75,6 @@ export class BrandSearchComponent extends CrudSearchImpl implements OnInit {
   }
 
   recieveModelOfSelect(answerModelSelect) {
-    console.log("recieveModelOfSelect");
-    
     this.populateDataForm(answerModelSelect);
   }
 
@@ -96,8 +94,6 @@ export class BrandSearchComponent extends CrudSearchImpl implements OnInit {
   }
 
   populateDataForm(data) {
-    console.log("populateDataForm");
-    console.log(data);
     
     this.form.patchValue({
       modelId: data.id,

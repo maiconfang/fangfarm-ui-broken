@@ -44,7 +44,6 @@ export class LoginComponent implements OnInit {
     this.auth.login(<User>this.form.value)
       .subscribe(
         data => {
-          console.log('Redirecionando');
           this.spinnerService.hide();
           this.router.navigate(['/app']);
         }
@@ -52,10 +51,8 @@ export class LoginComponent implements OnInit {
   }
 
   doLoginAutomatic() {
-    console.log('Called doLoginAutomatic()')
     this.user.fethUser().then(res => {
       if (res && res.remember === true) {
-        console.log('Permanecer logado ativado')
         this.router.navigate(['/home']);
       } 
     })

@@ -78,7 +78,6 @@ export class InterceptorResponseHandleService implements HttpInterceptor {
             case 409:
               let errors = err.error;
               let message = errors.userMessage;
-              console.log(message);
               this.presentToast('error', message);
               break;
             case 500:

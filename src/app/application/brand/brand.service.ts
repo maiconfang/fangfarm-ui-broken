@@ -42,7 +42,6 @@ export class BrandService extends CrudServiceImpl {
   }
 
   listAllNoPagination(): Promise<any> {
-    console.log(this.brandUrl + "/noPagination");
     
     return this.http.get<any>(this.brandUrl + "/noPagination")
       .toPromise()
