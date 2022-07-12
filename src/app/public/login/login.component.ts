@@ -41,14 +41,18 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form) {
+    setTimeout(() => { this.spinnerService.show(); }, 30);
     this.auth.login(<User>this.form.value)
-      .subscribe(
-        data => {
-          this.spinnerService.hide();
-          this.router.navigate(['/app']);
-        }
-      );
-  }
+    .subscribe(
+      data => {
+        this.spinnerService.hide();
+        this.router.navigate(['/app']);
+      }, error => {
+        this.spinnerService.hide();
+        
+      }
+    );
+}
 
   doLoginAutomatic() {
     this.user.fethUser().then(res => {
@@ -58,14 +62,5 @@ export class LoginComponent implements OnInit {
     })
   }
 
-
-
-public showSpinner(): void {
-  this.spinnerService.show();
-
-  setTimeout(() => {
-    this.spinnerService.hide();
-  }, 150000);
-}
 
 }
