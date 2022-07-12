@@ -57,6 +57,10 @@ import { VehicleService } from './vehicle/vehicle.service';
 import { VehicleRegisterComponent } from './vehicle/vehicle-register/vehicle-register.component';
 import { VehicleSearchComponent } from './vehicle/vehicle-search/vehicle-search.component';
 
+import { ProfileModule } from './profile-update/profile-update.module';
+import { ProfileUpdateService } from './profile-update/profile-update.service';
+import { ProfileUpdateComponent } from './profile-update/profile-update/profile-update.component';
+
 const routesApp: Routes = [
   {
     path: 'app', component: ApplicationComponent,
@@ -103,7 +107,9 @@ const routesApp: Routes = [
 
       { path: 'vehicle', component: VehicleSearchComponent },
       { path: 'vehicle/new', component: VehicleRegisterComponent },
-      { path: 'vehicle/:id', component: VehicleRegisterComponent }
+      { path: 'vehicle/:id', component: VehicleRegisterComponent },
+
+      { path: 'profile-update', component: ProfileUpdateComponent }
 
     ]
   },
@@ -130,7 +136,8 @@ const routesApp: Routes = [
     EmployeeModule,
     GroupPermissionModule,
     BrandModule,
-    VehicleModule
+    VehicleModule,
+    ProfileModule
   ],
   exports: [
     ApplicationComponent, RouterModule
@@ -144,7 +151,8 @@ const routesApp: Routes = [
     EmployeeService,
     GroupPermissionService,
     BrandService,
-    VehicleService
+    VehicleService,
+    ProfileUpdateService
   ]
 })
 export class ApplicationModule { }

@@ -163,6 +163,7 @@
 	"CRUD": {
 		"SAVE" : "Salvar",
 		"BACK": "Voltar para pesquisa",
+		"HOME": "Principal",
 		"NEW": "Criar registro",
 		"EXPORT": "Exportar",
 		"IMPORT": "Importar",
@@ -173,6 +174,7 @@
 		"TOOLTIP_CREATE_NEW": "Criar novo registro",
 		"TOOLTIP_SAVE": "Salvar registro",
 		"TOOLTIP_BACK": "Voltar para pesquisa",
+		"TOOLTIP_HOME": "Voltar para tela principal",
 		"TOOLTIP_ERASER": "Limpar campos",
 		"MSG_CONFIRM_REMOVE": "Deseja realmente excluir ",
 		"MSG_CONFIRM_REMOVE_YES": "Sim",
@@ -201,6 +203,13 @@
 		"TITLE_CONSULT": "Consultar Usuário",
 		"TITLE_EDIT": "Edição do Usuário",
 		"TITLE_NEW": "Novo Usuário"
+	},
+
+	"PROFILE": {
+		"TITLE": "Perfil",
+		"LABEL_NAME": "Nome do usuário",
+		"LABEL_EMAIL": "E-mail do usuário",
+		"LABEL_PASSWORD": "Senha do usuário"		
 	},
 
 	"STATE": {

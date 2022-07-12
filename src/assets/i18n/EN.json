@@ -164,6 +164,7 @@
 	"CRUD": {
 		"SAVE" : "Save",
 		"BACK": "Back to search",
+		"HOME": "Home",
 		"NEW": "Create record",
 		"EXPORT": "Export",
 		"IMPORT": "Import",
@@ -174,6 +175,7 @@
 		"TOOLTIP_CREATE_NEW": "Create new record",
 		"TOOLTIP_SAVE": "Save record",
 		"TOOLTIP_BACK": "Back to search",
+		"TOOLTIP_HOME": "Back to home",
 		"TOOLTIP_ERASER": "Eraser fields",
 		"MSG_CONFIRM_REMOVE": "Do you really want to delete ",
 		"MSG_CONFIRM_REMOVE_YES": "Yes",
@@ -202,6 +204,13 @@
 		"TITLE_CONSULT": "Consult User",
 		"TITLE_EDIT": "Edit of User",
 		"TITLE_NEW": "New User"
+	},
+
+	"PROFILE": {
+		"TITLE": "Profile",
+		"LABEL_NAME": "Name of user",
+		"LABEL_EMAIL": "E-mail of user",
+		"LABEL_PASSWORD": "Password of user"		
 	},
 
 	"STATE": {
