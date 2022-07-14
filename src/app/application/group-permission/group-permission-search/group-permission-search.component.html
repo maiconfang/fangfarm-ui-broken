@@ -13,13 +13,11 @@
         <!-- testes ini-->
         <div class="input-group mb-3" style="margin-top: 8px;">
             <select class="form-select" id="group" formControlName="id">
-                <option selected>Selecione um grupo</option>
-                <option *ngFor="let grupo of groupss" [value]="grupo.id">{{grupo.name}}</option>
+                <option *ngFor="let group of groupss" [value]="group.id">{{group.name}}</option>
             </select>
             <div class="input-group-append">
-                <button id="filter-consult-model" class="btn btn-primary"
-                    tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}" type="submit"><i
-                        class="fas fa-search"></i></button>
+                <button id="filter-consult-model" [disabled]="form.invalid" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}" type="submit">
+                    <i  class="fas fa-search"></i></button>
             </div>
         </div>
         <!-- teste end-->
