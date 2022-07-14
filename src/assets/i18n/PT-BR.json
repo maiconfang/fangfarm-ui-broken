@@ -210,7 +210,13 @@
 		"TITLE": "Perfil",
 		"LABEL_NAME": "Nome do usuário",
 		"LABEL_EMAIL": "E-mail do usuário",
-		"LABEL_PASSWORD": "Senha do usuário"		
+		"LABEL_PASSWORD_CURRENT": "Senha atual",
+		"LABEL_PASSWORD_NEW": "Nova senha",
+		"TOOLTIP_CHANGE_PASSWORD": "Alterar senha?",
+		"CHANGE_PASSWORD": "Alterar senha?",
+		"ACCORDION_PROFILE": "Perfil",
+		"ACCORDION_UPDATE_PASSWORD": "Alterar senha",
+		"MSG_SUCCESS_UPDATED_PASSWORD": "Atualizado com sucesso a senha do usuário"		
 	},
 
 	"STATE": {

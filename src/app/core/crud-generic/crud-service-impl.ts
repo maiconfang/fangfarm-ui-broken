@@ -28,6 +28,10 @@ export abstract class CrudServiceImpl {
         return this.http.put(`${this.getUrlResource()}/${entity.id}`, entity);
     }
 
+    updatePassword(id: number, entity: any): Observable<any> {
+      return this.http.put(`${this.getUrlResource()}/${id}/password`, entity);
+  }
+
     remove(id: number): Observable<any> {
       return this.http.delete(`${this.getUrlResource()}/${id}`);
     }

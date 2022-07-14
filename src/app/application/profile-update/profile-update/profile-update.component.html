@@ -1,35 +1,72 @@
+
 <section class="container mt-5">
     <h1 class="title-screen-create"> {{ 'PROFILE.TITLE' | translate }} </h1>
-  
-    <form [formGroup]="form" (ngSubmit)="save()">
+    
       <div class="form-row">
+        <tabset>
+          <tab heading="{{ 'PROFILE.ACCORDION_PROFILE' | translate }}" id="tab1" class="text">
+            <form [formGroup]="form">
+            <div class="form-row">
   
-        <div class="form-group col form-group mb-3">
-          <label class="requiredLabel">{{ 'PROFILE.LABEL_NAME' | translate }}</label>
-          <input id="profile-name" type="text" class="form-control" formControlName="name" tooltip="{{ 'PROFILE.LABEL_NAME' | translate }}">
-          <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'PROFILE.LABEL_NAME' | translate }}">
-          </app-form-messages-erro>
-        </div>
-        
-  
-        <div class="form-group col form-group mb-3">
-          <label class="requiredLabel">{{ 'PROFILE.LABEL_EMAIL' | translate }}</label>
-          <input id="proflie-email" type="text" class="form-control" formControlName="email" tooltip="{{ 'PROFILE.LABEL_EMAIL' | translate }}">
-          <app-form-messages-erro [control]="$any(form).controls['email']" label="{{ 'PROFILE.LABEL_EMAIL' | translate }}">
-          </app-form-messages-erro>
-        </div>
-  
-      </div>
+                <div class="form-group col form-group mb-3">
+                  <label class="requiredLabel">{{ 'PROFILE.LABEL_NAME' | translate }}</label>
+                  <input id="profile-name" type="text" class="form-control" formControlName="name" tooltip="{{ 'PROFILE.LABEL_NAME' | translate }}">
+                  <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'PROFILE.LABEL_NAME' | translate }}">
+                  </app-form-messages-erro>
+                </div>
+                
+          
+                <div class="form-group col form-group mb-3">
+                  <label class="requiredLabel">{{ 'PROFILE.LABEL_EMAIL' | translate }}</label>
+                  <input id="proflie-email" type="text" class="form-control" formControlName="email" tooltip="{{ 'PROFILE.LABEL_EMAIL' | translate }}">
+                  <app-form-messages-erro [control]="$any(form).controls['email']" label="{{ 'PROFILE.LABEL_EMAIL' | translate }}">
+                  </app-form-messages-erro>
+                </div>
+          
+              </div>
 
-      <div class="buttons-crud-content">
-        <button id="btn-save-profile" type="submit" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}"
-          [disabled]="form.invalid">{{ 'CRUD.SAVE' | translate }}</button>
-        <button id="btn-back" type="button" class="btn btn-secondary" tooltip="{{ 'CRUD.TOOLTIP_HOME' | translate }}"
-          routerLink="/app">{{ 'CRUD.HOME' | translate }}</button>
+              <div class="buttons-crud-content">
+                <button id="btn-update-profile" (click)="update()" type="submit" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}"
+                  [disabled]="form.invalid">{{ 'CRUD.SAVE' | translate }}</button>
+              </div>
+              <app-form-debug [form]="form"></app-form-debug>
+              </form>
+          </tab>
+  
+          <tab heading="{{ 'PROFILE.ACCORDION_UPDATE_PASSWORD' | translate }}" class="text">
+            <form [formGroup]="changePasswordForm">
+            <div class="form-row" >
+
+                <div class="form-group col form-group mb-3">
+                  <label class="requiredLabel">{{ 'PROFILE.LABEL_PASSWORD_CURRENT' | translate }}</label>
+                  <input id="profile-password" type="password" class="form-control" formControlName="currentPassword"
+                    tooltip="{{ 'PROFILE.LABEL_PASSWORD_CURRENT' | translate }}">
+                    <app-form-messages-erro [control]="$any(changePasswordForm).controls['currentPassword']" label="{{ 'PROFILE.LABEL_PASSWORD_CURRENT' | translate }}">
+                    </app-form-messages-erro>
+                </div>
+        
+                <div class="form-group col form-group mb-3">
+                    <label class="requiredLabel">{{ 'PROFILE.LABEL_PASSWORD_NEW' | translate }}</label>
+                    <input id="user-password" type="password" class="form-control"  formControlName="newPassword"
+                      tooltip="{{ 'PROFILE.LABEL_PASSWORD_NEW' | translate }}">
+                      <app-form-messages-erro [control]="$any(changePasswordForm).controls['newPassword']" label="{{ 'PROFILE.LABEL_PASSWORD_NEW' | translate }}">
+                      </app-form-messages-erro>
+                </div>
+
+                <div class="buttons-crud-content">
+                    <button id="btn-udpate-profile-password" (click)="updatePassword()" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}"
+                      [disabled]="changePasswordForm.invalid">{{ 'CRUD.SAVE' | translate }}</button>
+                  </div>
+          
+              </div>
+              <app-form-debug [form]="changePasswordForm"></app-form-debug>
+              </form>
+              
+          </tab>
+          
+       </tabset>
       </div>
   
-  
-    </form>
-  
-    <app-form-debug [form]="form"></app-form-debug>
+    
   </section>
+

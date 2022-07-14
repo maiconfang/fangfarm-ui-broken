@@ -3,8 +3,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 import { CrudServiceImpl } from 'src/app/core/crud-generic/crud-service-impl';
-import { ProfileUpdate } from './profile-update';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,12 +18,6 @@ export class ProfileUpdateService extends CrudServiceImpl {
 
   getUrlResource(): string {
     return this.userUrl;
-  }
-
-  listAll(): Promise<any> {
-    return this.http.get<any>(this.userUrl)
-      .toPromise()
-      .then(response => response);
   }
   
 

@@ -211,7 +211,15 @@
 		"TITLE": "Profile",
 		"LABEL_NAME": "Name of user",
 		"LABEL_EMAIL": "E-mail of user",
-		"LABEL_PASSWORD": "Password of user"		
+		"LABEL_PASSWORD_CURRENT": "Current password",
+		"LABEL_PASSWORD_NEW": "New password",
+		"LABEL_PASSWORD": "Password of user",
+		"TOOLTIP_CHANGE_PASSWORD": "Change password?",
+		"CHANGE_PASSWORD": "Change password?",
+		"ACCORDION_PROFILE": "Profile",
+		"ACCORDION_UPDATE_PASSWORD": "Update Password",
+		"MSG_SUCCESS_UPDATED_PASSWORD": "Updated with successfully the password of user"
+
 	},
 
 	"STATE": {

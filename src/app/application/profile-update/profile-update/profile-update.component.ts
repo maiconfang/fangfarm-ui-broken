@@ -15,10 +15,8 @@ import { StorageService } from 'src/app/shared/storage/storage.service';
   styleUrls: ['./profile-update.component.scss']
 })
 export class ProfileUpdateComponent extends CrudRegisterImpl implements OnInit {
-
   form: FormGroup;
-  titleUser: string;
-  showPassword: boolean;
+  changePasswordForm: FormGroup;
 
   userLoggedId = this.storage.getLocalStorage('user_id');
 
@@ -26,8 +24,6 @@ export class ProfileUpdateComponent extends CrudRegisterImpl implements OnInit {
     private storage: StorageService,
     protected translate: TranslateService,
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
     protected profileUpdateService: ProfileUpdateService,
     protected toastService: MessageToastService) {
     super(translate, profileUpdateService, toastService)
@@ -36,47 +32,46 @@ export class ProfileUpdateComponent extends CrudRegisterImpl implements OnInit {
 
 
   ngOnInit() {
-
-    console.log(" userLoggedId asdfdasf " +  this.userLoggedId);
-
+    
     if (this.userLoggedId) {
-      this.translate.get('USER.TITLE_EDIT').subscribe((text: string) => {
-        this.titleUser = text;
-        this.form.removeControl('password');
-      });
       this.findEntity(this.userLoggedId);
-    } else {
-      console.log("nao pode cair aquiii, pois nao tem outra option");
-      
-    }
-
-    if (typeof this.userLoggedId === 'undefined') {
-      this.showPassword = true;
     }
 
   }
 
   createForm() {
+
+    this.changePasswordForm = this.formBuilder.group({
+      currentPassword: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(11)]],
+      newPassword: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(11)]]
+   
+  })
+
     this.form = this.formBuilder.group({
       id: [''],
       name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(80)]],
-      email: ['', [Validators.email, Validators.required, Validators.minLength(4), Validators.maxLength(100)]],
-      password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(80)]],
+      email: ['', [Validators.email, Validators.required, Validators.minLength(4), Validators.maxLength(100)]]
     });
   }
 
   redirectAfterAdd(entity: any) {
-    this.router.navigate(['/app/user', entity.id]);
+    //this.router.navigate(['/app/user', entity.id]);
   }
 
   backToSearch() {
-    this.router.navigate(['/user']);
+    //this.router.navigate(['/user']);
   }
 
   update() {
-    this.form.removeControl('password');
     this.service.update(this.form.value).subscribe(entity => {
       this.toastService.showMessageSuccess(this.translate.instant('CRUD.MSG_SUCCESS_UPDATED'));
+      this.updateFormWithEntity(entity);
+    });
+  }
+
+  updatePassword(){
+    this.service.updatePassword(this.userLoggedId, this.changePasswordForm.value).subscribe(entity => {
+      this.toastService.showMessageSuccess(this.translate.instant('PROFILE.MSG_SUCCESS_UPDATED_PASSWORD'));
       this.updateFormWithEntity(entity);
     });
   }
