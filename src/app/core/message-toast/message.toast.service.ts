@@ -12,7 +12,7 @@ export class MessageToastService {
     this.toasterService.success(message, '', {
       closeButton: true,
       positionClass: 'toast-bottom-right',
-      timeOut: 3000,
+      timeOut: 5000,
     });
   }
 
@@ -20,7 +20,7 @@ export class MessageToastService {
     this.toasterService.warning(message, '', {
       closeButton: true,
       positionClass: 'toast-bottom-right',
-      timeOut: 3000,
+      timeOut: 5000,
       enableHtml: html,
     });
   }

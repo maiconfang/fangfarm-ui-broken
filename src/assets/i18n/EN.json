@@ -93,15 +93,15 @@
 		"ACCESS_SYSTEM": "Access the System",
 		"LBL_LOGIN": "Login",
 		"LBL_PASSWORD": "Password",
-		"REQUERID_LOGIN": "Login",
-		"REQUERID_PASSWORD": "The password",
+		"REQUIRED_LOGIN": "Login",
+		"REQUIRED_PASSWORD": "The password",
 		"REMEMBER_ME": "Remember me",
 		"ENTER": "Enter",
 		"FORGOT_PASSWORD": "I forgot my password"
 	},
 
 	"FORM_VALIDATIONS": {
-		"REQUERID": " is required",
+		"REQUIRED": " is required",
 		"MIN_LENGTH": " need to have at least ",
 		"MAX_LENGTH":  " may have have at most ",
 		"CHARACTERS": " characters",
@@ -110,7 +110,7 @@
 
 	"NAV_BAR": {
 		"SYSTEM_NAME": "Fang Farm",
-		"OPTION": "Opation",
+		"OPTION": "Option",
 		"PROFILE": " Profile",
 		"SETTINGS": " Settings",
 		"LOGOUT": " Logout"

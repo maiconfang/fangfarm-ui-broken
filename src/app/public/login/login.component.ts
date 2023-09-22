@@ -33,9 +33,10 @@ export class LoginComponent implements OnInit {
   }
 
   createForm() {
+    
     this.form = this.fb.group({
-      "login": ['joao.ger@maiffarm.com.br', Validators.required],
-      "pass": ['123', [Validators.required, Validators.minLength(2)]],
+      "login": ['', Validators.required],
+      "pass": ['', [Validators.required, Validators.minLength(2)]],
     });
   }
 
@@ -43,7 +44,7 @@ export class LoginComponent implements OnInit {
     this.auth.login(<User>this.form.value)
       .subscribe(
         data => {
-          console.log('Redirecionando');
+          console.log('Redirect');
           this.router.navigate(['/app']);
         }
       );

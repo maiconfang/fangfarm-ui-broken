@@ -14,7 +14,7 @@ export class FormValidations {
 
   getErrorMsg(fieldName: string, validatorName: string, validatorValue?: any) {
     const config = {
-      'required': `${fieldName}` + this.translate.instant('FORM_VALIDATIONS.REQUERID'),
+      'required': `${fieldName}` + this.translate.instant('FORM_VALIDATIONS.REQUIRED'),
       'minlength': `${fieldName}` + this.translate.instant('FORM_VALIDATIONS.MIN_LENGTH') + 
                    `${validatorValue.requiredLength}` + this.translate.instant('FORM_VALIDATIONS.CHARACTERS'),
 

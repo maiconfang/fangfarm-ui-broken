@@ -93,15 +93,15 @@
 		"ACCESS_SYSTEM": "Entrar no Sistema",
 		"LBL_LOGIN": "Login",
 		"LBL_PASSWORD": "Senha",
-		"REQUERID_LOGIN": "O login",
-		"REQUERID_PASSWORD": "A senha",
+		"REQUIRED_LOGIN": "O login",
+		"REQUIRED_PASSWORD": "A senha",
 		"REMEMBER_ME": "Lembre-me",
 		"ENTER": "Entrar",
 		"FORGOT_PASSWORD": "Esqueci minha senha"
 	},
 
 	"FORM_VALIDATIONS": {
-		"REQUERID": " é obrigatório",
+		"REQUIRED": " é obrigatório",
 		"MIN_LENGTH": " precisa ter no mínimo ",
 		"MAX_LENGTH":  " pode ter no máximo ",
 		"CHARACTERS": " caracteres",
