@@ -19,6 +19,7 @@
 		"FORMATIONTAB": "Formação",
 		"LANGUAGESTAB": "Idiomas",
 		"COURSESTAB": "Cursos",
+		"BOOKSTAB": "Livros",
 		"ABOUTMETEXT": "Sou Desenvolvedor de Software com mais de 3 anos de experiência e já trabalhei com tecnologias como Angular, Java, MySQL, SQL Server e Postgresql. Também estou familiarizado com o HP Quality Center, Selenium WebDriver, Oracle, JUnit e HTML. Trabalhei com desenvolvimento front-end e back-end, construção e implantação de software e solução de problemas. Sou graduado em Sistemas de Informação e pós-graduado em Engenharia de Software. Considero-me uma pessoa dedicada, comunicativa e extrovertida",
 		"SKILLSTEXT": " Programação Orientado a Objeto",
 		"EXPERIENCETEXT_LINE_TITLE_1": "Analista de Testes - Velti Tecnologia. 2014 - 2019",
@@ -35,6 +36,10 @@
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.4": "Compilação e implantação de software usando Jira e Bamboo",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.5": "Verificação de bancos de dados e criação tabelas e visualizadores usando bancos de dados MySQL, SQL Server e PostgreSQL",
 		"EXPERIENCETEXT_LINE_DESCRIPTION_3.6": "Apoiar a melhoria contínua e a adoção das melhores práticas treinando colegas de trabalho",
+		"EXPERIENCETEXT_LINE_TITLE_4": "Analista de Sistema - Cloud and More. 2022 - NOW",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_4.1": "Desenvolvimento e manutenção de sistemas usando Java",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_4.2": "Migração de Software: Java 8 para Java 11 e Tomcat 8.5 para Tomcat 9",
+		"EXPERIENCETEXT_LINE_DESCRIPTION_4.3": "Acesso e uso de dados com serviços SOAP",
 
 
 		"FORMATIONTEXT_LINE_TITLE_1": "Universidade Federal do Paraná 2013 - 2014" ,
@@ -49,9 +54,32 @@
 		"LANGUAGESTEXT_LINE_TITLE_3": "Português",
 		"LANGUAGESTEXT_DESCRIPTION_3.1": "Nativo",
 
-		"COURSESTEXT_LINE_1": "Especialista Spring REST, 240 horas, na Algaworks",
-		"COURSESTEXT_LINE_2": "Fullstack Angular e Spring, 120 horas, na Algaworks",
-		"COURSESTEXT_LINE_3": "Java e Orientação a Objetos, 22 horas, na Algaworks"
+		"COURSESTEXT_LINE_1": "Especialista Spring REST, 240h, na Algaworks",
+		"COURSESTEXT_LINE_2": "Fullstack Angular e Spring, 120h, na Algaworks",
+		"COURSESTEXT_LINE_3": "Java e Orientação a Objetos, 22h , na Algaworks",
+		"COURSESTEXT_LINE_4": "jQuery e AJAX para Iniciantes - O Guia Definitivo, 2h 5m, na Udemy",
+		"COURSESTEXT_LINE_5": "Introdução a Programação Python, 1h 5m, na Udemy",
+		"COURSESTEXT_LINE_6": "Currículo completo de programação jQuery e AJAX, 2h 5m, na Udemy",
+		"COURSESTEXT_LINE_7": "Apreendendo Kubernetes, 2h 28m, no Linkedin Learning",
+		"COURSESTEXT_LINE_8": "Segurança da Web: OAuth e OpenID Connect, 1h 44m, no Linkedin Learning",
+		"COURSESTEXT_LINE_9": "Bootstrap 5 Treino Essencial, 4h 20m, at Linkedin Learning",
+		"COURSESTEXT_LINE_10": "Fundamentos de Programação: Design Orientado a Objetos, 2h 40m, no Linkedin Learning",
+		"COURSESTEXT_LINE_11": "PHP Avançado, 2h 17m, no Linkedin Learning",
+		"COURSESTEXT_LINE_12": "Laravel 5 Essencial Treinamento: 1 O Básico, 2h 41m, no Linkedin Learning",
+		"COURSESTEXT_LINE_13": "Apreendendo PHP, 4h 41m, no Linkedin Learning",
+		"COURSESTEXT_LINE_14": "Construindo RESTful APIs em Laravel, 1h 17m, no Linkedin Learning",
+		"COURSESTEXT_LINE_15": "Laravel 9.0 Essencial Treinamento, 2h 52m,  at Linkedin Learning",
+		
+		"BOOKSTEXT_LINE_1": "Clean Code: A Handbook of Agile Software Craftsmanship - Dean Wampler and Robert C. Martin",
+		"BOOKSTEXT_LINE_2": "The Everest Story - Tim Vicary",
+		"BOOKSTEXT_LINE_3": "Dracula - Bram Stoker",
+		"BOOKSTEXT_LINE_4": "High Live, Low Life - Alan Battersby",
+		"BOOKSTEXT_LINE_5": "Dolphin Music - Antoinette Moses",
+		"BOOKSTEXT_LINE_6": "Touching the Void - Joe Simpson",
+		"BOOKSTEXT_LINE_7": "Great Expectations - Charles Dickens",
+		"BOOKSTEXT_LINE_8": "The Phantom of the Opera - Gaston Leroux",
+		"BOOKSTEXT_LINE_9": "The Advetures of Huckleberry Finn - Mark Twain",
+		"BOOKSTEXT_LINE_10": "Leonardo da Vinci - Georgia Clarke"
 	},
 
 	"PROJECT": {
@@ -141,6 +169,7 @@
 	"CRUD": {
 		"SAVE" : "Salvar",
 		"BACK": "Voltar para pesquisa",
+		"HOME": "Principal",
 		"NEW": "Criar registro",
 		"EXPORT": "Exportar",
 		"IMPORT": "Importar",
@@ -151,6 +180,7 @@
 		"TOOLTIP_CREATE_NEW": "Criar novo registro",
 		"TOOLTIP_SAVE": "Salvar registro",
 		"TOOLTIP_BACK": "Voltar para pesquisa",
+		"TOOLTIP_HOME": "Voltar para tela principal",
 		"TOOLTIP_ERASER": "Limpar campos",
 		"MSG_CONFIRM_REMOVE": "Deseja realmente excluir ",
 		"MSG_CONFIRM_REMOVE_YES": "Sim",
@@ -179,6 +209,19 @@
 		"TITLE_CONSULT": "Consultar Usuário",
 		"TITLE_EDIT": "Edição do Usuário",
 		"TITLE_NEW": "Novo Usuário"
+	},
+
+	"PROFILE": {
+		"TITLE": "Perfil",
+		"LABEL_NAME": "Nome do usuário",
+		"LABEL_EMAIL": "E-mail do usuário",
+		"LABEL_PASSWORD_CURRENT": "Senha atual",
+		"LABEL_PASSWORD_NEW": "Nova senha",
+		"TOOLTIP_CHANGE_PASSWORD": "Alterar senha?",
+		"CHANGE_PASSWORD": "Alterar senha?",
+		"ACCORDION_PROFILE": "Perfil",
+		"ACCORDION_UPDATE_PASSWORD": "Alterar senha",
+		"MSG_SUCCESS_UPDATED_PASSWORD": "Atualizado com sucesso a senha do usuário"		
 	},
 
 	"STATE": {

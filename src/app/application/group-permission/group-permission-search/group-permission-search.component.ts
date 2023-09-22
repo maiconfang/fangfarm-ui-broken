@@ -33,7 +33,7 @@ export class GroupPermissionSearchComponent extends CrudSearchImpl implements On
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      id: ['']
+      id: ['',[Validators.required]]
     });
 
     this.loadGroup();
@@ -45,7 +45,7 @@ export class GroupPermissionSearchComponent extends CrudSearchImpl implements On
 
   confirmRemoval(entity: any, identification = '') {
     const initialState = {
-      message: `Deseja realmente excluir '${identification}'?`
+      message: this.translate.instant('CRUD.MSG_CONFIRM_REMOVE') + `"` + identification + `" ?`
     };
     this.modalRef = this.modalService.show(DialogConfirmationComponent, { initialState });
     this.modalRef.content.eventConfirm.subscribe((value) => {
@@ -56,7 +56,7 @@ export class GroupPermissionSearchComponent extends CrudSearchImpl implements On
   remove(entity: any) {
     const urlGroupPermission = this.groupPermissionService.getUrlResource() + this.form.value.id + "/permissions/" + entity.id;
     this.service.removeWithUrl(urlGroupPermission).subscribe(result => {
-      this.toastService.showMessageSuccess("Excluído com sucesso");
+      this.toastService.showMessageSuccess(this.translate.instant('CRUD.MSG_SUCCESS_REMOVE'));
       this.search();
     });
   }
@@ -68,9 +68,6 @@ export class GroupPermissionSearchComponent extends CrudSearchImpl implements On
         try {
           this.page = data.page;
           this.entities = data._embedded.permssions;
-          console.log("data._embedded.permssions");
-          console.log(data._embedded.permssions);
-          
           
         } catch (error) {
           this.entities = []
@@ -83,9 +80,6 @@ export class GroupPermissionSearchComponent extends CrudSearchImpl implements On
     return this.groupService.listAll()
       .then(group => {
         this.page = group.page;
-        console.log(" loadGroup() {");
-        
-        console.log(group._embedded.groups);
         
         this.groupss = group._embedded.groups
       })

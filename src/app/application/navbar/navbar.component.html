@@ -4,7 +4,11 @@
     <i class="fas fa-bars"></i>
   </button>
 
+<<<<<<< HEAD
   <a id="id-navbar-system-name" class="navbar-brand" href="#">
+=======
+  <a id="navBarComponentPrivateLine7" class="navbar-brand" href="#/app">
+>>>>>>> 29f5fa2a3681f27eb3f7b0c49e3186313d3991c9
     {{ 'NAV_BAR.SYSTEM_NAME' | translate }}
   </a>
 
@@ -14,10 +18,10 @@
       <a class="nav-color-user " id="dropdownUserLogged">{{ userLogged  }} <img src="https://dummyimage.com/200X200/777777/FFFFFF.png" class="img-round" alt="..."></a>
     </li>
 
-    <div class="dropdown " style="width: 170px;" dropdown>
+    <div id="navBarComponentPrivateLine17" class="dropdown " style="width: 170px;" dropdown>
       <a dropdownToggle class="pull-right text-center btn btn-setting dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria- expanded="true"><i class="fa fa-cog nav-color-user"></i></a>
       <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-        <li class="dropdown-item"><i class="fas fa-user-circle"></i> {{ 'NAV_BAR.PROFILE' | translate }}</li>
+        <li id="navbarPrivateLine20" routerLink="/app/profile-update" class="dropdown-item"><i class="fas fa-user-circle"></i> {{ 'NAV_BAR.PROFILE' | translate }}</li>
         <li class="dropdown-item"><i class="fas fa-wrench"></i> {{ 'NAV_BAR.SETTINGS' | translate }}</li>
         <li class="dropdown-divider"></li>
         <li (click)="logout()"> <a class="dropdown-item" rel="noopener" ><i class="fas fa-sign-out-alt" ></i> {{ 'NAV_BAR.LOGOUT' | translate }} </a> </li>

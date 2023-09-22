@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 import { AuthenticationService } from 'src/app/authentication/authentication.service';
 import { User, UserSession } from 'src/app/authentication/user-session.service';
-
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-login',
@@ -15,21 +15,22 @@ import { User, UserSession } from 'src/app/authentication/user-session.service';
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
+  typeSelected: string;
 
   constructor(
     private auth: AuthenticationService,
     private user: UserSession,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private spinnerService: NgxSpinnerService
   ) { 
 
     this.createForm();
     this.doLoginAutomatic();
-
+    this.typeSelected = 'pacman';
   }
 
   ngOnInit() {
-
   }
 
   createForm() {
@@ -41,7 +42,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form) {
+    setTimeout(() => { this.spinnerService.show(); }, 30);
     this.auth.login(<User>this.form.value)
+<<<<<<< HEAD
       .subscribe(
         data => {
           console.log('Redirect');
@@ -49,15 +52,26 @@ export class LoginComponent implements OnInit {
         }
       );
   }
+=======
+    .subscribe(
+      data => {
+        this.spinnerService.hide();
+        this.router.navigate(['/app']);
+      }, error => {
+        this.spinnerService.hide();
+        
+      }
+    );
+}
+>>>>>>> 29f5fa2a3681f27eb3f7b0c49e3186313d3991c9
 
   doLoginAutomatic() {
-    console.log('Called doLoginAutomatic()')
     this.user.fethUser().then(res => {
       if (res && res.remember === true) {
-        console.log('Permanecer logado ativado')
         this.router.navigate(['/home']);
       } 
     })
   }
+
 
 }
